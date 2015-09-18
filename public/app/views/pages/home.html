@@ -1,0 +1,15 @@
+<div class="jumbotron text-center">
+	<h1>Welcome to Formula 1 Hero</h1>
+
+	<div ng-if="!main.loggedIn">
+		<p>A Formula 1 Fantasy Game!</p>
+		<a href="/login" class="btn btn-primary">Login</a><br><br>
+		<a href="/users/create" class="btn">New User</a>
+
+	</div>
+
+	<div ng-if="main.loggedIn">
+		<p>Manage your users.</p>
+		<a href="/users" class="btn btn-primary">View Users</a>
+	</div>
+</div>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<html ng-app="myApp" lang="en"> <!-- ng-app tells that this is an angular application and it chooses myApp-->
+    <meta charset="UTF-8">
+    <title>Formula 1 Hero</title>
+
+    <!-- CSS -->
+    <!-- load bootstrap from CDN and custom CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+
+</head>
+<body class="container">
+
+    <h3 class="text-center">F1 2015 Race Calendar</h3><br>
+
+    <!-- Search Bar -->
+    <section class="text-center">
+      <label>Search:</label>
+      <input type="text" ng-model="search">
+    </section>
+    <br>
+
+    <!-- Table that will populate with our list of drivers -->
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th class="text-center" colspan="2">GP</th>
+                <th class="text-center">Race Track</th>
+                <th class="text-center">Date</th>
+                <th class="text-center">Grid Picks</th>
+                <th class="text-center">Race Picks</th>
+                <th class="text-center">Actual Grid Results</th>
+                <th class="text-center">Actual Race Results</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="race in raceCtrl.races | filter:search">
+                <td class="text-center"><img height:"12px" width="36px" src="{{race.flag}}"></td>
+                <td class="text-center"><b>{{race.country}}</b></td>
+                <td class="text-center">{{race.track}}</td>
+                <td class="text-center">{{race.dates}}</td>
+                <td class="text-center">{{race.gridPicks}}</td>
+                <td class="text-center">{{race.racePicks}}</td>
+                <td class="text-center">{{race.gridResults}}</td>
+                <td class="text-center">{{race.raceResults}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

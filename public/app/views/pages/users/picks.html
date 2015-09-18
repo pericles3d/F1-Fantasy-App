@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formula 1 Hero</title>
+
+    <!-- CSS -->
+    <!-- load bootstrap from CDN and custom CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+
+    <!-- draggable script -->
+    <script src="assets/js/picks.js"></script>
+
+    </head>
+  <body>
+      <!-- <h1>{{user.userData.username}}</h1>
+      <p>{{user}}</p> -->
+    <div class="container">
+      <div class="pure-g">
+        <div class="blink_me pure-u-5-24 drag_title"><p>Drag and Drop</p></div>
+        <div class="pure-u-14-24 pick_title"><p><img class="flag2" src="https://www.formula1.com/content/fom-website/en/championship/races/2015/Singapore/_jcr_content/countryFlag.img.jpg/1423093148498.jpg"> Singapore GP Picks</p></div>
+        <div class="blink_me pure-u-5-24 drag_title"><p>Drag and Drop</p></div>
+      </div>
+      <div class="pure-g">
+        <div class="pure-u-2-24"><p><img alt="Hamilton" class="drag-hamilton picture2" src="../../../assets/img/driver_pics/hamilton.jpg"></p>
+                                 <p><img alt="Vettel" class="drag-vettel picture2" src="../../../assets/img/driver_pics/vettel.jpg"></p>
+                                 <p><img alt="Massa" class="drag-massa picture2" src="../../../assets/img/driver_pics/massa.jpg"></p>
+                                 <p><img alt="Kvyat" class="drag-kvyat picture2" src="../../../assets/img/driver_pics/kvyat.jpg"></p>
+                                 <p><img alt="Perez" class="drag-perez picture2" src="../../../assets/img/driver_pics/perez.jpg"></p>
+        </div>
+        <div class="pure-u-1-24"><p></p></div>
+        <div class="pure-u-2-24"><p><img alt="Rosberg" class="drag-rosberg picture2" src="../../../assets/img/driver_pics/rosberg.jpg"></p>
+                                 <p><img alt="Raikkonen" class="drag-raikkonen picture2" src="../../../assets/img/driver_pics/raikkonen.jpg"></p>
+                                 <p><img alt="Bottas" class="drag-bottas picture2" src="../../../assets/img/driver_pics/bottas.jpg"></p>
+                                 <p><img alt="Ricciardo" class="drag-ricciardo picture2" src="../../../assets/img/driver_pics/ricciardo.jpg"></p>
+                                 <p><img alt="Hulkenberg" class="drag-hulkenberg picture2" src="../../../assets/img/driver_pics/hulkenberg.jpg"></p>
+        </div>
+        <div class="pure-u-1-24"><p></p></div>
+        <div class="pure-u-1-24"><p class="pos_num_help"></p>
+                                 <p class="pos_num">1st</p>
+                                 <p class="pos_num">2nd</p>
+                                 <p class="pos_num">3rd</p>
+                                 <p class="pos_num">4th</p>
+                                 <p class="pos_num">5th</p>
+                                 <p class="pos_num">6th</p>
+                                 <p class="pos_num">7th</p>
+                                 <p class="pos_num">8th</p>
+                                 <p class="pos_num">9th</p>
+                                 <p class="pos_num">10th</p>
+        </div>
+        <div class="pure-u-5-24">
+          <p class="table-title">Starting Grid</p>
+          <div id="droppable1"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.grid1"></div>
+          <div id="droppable2"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.grid2"></div>
+          <div id="droppable3"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.grid3"></div>
+          <div id="droppable4"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.grid4"></div>
+          <div id="droppable5"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.grid5"></div>
+          <div id="droppable6"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.grid6"></div>
+          <div id="droppable7"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.grid7"></div>
+          <div id="droppable8"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.grid8"></div>
+          <div id="droppable9"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.grid9"></div>
+          <div id="droppable10"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.grid10"></div>
+        </div>
+        <div class="pure-u-1-24"><p class="pos_num_help"></p>
+                                 <p class="pos_num">1st</p>
+                                 <p class="pos_num">2nd</p>
+                                 <p class="pos_num">3rd</p>
+                                 <p class="pos_num">4th</p>
+                                 <p class="pos_num">5th</p>
+                                 <p class="pos_num">6th</p>
+                                 <p class="pos_num">7th</p>
+                                 <p class="pos_num">8th</p>
+                                 <p class="pos_num">9th</p>
+                                 <p class="pos_num">10th</p>
+        </div>
+        <div class="pure-u-5-24">
+          <p class="table-title">Race Results</p>
+          <div id="droppable11"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.result1"></div>
+          <div id="droppable12"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.result2"></div>
+          <div id="droppable13"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.result3"></div>
+          <div id="droppable14"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.result4"></div>
+          <div id="droppable15"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.result5"></div>
+          <div id="droppable16"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.result6"></div>
+          <div id="droppable17"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.result7"></div>
+          <div id="droppable18"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.result8"></div>
+          <div id="droppable19"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.result9"></div>
+          <div id="droppable20"><input readonly type="text" class="form-control" id="pick_input" ng-model="user.result10"></div>
+        </div>
+        <div class="pure-u-1-24"><p></p></div>
+        <div class="pure-u-2-24"><p><img alt="Grosjean" class="drag-grosjean picture2" src="../../../assets/img/driver_pics/grosjean.jpg"></p>
+                                 <p><img alt="Verstappen" class="drag-verstappen picture2" src="../../../assets/img/driver_pics/verstappen.jpg"></p>
+                                 <p><img alt="Ericsson" class="drag-ericsson picture2" src="../../../assets/img/driver_pics/ericsson.jpg"></p>
+                                 <p><img alt="Alonso" class="drag-alonso picture2" src="../../../assets/img/driver_pics/alonso.jpg"></p>
+                                 <p><img alt="Stevens" class="drag-stevens picture2" src="../../../assets/img/driver_pics/stevens.jpg"></p>
+        </div>
+        <div class="pure-u-1-24"><p></p></div>
+        <div class="pure-u-2-24"><p><img alt="Maldonado" class="drag-maldonado picture2" src="../../../assets/img/driver_pics/maldonado.jpg"></p>
+                                 <p><img alt="Sainz" class="drag-sainz picture2" src="../../../assets/img/driver_pics/sainz.jpg"></p>
+                                 <p><img alt="Nasr" class="drag-nasr picture2" src="../../../assets/img/driver_pics/nasr.jpg"></p>
+                                 <p><img alt="Button" class="drag-button picture2" src="../../../assets/img/driver_pics/button.jpg"></p>
+                                 <p><img alt="Merhi" class="drag-mehri picture2" src="../../../assets/img/driver_pics/merhi.jpg"></p>
+        </div>
+      </div>
+      <div class="pure-g">
+        <div class="pure-u-1-1 center-button">
+          <a ng-click="user.submitPicks()" href="/users/{{user.userData._id}}" class="btn btn-sm btn-info">
+            <i class="glyphicon glyphicon-check"> Submit</i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

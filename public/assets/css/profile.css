@@ -1,0 +1,248 @@
+.container1 {
+  display: inline-block;
+  float: left;
+}
+.container2 {
+  display: inline-block;
+}
+.container3 {
+  display: inline-block;
+  float: right;
+}
+
+
+.profile {
+    padding: 0 1px 0 0;
+    width: 50%;
+    float: left;
+    min-height: 20px;
+    width: 50%;
+}
+
+.picture {
+    width: 300px;
+    height: 300px;
+    margin-left: 25%;
+    border-radius: 150px;
+    border: 1px solid #E4E4E4;
+  }
+
+.picture2 {
+  width: 78px;
+  height: 78px;
+}
+
+.drag-hamilton {
+  width: 78px;
+  height: 78px;
+}
+
+.driver-details {
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.user_name {
+    padding-top: 20px;
+    color: black;
+    font-family: 'bentonsans',Helvetica,sans-serif;
+    font-size: 48px;
+    font-size: 4.8rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+.flag2 {
+    display: inline-block;
+    height: 32px;
+    margin: 0 0 0 5px;
+    position: relative;
+    top: -2px;
+    width: 48px;
+}
+
+.user-stat-list {
+  text-align: center;
+  margin-left: 37%;
+}
+
+.user_position {
+    color: #808080;
+    font-size: 20px;;
+    line-height: 1.1;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.stats {
+    background: #fff;
+    padding: 0 0 0 1px;
+}
+
+.stats, .profile {
+    float: left;
+    min-height: 20px;
+    width: 50%;
+}
+
+.next-title {
+  font-size: 20px;
+}
+
+.race-country {
+  font-size: 20px;
+}
+
+.total-players {
+  font-size: 20px;
+  text-align: right;
+}
+
+.stat-key2 {
+  text-align: right;
+}
+
+.stat-key3 {
+  text-align: right;
+  width: 160px;
+}
+
+.stat-value {
+  text-align: center;
+}
+
+.stat-value2 {
+  text-align: center;
+  border-right: 1px solid #ccc;
+}
+
+.stat-value3 {
+  text-align: center;
+  width: 160px;
+}
+
+.stat-value4 {
+  text-align: center;
+  width: 160px;
+  border-right: 1px solid #ccc;
+}
+
+.table-name {
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.table-title {
+  text-align: center;
+  margin-bottom: -3px;
+  margin-top: -7px;
+  font-size: 16px;
+  text-decoration: blink;
+}
+
+.extra-info {
+    border-bottom: solid 1px #b0b0b0;
+    overflow: hidden;
+    padding: 0 0 20px;
+}
+
+.brand-logo {
+    float: left;
+    height: 125px;
+    padding: 0 10px 0 0;
+    width: 50%;
+}
+
+.brand-logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.quicklinks {
+    margin: 0 0 0 50%;
+}
+
+.quicklinks p {
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.stat-list {
+    font-family: 'bentonsans',Helvetica,sans-serif;
+    margin: 20px 0 0;
+    width: 100%;
+}
+
+.pick_title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.drag_title {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 23px;
+}
+
+.pos_num  {
+  margin-top: 19px;
+  text-align: center;
+}
+
+.pos_num_help  {
+  margin-top: 30px;
+}
+
+#pick_input {
+  width: 230px;
+  text-align: center;
+  margin-top: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.center-button {
+  margin-left: 47%;
+}
+
+/*ANIMATION FOR THE DRAG AND DROP*/
+.blink_me {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 7;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: 7;
+
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 7;
+}
+
+@-moz-keyframes blinker {
+    0% { text-transform: uppercase; color: red; opacity: 1.0; }
+    50% { color: red; opacity: 0.0; }
+    100% { color: red; opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {
+    0% { text-transform: uppercase; color: red; opacity: 1.0; }
+    50% { color: red; opacity: 0.0; }
+    100% { color: red; opacity: 1.0; }
+}
+
+@keyframes blinker {
+    0% { text-transform: uppercase; color: red; opacity: 1.0; }
+    50% { color: red; opacity: 0.0; }
+    100% { color: red; opacity: 1.0; }
+}

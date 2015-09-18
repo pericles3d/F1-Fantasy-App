@@ -1,0 +1,311 @@
+main {
+  padding-top: 30px;
+}
+
+/*HEADER
+=======================*/
+header .navbar {
+  border-radius: 0;
+}
+
+/* BODY
+============================= */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body.full>section #conteudo-principal {
+    width: 944px;
+    float: none;
+    border-right: 0;
+}
+
+body>section #conteudo-principal {
+    width: 600px;
+    margin: 20px 0 0 22px;
+    padding: 0 21px 0 0;
+    float: left;
+}
+
+
+
+.classificacao table {
+    width: 100%;
+    margin: 0;
+    border: 1px solid #e6e6e6;
+    table-layout: auto;
+    transition: width .3s;
+    -webkit-transition: width .3s;
+    -moz-transition: width .3s;
+    -o-transition: width .3s;
+    -ms-transition: width .3s;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.classificacao table caption {
+    margin-bottom: 11px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.classificacao table thead th {
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+    font-size: 12px;
+    line-height: 1em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*add borders to the thead*/
+.classificacao table thead th+th {
+    border-left: 1px solid #e6e6e6;
+}
+
+/*color for the table titles*/
+.pg-color10 {
+    color: #000 !important;
+}
+
+/*color for the points*/
+.pg-color5 {
+    color: #666 !important;
+}
+
+/*color for driver names and total points*/
+.pg-color4, .h-pg-color4:hover {
+    color: #333 !important;
+}
+
+.classificacao table thead th.etapas {
+    height: 28px;
+    padding: 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.etapa {
+    padding-top: 10px;
+    border-left: 1px solid #e6e6e6;
+}
+
+.etapa .flag {
+    position: initial;
+    display: block;
+    margin: 8px auto 7px;
+}
+
+.posicao {
+    width: 45px;
+    font-weight: bold;
+}
+
+.classificacao table tbody tr:first-child td, .classificacao table tbody tr:first-child th {
+    border-top: 2px solid #ebebeb;
+}
+
+.classificacao table tbody tr td {
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    height: 60px;
+    border-top: 1px solid #ebebeb;
+}
+
+.classificacao table tbody tr td.competidor {
+    position: relative;
+    width: 172px;
+    text-align: left;
+    border-left-width: 3px;
+    padding: 0 7px;
+}
+
+/*country flags*/
+.flag.inglaterra {
+    background-position: -151px -56px;
+}
+
+.flag.alemanha {
+    background-position: -56px -9px;
+}
+
+.flag.brasil {
+    background-position: -198px -9px;
+}
+
+.flag.finlandia {
+    background-position: -9px -56px;
+}
+
+.flag.russia {
+    background-position: -151px -103px;
+}
+
+.flag.australia {
+    background-position: -104px -9px;
+}
+
+.flag.franca {
+    background-position: -56px -56px;
+}
+
+.flag.mexico {
+    background-position: -9px -103px;
+}
+
+.flag.holanda {
+    background-position: -104px -56px;
+}
+
+.flag.venezuela {
+    background-position: -293px -103px;
+}
+
+.flag.espanha {
+    background-position: -293px -9px;
+}
+
+.flag.suecia {
+    background-position: -198px -103px;
+}
+
+.flag.dinamarca {
+    background-position: -246px -9px;
+}
+
+.flag.malasia {
+    background-position: -56px -197px;
+}
+
+.flag.china {
+    background-position: -151px -150px;
+}
+
+.flag.bahrein {
+    background-position: -9px -150px;
+}
+
+.flag.monaco {
+    background-position: -104px -197px;
+}
+
+.flag.canada {
+    background-position: -104px -150px;
+}
+
+.flag.austria {
+    background-position: -151px -9px;
+}
+
+.flag.hungria {
+    background-position: -9px -197px;
+}
+
+.flag.belgica {
+    background-position: -56px -150px;
+}
+
+.flag.italia {
+    background-position: -246px -56px;
+}
+
+.flag.cingapura {
+    background-position: -198px -150px;
+}
+
+.flag.japao {
+    background-position: -293px -56px;
+}
+
+.flag.estados-unidos {
+    background-position: -293px -150px;
+}
+
+.flag.emirados-arabes {
+    background-position: -247px -150px;
+}
+
+.flag {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    margin-top: -12px;
+    width: 25px;
+    height: 25px;
+    background: url('http://imguol.com/c/esporte/f1/sprite.png?v2') -9px -9px transparent;
+    border-radius: 25px;
+}
+
+.f1CarIcon {
+  width: 70px;
+  height: 25px;
+}
+
+.competidor .flag+div {
+    margin-left: 31px;
+}
+
+.competidor span:first-child {
+    font-weight: bold;
+}
+
+.competidor span {
+    display: block;
+}
+
+.competidor span:first-child+span {
+    padding-top: 2px;
+}
+
+.total {
+    font-weight: bold;
+    width: 60px;
+}
+
+.pontos {
+    position: relative;
+    cursor: pointer;
+    width: 33px;
+}
+
+.classificacao table tbody tr td+td {
+    border-left: 1px solid #e6e6e6;
+}
+/* NGANIMATE
+============================= */
+
+/*show and hide */
+.show-hide-message.ng-hide-remove {
+  -webkit-animation:zoomIn 0.3s both ease;
+  -moz-animation:zoomIn 0.3s both ease;
+  animation:zoomIn 0.3s both ease;
+}
+
+
+
+/* ANIMATIONS
+============================= */
+.spinner {
+  animation:spin 1s infinite;
+  -webkit-animation:spin 1s infinite;
+  -moz-animation:spin 1s infinite;
+}
+
+@keyframes spin {
+  from { transform:rotate(0deg); }
+  to   { transform:rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+  from { -webkit-transform:rotate(0deg); }
+  to   { -webkit-transform:rotate(360deg); }
+}
+
+@-moz-keyframes spin {
+  from { -moz-transform:rotate(0deg); }
+  to   { -moz-transform:rotate(360deg); }
+}

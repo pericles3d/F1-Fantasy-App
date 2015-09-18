@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+<html ng-app="userCtrl" lang="en"> <!-- ng-app tells that this is an angular application and it chooses userCtrl-->
+    <meta charset="UTF-8">
+    <title>Formula 1 Hero</title>
+
+    <!-- CSS -->
+    <!-- load bootstrap from CDN and custom CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+
+</head>
+<body class="container">
+
+  <h1>{{user.userData.username}}</h1>
+  <p>{{user}}</p>
+
+
+  <table class="next-race">
+    <col width="110">
+    <col width="350">
+    <col width="300">
+    <col width="500">
+    <tbody>
+      <tr>
+         <th scope="row" class="next-title">
+           <span class="text">Next Race:</span>
+         </th>
+         <td class="race-country">Singapore <img class="flag2" src="https://www.formula1.com/content/fom-website/en/championship/races/2015/Singapore/_jcr_content/countryFlag.img.jpg/1423093148498.jpg"></td>
+         <td><h5><b><u>Starting Grid</u></b> Points Table</h5></td>
+         <td class="total-players">Total Players: {{sgPointsCtrl.users.length}}</td>
+       </tr>
+    </tbody>
+  </table>
+    <br>
+
+    <p class="text-center">This table shows the points that each driver "pays" for each position in the STARTING GRID. It is generated based on the <u>picks table</u> for this specific race.</p><br>
+
+    <!-- Search Bar -->
+    <section class="text-center">
+      <label>Search:</label>
+      <input type="text" ng-model="search">
+      <a href="/users/starting_grid_picks" class="btn btn-sm btn-info">
+        <i>Picks Table</i>
+      </a>
+    </section>
+    <br>
+
+    <!-- Table that will populate with our list of drivers -->
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th class="text-center" rowspan="2" ng-click="sgPointsCtrl.sortType = 'pos'; sgPointsCtrl.sortReverse = !sgPointsCtrl.sortReverse">Pos</th>
+                <th class="text-center" rowspan="2" ng-click="sgPointsCtrl.sortType = 'driver'; sgPointsCtrl.sortReverse = !sgPointsCtrl.sortReverse">Driver</th>
+                <th class="text-center" colspan="3">1st</th>
+                <th class="text-center" colspan="3">2nd</th>
+                <th class="text-center" colspan="3">3rd</th>
+                <th class="text-center" colspan="3">4th</th>
+                <th class="text-center" colspan="3">5th</th>
+                <th class="text-center" colspan="3">6th</th>
+                <th class="text-center" colspan="3">7th</th>
+                <th class="text-center" colspan="3">8th</th>
+                <th class="text-center" colspan="3">9th</th>
+                <th class="text-center" colspan="3">10th</th>
+            </tr>
+            <tr>
+                <th class="text-center">P</th>
+                <th class="text-center">N</th>
+                <th class="text-center">10</th>
+                <th class="text-center">P</th>
+                <th class="text-center">N</th>
+                <th class="text-center">10</th>
+                <th class="text-center">P</th>
+                <th class="text-center">N</th>
+                <th class="text-center">10</th>
+                <th class="text-center">P</th>
+                <th class="text-center">N</th>
+                <th class="text-center">10</th>
+                <th class="text-center">P</th>
+                <th class="text-center">N</th>
+                <th class="text-center">10</th>
+                <th class="text-center">P</th>
+                <th class="text-center">N</th>
+                <th class="text-center">10</th>
+                <th class="text-center">P</th>
+                <th class="text-center">N</th>
+                <th class="text-center">10</th>
+                <th class="text-center">P</th>
+                <th class="text-center">N</th>
+                <th class="text-center">10</th>
+                <th class="text-center">P</th>
+                <th class="text-center">N</th>
+                <th class="text-center">10</th>
+                <th class="text-center">P</th>
+                <th class="text-center">N</th>
+                <th class="text-center">10</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="driver in sgPointsCtrl.driversPoints | filter:search | orderBy: sgPointsCtrl.sortType:sgPointsCtrl.sortReverse">
+                <td class="text-center">{{driver.pos}}</td>
+                <td class="text-center">{{driver.driver}}</td>
+                <td class="text-center">{{driver.oneP}}</td>
+                <td class="text-center">{{driver.oneN}}</td>
+                <td class="text-center">{{driver.oneTen}}</td>
+                <td class="text-center">{{driver.twoP}}</td>
+                <td class="text-center">{{driver.twoN}}</td>
+                <td class="text-center">{{driver.twoTen}}</td>
+                <td class="text-center">{{driver.threeP}}</td>
+                <td class="text-center">{{driver.threeN}}</td>
+                <td class="text-center">{{driver.threeTen}}</td>
+                <td class="text-center">{{driver.fourP}}</td>
+                <td class="text-center">{{driver.fourN}}</td>
+                <td class="text-center">{{driver.fourTen}}</td>
+                <td class="text-center">{{driver.fiveP}}</td>
+                <td class="text-center">{{driver.fiveN}}</td>
+                <td class="text-center">{{driver.fiveTen}}</td>
+                <td class="text-center">{{driver.sixP}}</td>
+                <td class="text-center">{{driver.sixN}}</td>
+                <td class="text-center">{{driver.sixTen}}</td>
+                <td class="text-center">{{driver.sevenP}}</td>
+                <td class="text-center">{{driver.sevenN}}</td>
+                <td class="text-center">{{driver.sevenTen}}</td>
+                <td class="text-center">{{driver.eightP}}</td>
+                <td class="text-center">{{driver.eightN}}</td>
+                <td class="text-center">{{driver.eightTen}}</td>
+                <td class="text-center">{{driver.nineP}}</td>
+                <td class="text-center">{{driver.nineN}}</td>
+                <td class="text-center">{{driver.nineTen}}</td>
+                <td class="text-center">{{driver.tenP}}</td>
+                <td class="text-center">{{driver.tenN}}</td>
+                <td class="text-center">{{driver.tenTen}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+      <b>P: </b>points you get for a Perfect pick position<br>
+      <b>N: </b>points you get for a Neighboring pick position<br>
+      <b>10: </b>points you get for a pick among the top 10 positions
+    </p>
+
+</body>
+</html>

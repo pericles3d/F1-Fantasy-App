@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formula 1 Hero</title>
+
+    <!-- CSS -->
+    <!-- load bootstrap from CDN and custom CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  </head>
+  <body>
+    <section id="conteudo-principal">
+      <section class="classificacao">
+        <table id="pilots">
+          <caption class="pg-color10">Driver Standings</caption>
+          <thead>
+            <tr>
+              <th rowspan="2" colspan="2" class="col-full pg-color10">Position</th>
+              <th rowspan="2" class="col-full pg-color10">Points</th>
+              <th class="etapas pg-color10" colspan="19">Races</th>
+            </tr>
+            <tr class="pg-color10">
+              <th class="etapa"> 1 <div class="flag australia"></div></th>
+              <th class="etapa"> 2 <div class="flag malasia"></div></th>
+              <th class="etapa"> 3 <div class="flag china"></div></th>
+              <th class="etapa"> 4 <div class="flag bahrein"></div></th>
+              <th class="etapa"> 5 <div class="flag espanha"></div></th>
+              <th class="etapa"> 6 <div class="flag monaco"></div></th>
+              <th class="etapa"> 7 <div class="flag canada"></div></th>
+              <th class="etapa"> 8 <div class="flag austria"></div></th>
+              <th class="etapa"> 9 <div class="flag inglaterra"></div></th>
+              <th class="etapa"> 10 <div class="flag hungria"></div></th>
+              <th class="etapa"> 11 <div class="flag belgica"></div></th>
+              <th class="etapa"> 12 <div class="flag italia"></div></th>
+              <th class="etapa"> 13 <div class="flag cingapura"></div></th>
+              <th class="etapa"> 14 <div class="flag japao"></div></th>
+              <th class="etapa"> 15 <div class="flag russia"></div></th>
+              <th class="etapa"> 16 <div class="flag estados-unidos"></div></th>
+              <th class="etapa"> 17 <div class="flag mexico"></div></th>
+              <th class="etapa"> 18 <div class="flag brasil"></div></th>
+              <th class="etapa"> 19 <div class="flag emirados-arabes"></div></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">1</td>
+              <td class="competidor">
+                <div class="flag inglaterra" title="Inglaterra"></div>
+                <div class="pg-color4">
+                  <span>Hamilton</span>
+                  <span>Mercedes</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 227 </td>
+              <td class="pontos"> 25 </td>
+              <td class="pontos"> 18 </td>
+              <td class="pontos"> 25 </td>
+              <td class="pontos"> 25 </td>
+              <td class="pontos"> 18 </td>
+              <td class="pontos"> 15 </td>
+              <td class="pontos"> 25 </td>
+              <td class="pontos"> 18 </td>
+              <td class="pontos"> 25 </td>
+              <td class="pontos"> 8 </td>
+              <td class="pontos"> 25 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">2</td>
+              <td class="competidor">
+                <div class="flag alemanha" title="Alemanha"></div>
+                <div class="pg-color4">
+                  <span>Rosberg</span>
+                  <span>Mercedes</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 199 </td>
+              <td class="pontos"> 18 </td>
+              <td class="pontos"> 15 </td>
+              <td class="pontos"> 18 </td>
+              <td class="pontos"> 15 </td>
+              <td class="pontos"> 25 </td>
+              <td class="pontos"> 25 </td>
+              <td class="pontos"> 18 </td>
+              <td class="pontos"> 25 </td>
+              <td class="pontos"> 18 </td>
+              <td class="pontos"> 4 </td>
+              <td class="pontos"> 18 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">3</td>
+              <td class="competidor">
+                <div class="flag alemanha" title="Alemanha"></div>
+                <div class="pg-color4">
+                  <span>Vettel</span>
+                  <span>Ferrari</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 160 </td>
+              <td class="pontos"> 15 </td>
+              <td class="pontos"> 25 </td>
+              <td class="pontos"> 15 </td>
+              <td class="pontos"> 10 </td>
+              <td class="pontos"> 15 </td>
+              <td class="pontos"> 18 </td>
+              <td class="pontos"> 10 </td>
+              <td class="pontos"> 12 </td>
+              <td class="pontos"> 15 </td>
+              <td class="pontos"> 25 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">4</td>
+              <td class="competidor">
+                <div class="flag finlandia" title="Finlândia"></div>
+                <div class="pg-color4">
+                  <span>Räikkönen</span>
+                  <span>Ferrari</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 82 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 12 </td>
+              <td class="pontos"> 12 </td>
+              <td class="pontos"> 18 </td>
+              <td class="pontos"> 10 </td>
+              <td class="pontos"> 8 </td>
+              <td class="pontos"> 12 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 4 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 6 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">5</td>
+              <td class="competidor">
+                <div class="flag brasil" title="Brasil"></div>
+                <div class="pg-color4">
+                  <span>Massa</span>
+                  <span>Williams</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 82 </td>
+              <td class="pontos"> 12 </td>
+              <td class="pontos"> 8 </td>
+              <td class="pontos"> 10 </td>
+              <td class="pontos"> 1 </td>
+              <td class="pontos"> 8 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 8 </td>
+              <td class="pontos"> 15 </td>
+              <td class="pontos"> 12 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 8 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">6</td>
+              <td class="competidor">
+                <div class="flag finlandia" title="Finlândia"></div>
+                <div class="pg-color4">
+                  <span>Bottas</span>
+                  <span>Williams</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 79 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> 10 </td>
+              <td class="pontos"> 8 </td>
+              <td class="pontos"> 12 </td>
+              <td class="pontos"> 12 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 15 </td>
+              <td class="pontos"> 10 </td>
+              <td class="pontos"> 10 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 2 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">7</td>
+              <td class="competidor">
+                <div class="flag russia" title="Rússia"></div>
+                <div class="pg-color4">
+                  <span>Kvyat</span>
+                  <span>Red Bull</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 57 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 2 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 2 </td>
+              <td class="pontos"> 1 </td>
+              <td class="pontos"> 12 </td>
+              <td class="pontos"> 2 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 8 </td>
+              <td class="pontos"> 18 </td>
+              <td class="pontos"> 12 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">8</td>
+              <td class="competidor">
+                <div class="flag australia" title="Austrália"></div>
+                <div class="pg-color4">
+                  <span>Ricciardo</span>
+                  <span>Red Bull</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 51 </td>
+              <td class="pontos"> 8 </td>
+              <td class="pontos"> 1 </td>
+              <td class="pontos"> 2 </td>
+              <td class="pontos"> 8 </td>
+              <td class="pontos"> 6 </td>
+              <td class="pontos"> 10 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 1 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 15 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">9</td>
+              <td class="competidor">
+                <div class="flag franca" title="França"></div>
+                <div class="pg-color4">
+                  <span>Grosjean</span>
+                  <span>Lotus</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 38 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 6 </td>
+              <td class="pontos"> 6 </td>
+              <td class="pontos"> 4 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 1 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 6 </td>
+              <td class="pontos"> 15 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">10</td>
+              <td class="competidor">
+                <div class="flag holanda" title="Holanda"></div>
+                <div class="pg-color4">
+                  <span>Verstappen</span>
+                  <span>Toro Rosso</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 26 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 6 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 4 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 12 </td>
+              <td class="pontos"> 4 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">11</td>
+              <td class="competidor">
+                <div class="flag mexico" title="México"></div>
+                <div class="pg-color4">
+                  <span>Pérez</span>
+                  <span>Force India</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 25 </td>
+              <td class="pontos"> 1 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 4 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 6 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 2 </td>
+              <td class="pontos"> 2 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 10 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">12</td>
+              <td class="competidor">
+                <div class="flag alemanha" title="Alemanha"></div>
+                <div class="pg-color4">
+                  <span>Hülkenberg</span>
+                  <span>Force India</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 24 </td>
+              <td class="pontos"> 6 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 4 </td>
+              <td class="pontos"> 8 </td>
+              <td class="pontos"> 6 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">13</td>
+              <td class="competidor">
+                <div class="flag brasil" title="Brasil"></div>
+                <div class="pg-color4">
+                  <span>Nasr</span>
+                  <span>Sauber</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 16 </td>
+              <td class="pontos"> 10 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 4 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 2 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">14</td>
+              <td class="competidor">
+                <div class="flag venezuela" title="Venezuela"></div>
+                <div class="pg-color4">
+                  <span>Maldonado</span>
+                  <span>Lotus</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 12 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 6 </td>
+              <td class="pontos"> 6 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">15</td>
+              <td class="competidor">
+                <div class="flag espanha" title="Espanha"></div>
+                <div class="pg-color4">
+                  <span>Alonso</span>
+                  <span>McLaren</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 11 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 1 </td>
+              <td class="pontos"> 10 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">16</td>
+              <td class="competidor">
+                <div class="flag espanha" title="Espanha"></div>
+                <div class="pg-color4">
+                  <span>Sainz Jr.</span>
+                  <span>Toro Rosso</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 9 </td>
+              <td class="pontos"> 2 </td>
+              <td class="pontos"> 4 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 2 </td>
+              <td class="pontos"> 1 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">17</td>
+              <td class="competidor">
+                <div class="flag suecia" title="Suécia"></div>
+                <div class="pg-color4">
+                  <span>Ericsson</span>
+                  <span>Sauber</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 7 </td>
+              <td class="pontos"> 4 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 1 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 1 </td>
+              <td class="pontos"> 1 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">18</td>
+              <td class="competidor">
+                <div class="flag inglaterra" title="Inglaterra"></div>
+                <div class="pg-color4">
+                  <span>Button</span>
+                  <span>McLaren</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 6 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 4 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 2 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">19</td>
+              <td class="competidor">
+                <div class="flag espanha" title="Espanha"></div>
+                <div class="pg-color4">
+                  <span>Merhi</span>
+                  <span>Manor</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">20</td>
+              <td class="competidor">
+                <div class="flag inglaterra" title="Inglaterra"></div>
+                <div class="pg-color4">
+                  <span>Stevens</span>
+                  <span>Manor</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 0 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            <tr class="pg-color5">
+              <td class="posicao pg-color10">21</td>
+              <td class="competidor">
+                <div class="flag dinamarca" title="Dinamarca"></div>
+                <div class="pg-color4">
+                  <span>Magnussen</span>
+                  <span>McLaren</span>
+                </div>
+              </td>
+              <td class="pg-color4 total"> 0 </td>
+              <td class="pontos"> 0 </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+              <td class="pontos"> - </td>
+            </tr>
+            </tbody>
+        </table>
+      </section>
+    </section>
+  </body>
+</html>

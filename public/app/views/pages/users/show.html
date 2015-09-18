@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html ng-app="userApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Formula 1 Hero</title>
+
+    <!-- CSS -->
+    <!-- load bootstrap from CDN and custom CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+
+  </head>
+  <body>
+
+    <!-- DELETE THIS WHEN DONE. JUST FOR REFERENCE -->
+    <!-- <h1>{{user.userData.username}}</h1>
+    <p>{{user}}</p> -->
+
+    <section class="profile">
+      <img class="picture" src="../../../../assets/img/icons/mDefaultAvatar.png" alt="" class="image fom-image">
+       <figcaption class="driver-details">
+         <div class="user_name">
+           <span>{{user.userData.username}}</span>
+              <img class="flag2" src="https://www.formula1.com/content/fom-website/en/championship/drivers/felipe-massa/_jcr_content/countryFlag.img.png" alt="countryFlag" data-emptytext="Image">
+        </div>
+          <table class="user-stat-list">
+            <col width="120">
+            <col width="80">
+            <tbody>
+              <tr>
+                 <th scope="row" class="stat-key">
+                   <span class="text">Position</span>
+                 </th>
+                 <td class="stat-value">1st</td>
+               </tr>
+               <tr>
+                 <th scope="row" class="stat-key">
+                    <span class="text">Points</span>
+                 </th>
+                 <td class="stat-value">1,378</td>
+               </tr>
+               <tr>
+                 <th scope="row" class="stat-key">
+                    <span class="text">Last Race Position</span>
+                 </th>
+                 <td class="stat-value">10th</td>
+               </tr>
+               <tr>
+                 <th scope="row" class="stat-key">
+                    <span class="text">Last Race Points</span>
+                 </th>
+                 <td class="stat-value">121</td>
+               </tr>
+             </tbody>
+           </table>
+      </figcaption>
+    </section>
+    <section class="stats">
+      <div class="stats-list-component driver-stats responsive-element lt704 lt736 lt768 lt800 lt832 lt864 lt896 lt928 lt960 lt992 lt1024">
+        <section class="extra-info">
+            <table class="next-race">
+              <col width="110">
+              <col width="200">
+              <tbody>
+                <tr>
+                   <th scope="row" class="next-title">
+                     <span class="text">Next Race:</span>
+                   </th>
+                   <td class="race-country" ><a href="/users/starting_grid_picks">Singapore <img class="flag2" src="https://www.formula1.com/content/fom-website/en/championship/races/2015/Singapore/_jcr_content/countryFlag.img.jpg/1423093148498.jpg"></a></td>
+                 </tr>
+              </tbody>
+            </table>
+
+          <div class="brand-logo">
+            <img src="../../../assets/img/tracks/singapore-track.png" alt="HAM.png" class="cq-dd-image" data-emptytext="Image">
+          </div>
+           <div class="quicklinks">
+            <p>
+              <a href="https://www.formula1.com/content/fom-website/en/championship/drivers/lewis-hamilton/Biography.html" target="_self" class=" text-link">Driver biography</a>
+            </p>
+            <p>
+              <a href="https://www.formula1.com/content/fom-website/en/championship/drivers/lewis-hamilton/Year_by_Year.html" target="_self" class=" text-link">Year-by-year profile</a>
+            </p>
+            <p>
+              <a href="http://f1store.formula1.com/stores/f1/en/search/hamilton?portal=ABSP8TIJ&amp;CMP=PSC-ABSP8TIJ" target="_blank" class=" text-link">Official merchandise</a>
+            </p>
+           </div>
+         </section>
+       <table class="stat-list">
+         <col width="110">
+         <col width="200">
+         <col width="110">
+         <col width="200">
+         <tbody>
+            <tr>
+              <th class="table-name" colspan="4">Pericles Race Picks for Brazil GP</th>
+            </tr>
+            <tr>
+              <th class="table-title" colspan="2">Starting Grid</th>
+              <th class="table-title" colspan="2">Race Results</th>
+            </tr>
+            <tr class="stat-picks">
+              <th class="stat-key2">
+                <span class="text">1st</span>
+              </th>
+              <td class="stat-value2">{{user.userData.picks[0].starting_grid[0]}}</td>
+              <th class="stat-key2">
+                <span class="text">1st</span>
+              </th>
+              <td class="stat-value">{{user.userData.picks[0].race_result[0]}}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="stat-key2">
+                 <span class="text">2nd</span>
+              </th>
+              <td class="stat-value2">{{user.userData.picks[0].starting_grid[1]}}</td>
+              <th scope="row" class="stat-key2">
+                 <span class="text">2nd</span>
+              </th>
+              <td class="stat-value">{{user.userData.picks[0].race_result[1]}}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="stat-key2">
+                 <span class="text">3rd</span>
+              </th>
+              <td class="stat-value2">{{user.userData.picks[0].starting_grid[2]}}</td>
+              <th scope="row" class="stat-key2">
+                 <span class="text">3rd</span>
+              </th>
+              <td class="stat-value">{{user.userData.picks[0].race_result[2]}}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="stat-key2">
+                 <span class="text">4th</span>
+              </th>
+              <td class="stat-value2">{{user.userData.picks[0].starting_grid[3]}}</td>
+              <th scope="row" class="stat-key2">
+                 <span class="text">4th</span>
+              </th>
+              <td class="stat-value">{{user.userData.picks[0].race_result[3]}}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="stat-key2">
+                 <span class="text">5th</span>
+               </th>
+               <td class="stat-value2">{{user.userData.picks[0].starting_grid[4]}}</td>
+              <th scope="row" class="stat-key2">
+                 <span class="text">5th</span>
+               </th>
+               <td class="stat-value">{{user.userData.picks[0].race_result[4]}}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="stat-key2">
+                 <span class="text">6th</span>
+              </th>
+              <td class="stat-value2">{{user.userData.picks[0].starting_grid[5]}}</td>
+              <th scope="row" class="stat-key2">
+                 <span class="text">6th</span>
+              </th>
+              <td class="stat-value">{{user.userData.picks[0].race_result[5]}}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="stat-key2">
+                 <span class="text">7th</span>
+              </th>
+              <td class="stat-value2">{{user.userData.picks[0].starting_grid[6]}}</td>
+              <th scope="row" class="stat-key2">
+                 <span class="text">7th</span>
+              </th>
+              <td class="stat-value">{{user.userData.picks[0].race_result[6]}}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="stat-key2">
+                 <span class="text">8th</span>
+              </th>
+              <td class="stat-value2">{{user.userData.picks[0].starting_grid[7]}}</td>
+              <th scope="row" class="stat-key2">
+                 <span class="text">8th</span>
+              </th>
+              <td class="stat-value">{{user.userData.picks[0].race_result[7]}}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="stat-key2">
+                 <span class="text">9th</span>
+              </th>
+              <td class="stat-value2">{{user.userData.picks[0].starting_grid[8]}}</td>
+              <th scope="row" class="stat-key2">
+                 <span class="text">9th</span>
+              </th>
+              <td class="stat-value">{{user.userData.picks[0].race_result[8]}}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="stat-key2">
+                 <span class="text">10th</span>
+              </th>
+              <td class="stat-value2">{{user.userData.picks[0].starting_grid[9]}}</td>
+              <th scope="row" class="stat-key2">
+                 <span class="text">10th</span>
+              </th>
+              <td class="stat-value">{{user.userData.picks[0].race_result[9]}}</td>
+            </tr>
+            <tr>
+              <th class="table-name" colspan="4">
+                <a href="/users/{{user.userData._id}}/picks" class="btn btn-sm btn-info">
+                  <i class="glyphicon glyphicon-pencil"> Edit</i>
+                </a>
+            </th>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</body>
