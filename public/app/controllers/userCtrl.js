@@ -384,26 +384,46 @@ vm.submitPicks = function(){
 						//Percentage of picks per specific grid position
 
 						var sgPercentage = {
-							Hamilton:   { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Rosberg:    { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Vettel:     { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Raikkonen:  { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Massa:      { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Bottas:     { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Kvyat:      { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Ricciardo:  { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Perez:      { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Hulkenberg: { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Grosjean:   { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Maldonado:  { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Verstappen: { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Sainz:      { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Ericsson:   { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Nasr:       { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Alonso:     { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Button:     { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Stevens:    { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
-							Merhi:      { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 }
+							Hamilton:   { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Rosberg:    { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Vettel:     { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Raikkonen:  { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Massa:      { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Bottas:     { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Kvyat:      { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Ricciardo:  { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Perez:      { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Hulkenberg: { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Grosjean:   { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Maldonado:  { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Verstappen: { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Sainz:      { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Ericsson:   { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Nasr:       { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Alonso:     { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Button:     { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Stevens:    { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							Merhi:      { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
 						};
 
 						//var dr goes from 0 to 19 and represents the driver name, which is a key in the sgPercentage object
@@ -414,8 +434,8 @@ vm.submitPicks = function(){
 						//The second part with Math.round finds the starting grid position "sg" from 0 to 9 and the driver name "dr" from 0 to 19 and divides it by the number of users to get a percentage.
 						console.log(counts[Object.keys(counts)[1]][Object.keys(counts[Object.keys(counts)[1]])[19]]);//This will get Sg02 and Merhi. First number goes from 0 to 9 and second goes from 0 to 19
 
-						var dr = 0;
-						var sg = 0;
+						var dr = 0; //stands for driver name and it goes from 0 to 19
+						var sg = 0; //stands for strating grid position and it goes from 0 to 9
 						while (dr < 20) {
 							while (sg < 10){
 								sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[sg]] = Math.round((counts[Object.keys(counts)[sg]][Object.keys(counts[Object.keys(counts)[sg]])[dr]]/vm.users.length)*100) || 0;
@@ -427,449 +447,41 @@ vm.submitPicks = function(){
 
 						console.log(sgPercentage);
 
+        //======================================================
 
 						//Driver Pick Status
 						//Hamilton
-						var hamiltonSg01PickStatus = "";
-						if(hamiltonSg01Percent === 0){ hamiltonSg01PickStatus = "Zero";} else if (hamiltonSg01Percent >= 20){ hamiltonSg01PickStatus = "High";} else if (hamiltonSg01Percent >= 10){ hamiltonSg01PickStatus = "Medium";}  else { hamiltonSg01PickStatus = "Low";}
-						var hamiltonSg02PickStatus = "";
-						if(hamiltonSg02Percent === 0){ hamiltonSg02PickStatus = "Zero";} else if (hamiltonSg02Percent >= 20){ hamiltonSg02PickStatus = "High";} else if (hamiltonSg02Percent >= 10){ hamiltonSg02PickStatus = "Medium";}  else { hamiltonSg02PickStatus = "Low";}
-						var hamiltonSg03PickStatus = "";
-						if(hamiltonSg03Percent === 0){ hamiltonSg03PickStatus = "Zero";} else if (hamiltonSg03Percent >= 20){ hamiltonSg03PickStatus = "High";} else if (hamiltonSg03Percent >= 10){ hamiltonSg03PickStatus = "Medium";}  else { hamiltonSg03PickStatus = "Low";}
-						var hamiltonSg04PickStatus = "";
-						if(hamiltonSg04Percent === 0){ hamiltonSg04PickStatus = "Zero";} else if (hamiltonSg04Percent >= 20){ hamiltonSg04PickStatus = "High";} else if (hamiltonSg04Percent >= 10){ hamiltonSg04PickStatus = "Medium";}  else { hamiltonSg04PickStatus = "Low";}
-						var hamiltonSg05PickStatus = "";
-						if(hamiltonSg05Percent === 0){ hamiltonSg05PickStatus = "Zero";} else if (hamiltonSg05Percent >= 20){ hamiltonSg05PickStatus = "High";} else if (hamiltonSg05Percent >= 10){ hamiltonSg05PickStatus = "Medium";}  else { hamiltonSg05PickStatus = "Low";}
-						var hamiltonSg06PickStatus = "";
-						if(hamiltonSg06Percent === 0){ hamiltonSg06PickStatus = "Zero";} else if (hamiltonSg06Percent >= 20){ hamiltonSg06PickStatus = "High";} else if (hamiltonSg06Percent >= 10){ hamiltonSg06PickStatus = "Medium";}  else { hamiltonSg06PickStatus = "Low";}
-						var hamiltonSg07PickStatus = "";
-						if(hamiltonSg07Percent === 0){ hamiltonSg07PickStatus = "Zero";} else if (hamiltonSg07Percent >= 20){ hamiltonSg07PickStatus = "High";} else if (hamiltonSg07Percent >= 10){ hamiltonSg07PickStatus = "Medium";}  else { hamiltonSg07PickStatus = "Low";}
-						var hamiltonSg08PickStatus = "";
-						if(hamiltonSg08Percent === 0){ hamiltonSg08PickStatus = "Zero";} else if (hamiltonSg08Percent >= 20){ hamiltonSg08PickStatus = "High";} else if (hamiltonSg08Percent >= 10){ hamiltonSg08PickStatus = "Medium";}  else { hamiltonSg08PickStatus = "Low";}
-						var hamiltonSg09PickStatus = "";
-						if(hamiltonSg09Percent === 0){ hamiltonSg09PickStatus = "Zero";} else if (hamiltonSg09Percent >= 20){ hamiltonSg09PickStatus = "High";} else if (hamiltonSg09Percent >= 10){ hamiltonSg09PickStatus = "Medium";}  else { hamiltonSg09PickStatus = "Low";}
-						var hamiltonSg10PickStatus = "";
-						if(hamiltonSg10Percent === 0){ hamiltonSg10PickStatus = "Zero";} else if (hamiltonSg10Percent >= 20){ hamiltonSg10PickStatus = "High";} else if (hamiltonSg10Percent >= 10){ hamiltonSg10PickStatus = "Medium";}  else { hamiltonSg10PickStatus = "Low";}
+						dr = 0;
+						sg = 0;
+						var ps = 10; //ps stands for pick status and it goes from 10 to 19 in the sgPercentage object
 
-						//Rosberg
-						var rosbergSg01PickStatus = "";
-						if(rosbergSg01Percent === 0){ rosbergSg01PickStatus = "Zero";} else if (rosbergSg01Percent >= 20){ rosbergSg01PickStatus = "High";} else if (rosbergSg01Percent >= 10){ rosbergSg01PickStatus = "Medium";}  else { rosbergSg01PickStatus = "Low";}
-						var rosbergSg02PickStatus = "";
-						if(rosbergSg02Percent === 0){ rosbergSg02PickStatus = "Zero";} else if (rosbergSg02Percent >= 20){ rosbergSg02PickStatus = "High";} else if (rosbergSg02Percent >= 10){ rosbergSg02PickStatus = "Medium";}  else { rosbergSg02PickStatus = "Low";}
-						var rosbergSg03PickStatus = "";
-						if(rosbergSg03Percent === 0){ rosbergSg03PickStatus = "Zero";} else if (rosbergSg03Percent >= 20){ rosbergSg03PickStatus = "High";} else if (rosbergSg03Percent >= 10){ rosbergSg03PickStatus = "Medium";}  else { rosbergSg03PickStatus = "Low";}
-						var rosbergSg04PickStatus = "";
-						if(rosbergSg04Percent === 0){ rosbergSg04PickStatus = "Zero";} else if (rosbergSg04Percent >= 20){ rosbergSg04PickStatus = "High";} else if (rosbergSg04Percent >= 10){ rosbergSg04PickStatus = "Medium";}  else { rosbergSg04PickStatus = "Low";}
-						var rosbergSg05PickStatus = "";
-						if(rosbergSg05Percent === 0){ rosbergSg05PickStatus = "Zero";} else if (rosbergSg05Percent >= 20){ rosbergSg05PickStatus = "High";} else if (rosbergSg05Percent >= 10){ rosbergSg05PickStatus = "Medium";}  else { rosbergSg05PickStatus = "Low";}
-						var rosbergSg06PickStatus = "";
-						if(rosbergSg06Percent === 0){ rosbergSg06PickStatus = "Zero";} else if (rosbergSg06Percent >= 20){ rosbergSg06PickStatus = "High";} else if (rosbergSg06Percent >= 10){ rosbergSg06PickStatus = "Medium";}  else { rosbergSg06PickStatus = "Low";}
-						var rosbergSg07PickStatus = "";
-						if(rosbergSg07Percent === 0){ rosbergSg07PickStatus = "Zero";} else if (rosbergSg07Percent >= 20){ rosbergSg07PickStatus = "High";} else if (rosbergSg07Percent >= 10){ rosbergSg07PickStatus = "Medium";}  else { rosbergSg07PickStatus = "Low";}
-						var rosbergSg08PickStatus = "";
-						if(rosbergSg08Percent === 0){ rosbergSg08PickStatus = "Zero";} else if (rosbergSg08Percent >= 20){ rosbergSg08PickStatus = "High";} else if (rosbergSg08Percent >= 10){ rosbergSg08PickStatus = "Medium";}  else { rosbergSg08PickStatus = "Low";}
-						var rosbergSg09PickStatus = "";
-						if(rosbergSg09Percent === 0){ rosbergSg09PickStatus = "Zero";} else if (rosbergSg09Percent >= 20){ rosbergSg09PickStatus = "High";} else if (rosbergSg09Percent >= 10){ rosbergSg09PickStatus = "Medium";}  else { rosbergSg09PickStatus = "Low";}
-						var rosbergSg10PickStatus = "";
-						if(rosbergSg10Percent === 0){ rosbergSg10PickStatus = "Zero";} else if (rosbergSg10Percent >= 20){ rosbergSg10PickStatus = "High";} else if (rosbergSg10Percent >= 10){ rosbergSg10PickStatus = "Medium";}  else { rosbergSg10PickStatus = "Low";}
+						while (dr < 20){
+							while (sg < 10){
+								if(sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[sg]] === 0){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] = "Zero";
+								} else if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[sg]] >= 20){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] = "High";
+								} else if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[sg]] >= 10){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] = "Medium";
+								} else {
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] = "Low";
+								}
+								sg ++;
+								ps ++;
+							}
+							sg = 0;
+							ps = 10;
+							dr++;
+						}
 
-						//Vettel
-						var vettelSg01PickStatus = "";
-						if(vettelSg01Percent === 0){ vettelSg01PickStatus = "Zero";} else if (vettelSg01Percent >= 20){ vettelSg01PickStatus = "High";} else if (vettelSg01Percent >= 10){ vettelSg01PickStatus = "Medium";}  else { vettelSg01PickStatus = "Low";}
-						var vettelSg02PickStatus = "";
-						if(vettelSg02Percent === 0){ vettelSg02PickStatus = "Zero";} else if (vettelSg02Percent >= 20){ vettelSg02PickStatus = "High";} else if (vettelSg02Percent >= 10){ vettelSg02PickStatus = "Medium";}  else { vettelSg02PickStatus = "Low";}
-						var vettelSg03PickStatus = "";
-						if(vettelSg03Percent === 0){ vettelSg03PickStatus = "Zero";} else if (vettelSg03Percent >= 20){ vettelSg03PickStatus = "High";} else if (vettelSg03Percent >= 10){ vettelSg03PickStatus = "Medium";}  else { vettelSg03PickStatus = "Low";}
-						var vettelSg04PickStatus = "";
-						if(vettelSg04Percent === 0){ vettelSg04PickStatus = "Zero";} else if (vettelSg04Percent >= 20){ vettelSg04PickStatus = "High";} else if (vettelSg04Percent >= 10){ vettelSg04PickStatus = "Medium";}  else { vettelSg04PickStatus = "Low";}
-						var vettelSg05PickStatus = "";
-						if(vettelSg05Percent === 0){ vettelSg05PickStatus = "Zero";} else if (vettelSg05Percent >= 20){ vettelSg05PickStatus = "High";} else if (vettelSg05Percent >= 10){ vettelSg05PickStatus = "Medium";}  else { vettelSg05PickStatus = "Low";}
-						var vettelSg06PickStatus = "";
-						if(vettelSg06Percent === 0){ vettelSg06PickStatus = "Zero";} else if (vettelSg06Percent >= 20){ vettelSg06PickStatus = "High";} else if (vettelSg06Percent >= 10){ vettelSg06PickStatus = "Medium";}  else { vettelSg06PickStatus = "Low";}
-						var vettelSg07PickStatus = "";
-						if(vettelSg07Percent === 0){ vettelSg07PickStatus = "Zero";} else if (vettelSg07Percent >= 20){ vettelSg07PickStatus = "High";} else if (vettelSg07Percent >= 10){ vettelSg07PickStatus = "Medium";}  else { vettelSg07PickStatus = "Low";}
-						var vettelSg08PickStatus = "";
-						if(vettelSg08Percent === 0){ vettelSg08PickStatus = "Zero";} else if (vettelSg08Percent >= 20){ vettelSg08PickStatus = "High";} else if (vettelSg08Percent >= 10){ vettelSg08PickStatus = "Medium";}  else { vettelSg08PickStatus = "Low";}
-						var vettelSg09PickStatus = "";
-						if(vettelSg09Percent === 0){ vettelSg09PickStatus = "Zero";} else if (vettelSg09Percent >= 20){ vettelSg09PickStatus = "High";} else if (vettelSg09Percent >= 10){ vettelSg09PickStatus = "Medium";}  else { vettelSg09PickStatus = "Low";}
-						var vettelSg10PickStatus = "";
-						if(vettelSg10Percent === 0){ vettelSg10PickStatus = "Zero";} else if (vettelSg10Percent >= 20){ vettelSg10PickStatus = "High";} else if (vettelSg10Percent >= 10){ vettelSg10PickStatus = "Medium";}  else { vettelSg10PickStatus = "Low";}
+						console.log(sgPercentage);
 
-						//Raikkonen
-						var raikkonenSg01PickStatus = "";
-						if(raikkonenSg01Percent === 0){ raikkonenSg01PickStatus = "Zero";} else if (raikkonenSg01Percent >= 20){ raikkonenSg01PickStatus = "High";} else if (raikkonenSg01Percent >= 10){ raikkonenSg01PickStatus = "Medium";}  else { raikkonenSg01PickStatus = "Low";}
-						var raikkonenSg02PickStatus = "";
-						if(raikkonenSg02Percent === 0){ raikkonenSg02PickStatus = "Zero";} else if (raikkonenSg02Percent >= 20){ raikkonenSg02PickStatus = "High";} else if (raikkonenSg02Percent >= 10){ raikkonenSg02PickStatus = "Medium";}  else { raikkonenSg02PickStatus = "Low";}
-						var raikkonenSg03PickStatus = "";
-						if(raikkonenSg03Percent === 0){ raikkonenSg03PickStatus = "Zero";} else if (raikkonenSg03Percent >= 20){ raikkonenSg03PickStatus = "High";} else if (raikkonenSg03Percent >= 10){ raikkonenSg03PickStatus = "Medium";}  else { raikkonenSg03PickStatus = "Low";}
-						var raikkonenSg04PickStatus = "";
-						if(raikkonenSg04Percent === 0){ raikkonenSg04PickStatus = "Zero";} else if (raikkonenSg04Percent >= 20){ raikkonenSg04PickStatus = "High";} else if (raikkonenSg04Percent >= 10){ raikkonenSg04PickStatus = "Medium";}  else { raikkonenSg04PickStatus = "Low";}
-						var raikkonenSg05PickStatus = "";
-						if(raikkonenSg05Percent === 0){ raikkonenSg05PickStatus = "Zero";} else if (raikkonenSg05Percent >= 20){ raikkonenSg05PickStatus = "High";} else if (raikkonenSg05Percent >= 10){ raikkonenSg05PickStatus = "Medium";}  else { raikkonenSg05PickStatus = "Low";}
-						var raikkonenSg06PickStatus = "";
-						if(raikkonenSg06Percent === 0){ raikkonenSg06PickStatus = "Zero";} else if (raikkonenSg06Percent >= 20){ raikkonenSg06PickStatus = "High";} else if (raikkonenSg06Percent >= 10){ raikkonenSg06PickStatus = "Medium";}  else { raikkonenSg06PickStatus = "Low";}
-						var raikkonenSg07PickStatus = "";
-						if(raikkonenSg07Percent === 0){ raikkonenSg07PickStatus = "Zero";} else if (raikkonenSg07Percent >= 20){ raikkonenSg07PickStatus = "High";} else if (raikkonenSg07Percent >= 10){ raikkonenSg07PickStatus = "Medium";}  else { raikkonenSg07PickStatus = "Low";}
-						var raikkonenSg08PickStatus = "";
-						if(raikkonenSg08Percent === 0){ raikkonenSg08PickStatus = "Zero";} else if (raikkonenSg08Percent >= 20){ raikkonenSg08PickStatus = "High";} else if (raikkonenSg08Percent >= 10){ raikkonenSg08PickStatus = "Medium";}  else { raikkonenSg08PickStatus = "Low";}
-						var raikkonenSg09PickStatus = "";
-						if(raikkonenSg09Percent === 0){ raikkonenSg09PickStatus = "Zero";} else if (raikkonenSg09Percent >= 20){ raikkonenSg09PickStatus = "High";} else if (raikkonenSg09Percent >= 10){ raikkonenSg09PickStatus = "Medium";}  else { raikkonenSg09PickStatus = "Low";}
-						var raikkonenSg10PickStatus = "";
-						if(raikkonenSg10Percent === 0){ raikkonenSg10PickStatus = "Zero";} else if (raikkonenSg10Percent >= 20){ raikkonenSg10PickStatus = "High";} else if (raikkonenSg10Percent >= 10){ raikkonenSg10PickStatus = "Medium";}  else { raikkonenSg10PickStatus = "Low";}
-
-						//Massa
-						var massaSg01PickStatus = "";
-						if(massaSg01Percent === 0){ massaSg01PickStatus = "Zero";} else if (massaSg01Percent >= 20){ massaSg01PickStatus = "High";} else if (massaSg01Percent >= 10){ massaSg01PickStatus = "Medium";}  else { massaSg01PickStatus = "Low";}
-						var massaSg02PickStatus = "";
-						if(massaSg02Percent === 0){ massaSg02PickStatus = "Zero";} else if (massaSg02Percent >= 20){ massaSg02PickStatus = "High";} else if (massaSg02Percent >= 10){ massaSg02PickStatus = "Medium";}  else { massaSg02PickStatus = "Low";}
-						var massaSg03PickStatus = "";
-						if(massaSg03Percent === 0){ massaSg03PickStatus = "Zero";} else if (massaSg03Percent >= 20){ massaSg03PickStatus = "High";} else if (massaSg03Percent >= 10){ massaSg03PickStatus = "Medium";}  else { massaSg03PickStatus = "Low";}
-						var massaSg04PickStatus = "";
-						if(massaSg04Percent === 0){ massaSg04PickStatus = "Zero";} else if (massaSg04Percent >= 20){ massaSg04PickStatus = "High";} else if (massaSg04Percent >= 10){ massaSg04PickStatus = "Medium";}  else { massaSg04PickStatus = "Low";}
-						var massaSg05PickStatus = "";
-						if(massaSg05Percent === 0){ massaSg05PickStatus = "Zero";} else if (massaSg05Percent >= 20){ massaSg05PickStatus = "High";} else if (massaSg05Percent >= 10){ massaSg05PickStatus = "Medium";}  else { massaSg05PickStatus = "Low";}
-						var massaSg06PickStatus = "";
-						if(massaSg06Percent === 0){ massaSg06PickStatus = "Zero";} else if (massaSg06Percent >= 20){ massaSg06PickStatus = "High";} else if (massaSg06Percent >= 10){ massaSg06PickStatus = "Medium";}  else { massaSg06PickStatus = "Low";}
-						var massaSg07PickStatus = "";
-						if(massaSg07Percent === 0){ massaSg07PickStatus = "Zero";} else if (massaSg07Percent >= 20){ massaSg07PickStatus = "High";} else if (massaSg07Percent >= 10){ massaSg07PickStatus = "Medium";}  else { massaSg07PickStatus = "Low";}
-						var massaSg08PickStatus = "";
-						if(massaSg08Percent === 0){ massaSg08PickStatus = "Zero";} else if (massaSg08Percent >= 20){ massaSg08PickStatus = "High";} else if (massaSg08Percent >= 10){ massaSg08PickStatus = "Medium";}  else { massaSg08PickStatus = "Low";}
-						var massaSg09PickStatus = "";
-						if(massaSg09Percent === 0){ massaSg09PickStatus = "Zero";} else if (massaSg09Percent >= 20){ massaSg09PickStatus = "High";} else if (massaSg09Percent >= 10){ massaSg09PickStatus = "Medium";}  else { massaSg09PickStatus = "Low";}
-						var massaSg10PickStatus = "";
-						if(massaSg10Percent === 0){ massaSg10PickStatus = "Zero";} else if (massaSg10Percent >= 20){ massaSg10PickStatus = "High";} else if (massaSg10Percent >= 10){ massaSg10PickStatus = "Medium";}  else { massaSg10PickStatus = "Low";}
-
-						//Bottas
-						var bottasSg01PickStatus = "";
-						if(bottasSg01Percent === 0){ bottasSg01PickStatus = "Zero";} else if (bottasSg01Percent >= 20){ bottasSg01PickStatus = "High";} else if (bottasSg01Percent >= 10){ bottasSg01PickStatus = "Medium";}  else { bottasSg01PickStatus = "Low";}
-						var bottasSg02PickStatus = "";
-						if(bottasSg02Percent === 0){ bottasSg02PickStatus = "Zero";} else if (bottasSg02Percent >= 20){ bottasSg02PickStatus = "High";} else if (bottasSg02Percent >= 10){ bottasSg02PickStatus = "Medium";}  else { bottasSg02PickStatus = "Low";}
-						var bottasSg03PickStatus = "";
-						if(bottasSg03Percent === 0){ bottasSg03PickStatus = "Zero";} else if (bottasSg03Percent >= 20){ bottasSg03PickStatus = "High";} else if (bottasSg03Percent >= 10){ bottasSg03PickStatus = "Medium";}  else { bottasSg03PickStatus = "Low";}
-						var bottasSg04PickStatus = "";
-						if(bottasSg04Percent === 0){ bottasSg04PickStatus = "Zero";} else if (bottasSg04Percent >= 20){ bottasSg04PickStatus = "High";} else if (bottasSg04Percent >= 10){ bottasSg04PickStatus = "Medium";}  else { bottasSg04PickStatus = "Low";}
-						var bottasSg05PickStatus = "";
-						if(bottasSg05Percent === 0){ bottasSg05PickStatus = "Zero";} else if (bottasSg05Percent >= 20){ bottasSg05PickStatus = "High";} else if (bottasSg05Percent >= 10){ bottasSg05PickStatus = "Medium";}  else { bottasSg05PickStatus = "Low";}
-						var bottasSg06PickStatus = "";
-						if(bottasSg06Percent === 0){ bottasSg06PickStatus = "Zero";} else if (bottasSg06Percent >= 20){ bottasSg06PickStatus = "High";} else if (bottasSg06Percent >= 10){ bottasSg06PickStatus = "Medium";}  else { bottasSg06PickStatus = "Low";}
-						var bottasSg07PickStatus = "";
-						if(bottasSg07Percent === 0){ bottasSg07PickStatus = "Zero";} else if (bottasSg07Percent >= 20){ bottasSg07PickStatus = "High";} else if (bottasSg07Percent >= 10){ bottasSg07PickStatus = "Medium";}  else { bottasSg07PickStatus = "Low";}
-						var bottasSg08PickStatus = "";
-						if(bottasSg08Percent === 0){ bottasSg08PickStatus = "Zero";} else if (bottasSg08Percent >= 20){ bottasSg08PickStatus = "High";} else if (bottasSg08Percent >= 10){ bottasSg08PickStatus = "Medium";}  else { bottasSg08PickStatus = "Low";}
-						var bottasSg09PickStatus = "";
-						if(bottasSg09Percent === 0){ bottasSg09PickStatus = "Zero";} else if (bottasSg09Percent >= 20){ bottasSg09PickStatus = "High";} else if (bottasSg09Percent >= 10){ bottasSg09PickStatus = "Medium";}  else { bottasSg09PickStatus = "Low";}
-						var bottasSg10PickStatus = "";
-						if(bottasSg10Percent === 0){ bottasSg10PickStatus = "Zero";} else if (bottasSg10Percent >= 20){ bottasSg10PickStatus = "High";} else if (bottasSg10Percent >= 10){ bottasSg10PickStatus = "Medium";}  else { bottasSg10PickStatus = "Low";}
-
-						//Kvyat
-						var kvyatSg01PickStatus = "";
-						if(kvyatSg01Percent === 0){ kvyatSg01PickStatus = "Zero";} else if (kvyatSg01Percent >= 20){ kvyatSg01PickStatus = "High";} else if (kvyatSg01Percent >= 10){ kvyatSg01PickStatus = "Medium";}  else { kvyatSg01PickStatus = "Low";}
-						var kvyatSg02PickStatus = "";
-						if(kvyatSg02Percent === 0){ kvyatSg02PickStatus = "Zero";} else if (kvyatSg02Percent >= 20){ kvyatSg02PickStatus = "High";} else if (kvyatSg02Percent >= 10){ kvyatSg02PickStatus = "Medium";}  else { kvyatSg02PickStatus = "Low";}
-						var kvyatSg03PickStatus = "";
-						if(kvyatSg03Percent === 0){ kvyatSg03PickStatus = "Zero";} else if (kvyatSg03Percent >= 20){ kvyatSg03PickStatus = "High";} else if (kvyatSg03Percent >= 10){ kvyatSg03PickStatus = "Medium";}  else { kvyatSg03PickStatus = "Low";}
-						var kvyatSg04PickStatus = "";
-						if(kvyatSg04Percent === 0){ kvyatSg04PickStatus = "Zero";} else if (kvyatSg04Percent >= 20){ kvyatSg04PickStatus = "High";} else if (kvyatSg04Percent >= 10){ kvyatSg04PickStatus = "Medium";}  else { kvyatSg04PickStatus = "Low";}
-						var kvyatSg05PickStatus = "";
-						if(kvyatSg05Percent === 0){ kvyatSg05PickStatus = "Zero";} else if (kvyatSg05Percent >= 20){ kvyatSg05PickStatus = "High";} else if (kvyatSg05Percent >= 10){ kvyatSg05PickStatus = "Medium";}  else { kvyatSg05PickStatus = "Low";}
-						var kvyatSg06PickStatus = "";
-						if(kvyatSg06Percent === 0){ kvyatSg06PickStatus = "Zero";} else if (kvyatSg06Percent >= 20){ kvyatSg06PickStatus = "High";} else if (kvyatSg06Percent >= 10){ kvyatSg06PickStatus = "Medium";}  else { kvyatSg06PickStatus = "Low";}
-						var kvyatSg07PickStatus = "";
-						if(kvyatSg07Percent === 0){ kvyatSg07PickStatus = "Zero";} else if (kvyatSg07Percent >= 20){ kvyatSg07PickStatus = "High";} else if (kvyatSg07Percent >= 10){ kvyatSg07PickStatus = "Medium";}  else { kvyatSg07PickStatus = "Low";}
-						var kvyatSg08PickStatus = "";
-						if(kvyatSg08Percent === 0){ kvyatSg08PickStatus = "Zero";} else if (kvyatSg08Percent >= 20){ kvyatSg08PickStatus = "High";} else if (kvyatSg08Percent >= 10){ kvyatSg08PickStatus = "Medium";}  else { kvyatSg08PickStatus = "Low";}
-						var kvyatSg09PickStatus = "";
-						if(kvyatSg09Percent === 0){ kvyatSg09PickStatus = "Zero";} else if (kvyatSg09Percent >= 20){ kvyatSg09PickStatus = "High";} else if (kvyatSg09Percent >= 10){ kvyatSg09PickStatus = "Medium";}  else { kvyatSg09PickStatus = "Low";}
-						var kvyatSg10PickStatus = "";
-						if(kvyatSg10Percent === 0){ kvyatSg10PickStatus = "Zero";} else if (kvyatSg10Percent >= 20){ kvyatSg10PickStatus = "High";} else if (kvyatSg10Percent >= 10){ kvyatSg10PickStatus = "Medium";}  else { kvyatSg10PickStatus = "Low";}
-
-						//Ricciardo
-						var ricciardoSg01PickStatus = "";
-						if(ricciardoSg01Percent === 0){ ricciardoSg01PickStatus = "Zero";} else if (ricciardoSg01Percent >= 20){ ricciardoSg01PickStatus = "High";} else if (ricciardoSg01Percent >= 10){ ricciardoSg01PickStatus = "Medium";}  else { ricciardoSg01PickStatus = "Low";}
-						var ricciardoSg02PickStatus = "";
-						if(ricciardoSg02Percent === 0){ ricciardoSg02PickStatus = "Zero";} else if (ricciardoSg02Percent >= 20){ ricciardoSg02PickStatus = "High";} else if (ricciardoSg02Percent >= 10){ ricciardoSg02PickStatus = "Medium";}  else { ricciardoSg02PickStatus = "Low";}
-						var ricciardoSg03PickStatus = "";
-						if(ricciardoSg03Percent === 0){ ricciardoSg03PickStatus = "Zero";} else if (ricciardoSg03Percent >= 20){ ricciardoSg03PickStatus = "High";} else if (ricciardoSg03Percent >= 10){ ricciardoSg03PickStatus = "Medium";}  else { ricciardoSg03PickStatus = "Low";}
-						var ricciardoSg04PickStatus = "";
-						if(ricciardoSg04Percent === 0){ ricciardoSg04PickStatus = "Zero";} else if (ricciardoSg04Percent >= 20){ ricciardoSg04PickStatus = "High";} else if (ricciardoSg04Percent >= 10){ ricciardoSg04PickStatus = "Medium";}  else { ricciardoSg04PickStatus = "Low";}
-						var ricciardoSg05PickStatus = "";
-						if(ricciardoSg05Percent === 0){ ricciardoSg05PickStatus = "Zero";} else if (ricciardoSg05Percent >= 20){ ricciardoSg05PickStatus = "High";} else if (ricciardoSg05Percent >= 10){ ricciardoSg05PickStatus = "Medium";}  else { ricciardoSg05PickStatus = "Low";}
-						var ricciardoSg06PickStatus = "";
-						if(ricciardoSg06Percent === 0){ ricciardoSg06PickStatus = "Zero";} else if (ricciardoSg06Percent >= 20){ ricciardoSg06PickStatus = "High";} else if (ricciardoSg06Percent >= 10){ ricciardoSg06PickStatus = "Medium";}  else { ricciardoSg06PickStatus = "Low";}
-						var ricciardoSg07PickStatus = "";
-						if(ricciardoSg07Percent === 0){ ricciardoSg07PickStatus = "Zero";} else if (ricciardoSg07Percent >= 20){ ricciardoSg07PickStatus = "High";} else if (ricciardoSg07Percent >= 10){ ricciardoSg07PickStatus = "Medium";}  else { ricciardoSg07PickStatus = "Low";}
-						var ricciardoSg08PickStatus = "";
-						if(ricciardoSg08Percent === 0){ ricciardoSg08PickStatus = "Zero";} else if (ricciardoSg08Percent >= 20){ ricciardoSg08PickStatus = "High";} else if (ricciardoSg08Percent >= 10){ ricciardoSg08PickStatus = "Medium";}  else { ricciardoSg08PickStatus = "Low";}
-						var ricciardoSg09PickStatus = "";
-						if(ricciardoSg09Percent === 0){ ricciardoSg09PickStatus = "Zero";} else if (ricciardoSg09Percent >= 20){ ricciardoSg09PickStatus = "High";} else if (ricciardoSg09Percent >= 10){ ricciardoSg09PickStatus = "Medium";}  else { ricciardoSg09PickStatus = "Low";}
-						var ricciardoSg10PickStatus = "";
-						if(ricciardoSg10Percent === 0){ ricciardoSg10PickStatus = "Zero";} else if (ricciardoSg10Percent >= 20){ ricciardoSg10PickStatus = "High";} else if (ricciardoSg10Percent >= 10){ ricciardoSg10PickStatus = "Medium";}  else { ricciardoSg10PickStatus = "Low";}
-
-						//Perez
-						var perezSg01PickStatus = "";
-						if(perezSg01Percent === 0){ perezSg01PickStatus = "Zero";} else if (perezSg01Percent >= 20){ perezSg01PickStatus = "High";} else if (perezSg01Percent >= 10){ perezSg01PickStatus = "Medium";}  else { perezSg01PickStatus = "Low";}
-						var perezSg02PickStatus = "";
-						if(perezSg02Percent === 0){ perezSg02PickStatus = "Zero";} else if (perezSg02Percent >= 20){ perezSg02PickStatus = "High";} else if (perezSg02Percent >= 10){ perezSg02PickStatus = "Medium";}  else { perezSg02PickStatus = "Low";}
-						var perezSg03PickStatus = "";
-						if(perezSg03Percent === 0){ perezSg03PickStatus = "Zero";} else if (perezSg03Percent >= 20){ perezSg03PickStatus = "High";} else if (perezSg03Percent >= 10){ perezSg03PickStatus = "Medium";}  else { perezSg03PickStatus = "Low";}
-						var perezSg04PickStatus = "";
-						if(perezSg04Percent === 0){ perezSg04PickStatus = "Zero";} else if (perezSg04Percent >= 20){ perezSg04PickStatus = "High";} else if (perezSg04Percent >= 10){ perezSg04PickStatus = "Medium";}  else { perezSg04PickStatus = "Low";}
-						var perezSg05PickStatus = "";
-						if(perezSg05Percent === 0){ perezSg05PickStatus = "Zero";} else if (perezSg05Percent >= 20){ perezSg05PickStatus = "High";} else if (perezSg05Percent >= 10){ perezSg05PickStatus = "Medium";}  else { perezSg05PickStatus = "Low";}
-						var perezSg06PickStatus = "";
-						if(perezSg06Percent === 0){ perezSg06PickStatus = "Zero";} else if (perezSg06Percent >= 20){ perezSg06PickStatus = "High";} else if (perezSg06Percent >= 10){ perezSg06PickStatus = "Medium";}  else { perezSg06PickStatus = "Low";}
-						var perezSg07PickStatus = "";
-						if(perezSg07Percent === 0){ perezSg07PickStatus = "Zero";} else if (perezSg07Percent >= 20){ perezSg07PickStatus = "High";} else if (perezSg07Percent >= 10){ perezSg07PickStatus = "Medium";}  else { perezSg07PickStatus = "Low";}
-						var perezSg08PickStatus = "";
-						if(perezSg08Percent === 0){ perezSg08PickStatus = "Zero";} else if (perezSg08Percent >= 20){ perezSg08PickStatus = "High";} else if (perezSg08Percent >= 10){ perezSg08PickStatus = "Medium";}  else { perezSg08PickStatus = "Low";}
-						var perezSg09PickStatus = "";
-						if(perezSg09Percent === 0){ perezSg09PickStatus = "Zero";} else if (perezSg09Percent >= 20){ perezSg09PickStatus = "High";} else if (perezSg09Percent >= 10){ perezSg09PickStatus = "Medium";}  else { perezSg09PickStatus = "Low";}
-						var perezSg10PickStatus = "";
-						if(perezSg10Percent === 0){ perezSg10PickStatus = "Zero";} else if (perezSg10Percent >= 20){ perezSg10PickStatus = "High";} else if (perezSg10Percent >= 10){ perezSg10PickStatus = "Medium";}  else { perezSg10PickStatus = "Low";}
-
-						//Hulkenberg
-						var hulkenbergSg01PickStatus = "";
-						if(hulkenbergSg01Percent === 0){ hulkenbergSg01PickStatus = "Zero";} else if (hulkenbergSg01Percent >= 20){ hulkenbergSg01PickStatus = "High";} else if (hulkenbergSg01Percent >= 10){ hulkenbergSg01PickStatus = "Medium";}  else { hulkenbergSg01PickStatus = "Low";}
-						var hulkenbergSg02PickStatus = "";
-						if(hulkenbergSg02Percent === 0){ hulkenbergSg02PickStatus = "Zero";} else if (hulkenbergSg02Percent >= 20){ hulkenbergSg02PickStatus = "High";} else if (hulkenbergSg02Percent >= 10){ hulkenbergSg02PickStatus = "Medium";}  else { hulkenbergSg02PickStatus = "Low";}
-						var hulkenbergSg03PickStatus = "";
-						if(hulkenbergSg03Percent === 0){ hulkenbergSg03PickStatus = "Zero";} else if (hulkenbergSg03Percent >= 20){ hulkenbergSg03PickStatus = "High";} else if (hulkenbergSg03Percent >= 10){ hulkenbergSg03PickStatus = "Medium";}  else { hulkenbergSg03PickStatus = "Low";}
-						var hulkenbergSg04PickStatus = "";
-						if(hulkenbergSg04Percent === 0){ hulkenbergSg04PickStatus = "Zero";} else if (hulkenbergSg04Percent >= 20){ hulkenbergSg04PickStatus = "High";} else if (hulkenbergSg04Percent >= 10){ hulkenbergSg04PickStatus = "Medium";}  else { hulkenbergSg04PickStatus = "Low";}
-						var hulkenbergSg05PickStatus = "";
-						if(hulkenbergSg05Percent === 0){ hulkenbergSg05PickStatus = "Zero";} else if (hulkenbergSg05Percent >= 20){ hulkenbergSg05PickStatus = "High";} else if (hulkenbergSg05Percent >= 10){ hulkenbergSg05PickStatus = "Medium";}  else { hulkenbergSg05PickStatus = "Low";}
-						var hulkenbergSg06PickStatus = "";
-						if(hulkenbergSg06Percent === 0){ hulkenbergSg06PickStatus = "Zero";} else if (hulkenbergSg06Percent >= 20){ hulkenbergSg06PickStatus = "High";} else if (hulkenbergSg06Percent >= 10){ hulkenbergSg06PickStatus = "Medium";}  else { hulkenbergSg06PickStatus = "Low";}
-						var hulkenbergSg07PickStatus = "";
-						if(hulkenbergSg07Percent === 0){ hulkenbergSg07PickStatus = "Zero";} else if (hulkenbergSg07Percent >= 20){ hulkenbergSg07PickStatus = "High";} else if (hulkenbergSg07Percent >= 10){ hulkenbergSg07PickStatus = "Medium";}  else { hulkenbergSg07PickStatus = "Low";}
-						var hulkenbergSg08PickStatus = "";
-						if(hulkenbergSg08Percent === 0){ hulkenbergSg08PickStatus = "Zero";} else if (hulkenbergSg08Percent >= 20){ hulkenbergSg08PickStatus = "High";} else if (hulkenbergSg08Percent >= 10){ hulkenbergSg08PickStatus = "Medium";}  else { hulkenbergSg08PickStatus = "Low";}
-						var hulkenbergSg09PickStatus = "";
-						if(hulkenbergSg09Percent === 0){ hulkenbergSg09PickStatus = "Zero";} else if (hulkenbergSg09Percent >= 20){ hulkenbergSg09PickStatus = "High";} else if (hulkenbergSg09Percent >= 10){ hulkenbergSg09PickStatus = "Medium";}  else { hulkenbergSg09PickStatus = "Low";}
-						var hulkenbergSg10PickStatus = "";
-						if(hulkenbergSg10Percent === 0){ hulkenbergSg10PickStatus = "Zero";} else if (hulkenbergSg10Percent >= 20){ hulkenbergSg10PickStatus = "High";} else if (hulkenbergSg10Percent >= 10){ hulkenbergSg10PickStatus = "Medium";}  else { hulkenbergSg10PickStatus = "Low";}
-
-						//Grosjean
-						var grosjeanSg01PickStatus = "";
-						if(grosjeanSg01Percent === 0){ grosjeanSg01PickStatus = "Zero";} else if (grosjeanSg01Percent >= 20){ grosjeanSg01PickStatus = "High";} else if (grosjeanSg01Percent >= 10){ grosjeanSg01PickStatus = "Medium";}  else { grosjeanSg01PickStatus = "Low";}
-						var grosjeanSg02PickStatus = "";
-						if(grosjeanSg02Percent === 0){ grosjeanSg02PickStatus = "Zero";} else if (grosjeanSg02Percent >= 20){ grosjeanSg02PickStatus = "High";} else if (grosjeanSg02Percent >= 10){ grosjeanSg02PickStatus = "Medium";}  else { grosjeanSg02PickStatus = "Low";}
-						var grosjeanSg03PickStatus = "";
-						if(grosjeanSg03Percent === 0){ grosjeanSg03PickStatus = "Zero";} else if (grosjeanSg03Percent >= 20){ grosjeanSg03PickStatus = "High";} else if (grosjeanSg03Percent >= 10){ grosjeanSg03PickStatus = "Medium";}  else { grosjeanSg03PickStatus = "Low";}
-						var grosjeanSg04PickStatus = "";
-						if(grosjeanSg04Percent === 0){ grosjeanSg04PickStatus = "Zero";} else if (grosjeanSg04Percent >= 20){ grosjeanSg04PickStatus = "High";} else if (grosjeanSg04Percent >= 10){ grosjeanSg04PickStatus = "Medium";}  else { grosjeanSg04PickStatus = "Low";}
-						var grosjeanSg05PickStatus = "";
-						if(grosjeanSg05Percent === 0){ grosjeanSg05PickStatus = "Zero";} else if (grosjeanSg05Percent >= 20){ grosjeanSg05PickStatus = "High";} else if (grosjeanSg05Percent >= 10){ grosjeanSg05PickStatus = "Medium";}  else { grosjeanSg05PickStatus = "Low";}
-						var grosjeanSg06PickStatus = "";
-						if(grosjeanSg06Percent === 0){ grosjeanSg06PickStatus = "Zero";} else if (grosjeanSg06Percent >= 20){ grosjeanSg06PickStatus = "High";} else if (grosjeanSg06Percent >= 10){ grosjeanSg06PickStatus = "Medium";}  else { grosjeanSg06PickStatus = "Low";}
-						var grosjeanSg07PickStatus = "";
-						if(grosjeanSg07Percent === 0){ grosjeanSg07PickStatus = "Zero";} else if (grosjeanSg07Percent >= 20){ grosjeanSg07PickStatus = "High";} else if (grosjeanSg07Percent >= 10){ grosjeanSg07PickStatus = "Medium";}  else { grosjeanSg07PickStatus = "Low";}
-						var grosjeanSg08PickStatus = "";
-						if(grosjeanSg08Percent === 0){ grosjeanSg08PickStatus = "Zero";} else if (grosjeanSg08Percent >= 20){ grosjeanSg08PickStatus = "High";} else if (grosjeanSg08Percent >= 10){ grosjeanSg08PickStatus = "Medium";}  else { grosjeanSg08PickStatus = "Low";}
-						var grosjeanSg09PickStatus = "";
-						if(grosjeanSg09Percent === 0){ grosjeanSg09PickStatus = "Zero";} else if (grosjeanSg09Percent >= 20){ grosjeanSg09PickStatus = "High";} else if (grosjeanSg09Percent >= 10){ grosjeanSg09PickStatus = "Medium";}  else { grosjeanSg09PickStatus = "Low";}
-						var grosjeanSg10PickStatus = "";
-						if(grosjeanSg10Percent === 0){ grosjeanSg10PickStatus = "Zero";} else if (grosjeanSg10Percent >= 20){ grosjeanSg10PickStatus = "High";} else if (grosjeanSg10Percent >= 10){ grosjeanSg10PickStatus = "Medium";}  else { grosjeanSg10PickStatus = "Low";}
-
-						//Maldonado
-						var maldonadoSg01PickStatus = "";
-						if(maldonadoSg01Percent === 0){ maldonadoSg01PickStatus = "Zero";} else if (maldonadoSg01Percent >= 20){ maldonadoSg01PickStatus = "High";} else if (maldonadoSg01Percent >= 10){ maldonadoSg01PickStatus = "Medium";}  else { maldonadoSg01PickStatus = "Low";}
-						var maldonadoSg02PickStatus = "";
-						if(maldonadoSg02Percent === 0){ maldonadoSg02PickStatus = "Zero";} else if (maldonadoSg02Percent >= 20){ maldonadoSg02PickStatus = "High";} else if (maldonadoSg02Percent >= 10){ maldonadoSg02PickStatus = "Medium";}  else { maldonadoSg02PickStatus = "Low";}
-						var maldonadoSg03PickStatus = "";
-						if(maldonadoSg03Percent === 0){ maldonadoSg03PickStatus = "Zero";} else if (maldonadoSg03Percent >= 20){ maldonadoSg03PickStatus = "High";} else if (maldonadoSg03Percent >= 10){ maldonadoSg03PickStatus = "Medium";}  else { maldonadoSg03PickStatus = "Low";}
-						var maldonadoSg04PickStatus = "";
-						if(maldonadoSg04Percent === 0){ maldonadoSg04PickStatus = "Zero";} else if (maldonadoSg04Percent >= 20){ maldonadoSg04PickStatus = "High";} else if (maldonadoSg04Percent >= 10){ maldonadoSg04PickStatus = "Medium";}  else { maldonadoSg04PickStatus = "Low";}
-						var maldonadoSg05PickStatus = "";
-						if(maldonadoSg05Percent === 0){ maldonadoSg05PickStatus = "Zero";} else if (maldonadoSg05Percent >= 20){ maldonadoSg05PickStatus = "High";} else if (maldonadoSg05Percent >= 10){ maldonadoSg05PickStatus = "Medium";}  else { maldonadoSg05PickStatus = "Low";}
-						var maldonadoSg06PickStatus = "";
-						if(maldonadoSg06Percent === 0){ maldonadoSg06PickStatus = "Zero";} else if (maldonadoSg06Percent >= 20){ maldonadoSg06PickStatus = "High";} else if (maldonadoSg06Percent >= 10){ maldonadoSg06PickStatus = "Medium";}  else { maldonadoSg06PickStatus = "Low";}
-						var maldonadoSg07PickStatus = "";
-						if(maldonadoSg07Percent === 0){ maldonadoSg07PickStatus = "Zero";} else if (maldonadoSg07Percent >= 20){ maldonadoSg07PickStatus = "High";} else if (maldonadoSg07Percent >= 10){ maldonadoSg07PickStatus = "Medium";}  else { maldonadoSg07PickStatus = "Low";}
-						var maldonadoSg08PickStatus = "";
-						if(maldonadoSg08Percent === 0){ maldonadoSg08PickStatus = "Zero";} else if (maldonadoSg08Percent >= 20){ maldonadoSg08PickStatus = "High";} else if (maldonadoSg08Percent >= 10){ maldonadoSg08PickStatus = "Medium";}  else { maldonadoSg08PickStatus = "Low";}
-						var maldonadoSg09PickStatus = "";
-						if(maldonadoSg09Percent === 0){ maldonadoSg09PickStatus = "Zero";} else if (maldonadoSg09Percent >= 20){ maldonadoSg09PickStatus = "High";} else if (maldonadoSg09Percent >= 10){ maldonadoSg09PickStatus = "Medium";}  else { maldonadoSg09PickStatus = "Low";}
-						var maldonadoSg10PickStatus = "";
-						if(maldonadoSg10Percent === 0){ maldonadoSg10PickStatus = "Zero";} else if (maldonadoSg10Percent >= 20){ maldonadoSg10PickStatus = "High";} else if (maldonadoSg10Percent >= 10){ maldonadoSg10PickStatus = "Medium";}  else { maldonadoSg10PickStatus = "Low";}
-
-						//Verstappen
-						var verstappenSg01PickStatus = "";
-						if(verstappenSg01Percent === 0){ verstappenSg01PickStatus = "Zero";} else if (verstappenSg01Percent >= 20){ verstappenSg01PickStatus = "High";} else if (verstappenSg01Percent >= 10){ verstappenSg01PickStatus = "Medium";}  else { verstappenSg01PickStatus = "Low";}
-						var verstappenSg02PickStatus = "";
-						if(verstappenSg02Percent === 0){ verstappenSg02PickStatus = "Zero";} else if (verstappenSg02Percent >= 20){ verstappenSg02PickStatus = "High";} else if (verstappenSg02Percent >= 10){ verstappenSg02PickStatus = "Medium";}  else { verstappenSg02PickStatus = "Low";}
-						var verstappenSg03PickStatus = "";
-						if(verstappenSg03Percent === 0){ verstappenSg03PickStatus = "Zero";} else if (verstappenSg03Percent >= 20){ verstappenSg03PickStatus = "High";} else if (verstappenSg03Percent >= 10){ verstappenSg03PickStatus = "Medium";}  else { verstappenSg03PickStatus = "Low";}
-						var verstappenSg04PickStatus = "";
-						if(verstappenSg04Percent === 0){ verstappenSg04PickStatus = "Zero";} else if (verstappenSg04Percent >= 20){ verstappenSg04PickStatus = "High";} else if (verstappenSg04Percent >= 10){ verstappenSg04PickStatus = "Medium";}  else { verstappenSg04PickStatus = "Low";}
-						var verstappenSg05PickStatus = "";
-						if(verstappenSg05Percent === 0){ verstappenSg05PickStatus = "Zero";} else if (verstappenSg05Percent >= 20){ verstappenSg05PickStatus = "High";} else if (verstappenSg05Percent >= 10){ verstappenSg05PickStatus = "Medium";}  else { verstappenSg05PickStatus = "Low";}
-						var verstappenSg06PickStatus = "";
-						if(verstappenSg06Percent === 0){ verstappenSg06PickStatus = "Zero";} else if (verstappenSg06Percent >= 20){ verstappenSg06PickStatus = "High";} else if (verstappenSg06Percent >= 10){ verstappenSg06PickStatus = "Medium";}  else { verstappenSg06PickStatus = "Low";}
-						var verstappenSg07PickStatus = "";
-						if(verstappenSg07Percent === 0){ verstappenSg07PickStatus = "Zero";} else if (verstappenSg07Percent >= 20){ verstappenSg07PickStatus = "High";} else if (verstappenSg07Percent >= 10){ verstappenSg07PickStatus = "Medium";}  else { verstappenSg07PickStatus = "Low";}
-						var verstappenSg08PickStatus = "";
-						if(verstappenSg08Percent === 0){ verstappenSg08PickStatus = "Zero";} else if (verstappenSg08Percent >= 20){ verstappenSg08PickStatus = "High";} else if (verstappenSg08Percent >= 10){ verstappenSg08PickStatus = "Medium";}  else { verstappenSg08PickStatus = "Low";}
-						var verstappenSg09PickStatus = "";
-						if(verstappenSg09Percent === 0){ verstappenSg09PickStatus = "Zero";} else if (verstappenSg09Percent >= 20){ verstappenSg09PickStatus = "High";} else if (verstappenSg09Percent >= 10){ verstappenSg09PickStatus = "Medium";}  else { verstappenSg09PickStatus = "Low";}
-						var verstappenSg10PickStatus = "";
-						if(verstappenSg10Percent === 0){ verstappenSg10PickStatus = "Zero";} else if (verstappenSg10Percent >= 20){ verstappenSg10PickStatus = "High";} else if (verstappenSg10Percent >= 10){ verstappenSg10PickStatus = "Medium";}  else { verstappenSg10PickStatus = "Low";}
-
-						//Sainz
-						var sainzSg01PickStatus = "";
-						if(sainzSg01Percent === 0){ sainzSg01PickStatus = "Zero";} else if (sainzSg01Percent >= 20){ sainzSg01PickStatus = "High";} else if (sainzSg01Percent >= 10){ sainzSg01PickStatus = "Medium";}  else { sainzSg01PickStatus = "Low";}
-						var sainzSg02PickStatus = "";
-						if(sainzSg02Percent === 0){ sainzSg02PickStatus = "Zero";} else if (sainzSg02Percent >= 20){ sainzSg02PickStatus = "High";} else if (sainzSg02Percent >= 10){ sainzSg02PickStatus = "Medium";}  else { sainzSg02PickStatus = "Low";}
-						var sainzSg03PickStatus = "";
-						if(sainzSg03Percent === 0){ sainzSg03PickStatus = "Zero";} else if (sainzSg03Percent >= 20){ sainzSg03PickStatus = "High";} else if (sainzSg03Percent >= 10){ sainzSg03PickStatus = "Medium";}  else { sainzSg03PickStatus = "Low";}
-						var sainzSg04PickStatus = "";
-						if(sainzSg04Percent === 0){ sainzSg04PickStatus = "Zero";} else if (sainzSg04Percent >= 20){ sainzSg04PickStatus = "High";} else if (sainzSg04Percent >= 10){ sainzSg04PickStatus = "Medium";}  else { sainzSg04PickStatus = "Low";}
-						var sainzSg05PickStatus = "";
-						if(sainzSg05Percent === 0){ sainzSg05PickStatus = "Zero";} else if (sainzSg05Percent >= 20){ sainzSg05PickStatus = "High";} else if (sainzSg05Percent >= 10){ sainzSg05PickStatus = "Medium";}  else { sainzSg05PickStatus = "Low";}
-						var sainzSg06PickStatus = "";
-						if(sainzSg06Percent === 0){ sainzSg06PickStatus = "Zero";} else if (sainzSg06Percent >= 20){ sainzSg06PickStatus = "High";} else if (sainzSg06Percent >= 10){ sainzSg06PickStatus = "Medium";}  else { sainzSg06PickStatus = "Low";}
-						var sainzSg07PickStatus = "";
-						if(sainzSg07Percent === 0){ sainzSg07PickStatus = "Zero";} else if (sainzSg07Percent >= 20){ sainzSg07PickStatus = "High";} else if (sainzSg07Percent >= 10){ sainzSg07PickStatus = "Medium";}  else { sainzSg07PickStatus = "Low";}
-						var sainzSg08PickStatus = "";
-						if(sainzSg08Percent === 0){ sainzSg08PickStatus = "Zero";} else if (sainzSg08Percent >= 20){ sainzSg08PickStatus = "High";} else if (sainzSg08Percent >= 10){ sainzSg08PickStatus = "Medium";}  else { sainzSg08PickStatus = "Low";}
-						var sainzSg09PickStatus = "";
-						if(sainzSg09Percent === 0){ sainzSg09PickStatus = "Zero";} else if (sainzSg09Percent >= 20){ sainzSg09PickStatus = "High";} else if (sainzSg09Percent >= 10){ sainzSg09PickStatus = "Medium";}  else { sainzSg09PickStatus = "Low";}
-						var sainzSg10PickStatus = "";
-						if(sainzSg10Percent === 0){ sainzSg10PickStatus = "Zero";} else if (sainzSg10Percent >= 20){ sainzSg10PickStatus = "High";} else if (sainzSg10Percent >= 10){ sainzSg10PickStatus = "Medium";}  else { sainzSg10PickStatus = "Low";}
-
-						//Ericsson
-						var ericssonSg01PickStatus = "";
-						if(ericssonSg01Percent === 0){ ericssonSg01PickStatus = "Zero";} else if (ericssonSg01Percent >= 20){ ericssonSg01PickStatus = "High";} else if (ericssonSg01Percent >= 10){ ericssonSg01PickStatus = "Medium";}  else { ericssonSg01PickStatus = "Low";}
-						var ericssonSg02PickStatus = "";
-						if(ericssonSg02Percent === 0){ ericssonSg02PickStatus = "Zero";} else if (ericssonSg02Percent >= 20){ ericssonSg02PickStatus = "High";} else if (ericssonSg02Percent >= 10){ ericssonSg02PickStatus = "Medium";}  else { ericssonSg02PickStatus = "Low";}
-						var ericssonSg03PickStatus = "";
-						if(ericssonSg03Percent === 0){ ericssonSg03PickStatus = "Zero";} else if (ericssonSg03Percent >= 20){ ericssonSg03PickStatus = "High";} else if (ericssonSg03Percent >= 10){ ericssonSg03PickStatus = "Medium";}  else { ericssonSg03PickStatus = "Low";}
-						var ericssonSg04PickStatus = "";
-						if(ericssonSg04Percent === 0){ ericssonSg04PickStatus = "Zero";} else if (ericssonSg04Percent >= 20){ ericssonSg04PickStatus = "High";} else if (ericssonSg04Percent >= 10){ ericssonSg04PickStatus = "Medium";}  else { ericssonSg04PickStatus = "Low";}
-						var ericssonSg05PickStatus = "";
-						if(ericssonSg05Percent === 0){ ericssonSg05PickStatus = "Zero";} else if (ericssonSg05Percent >= 20){ ericssonSg05PickStatus = "High";} else if (ericssonSg05Percent >= 10){ ericssonSg05PickStatus = "Medium";}  else { ericssonSg05PickStatus = "Low";}
-						var ericssonSg06PickStatus = "";
-						if(ericssonSg06Percent === 0){ ericssonSg06PickStatus = "Zero";} else if (ericssonSg06Percent >= 20){ ericssonSg06PickStatus = "High";} else if (ericssonSg06Percent >= 10){ ericssonSg06PickStatus = "Medium";}  else { ericssonSg06PickStatus = "Low";}
-						var ericssonSg07PickStatus = "";
-						if(ericssonSg07Percent === 0){ ericssonSg07PickStatus = "Zero";} else if (ericssonSg07Percent >= 20){ ericssonSg07PickStatus = "High";} else if (ericssonSg07Percent >= 10){ ericssonSg07PickStatus = "Medium";}  else { ericssonSg07PickStatus = "Low";}
-						var ericssonSg08PickStatus = "";
-						if(ericssonSg08Percent === 0){ ericssonSg08PickStatus = "Zero";} else if (ericssonSg08Percent >= 20){ ericssonSg08PickStatus = "High";} else if (ericssonSg08Percent >= 10){ ericssonSg08PickStatus = "Medium";}  else { ericssonSg08PickStatus = "Low";}
-						var ericssonSg09PickStatus = "";
-						if(ericssonSg09Percent === 0){ ericssonSg09PickStatus = "Zero";} else if (ericssonSg09Percent >= 20){ ericssonSg09PickStatus = "High";} else if (ericssonSg09Percent >= 10){ ericssonSg09PickStatus = "Medium";}  else { ericssonSg09PickStatus = "Low";}
-						var ericssonSg10PickStatus = "";
-						if(ericssonSg10Percent === 0){ ericssonSg10PickStatus = "Zero";} else if (ericssonSg10Percent >= 20){ ericssonSg10PickStatus = "High";} else if (ericssonSg10Percent >= 10){ ericssonSg10PickStatus = "Medium";}  else { ericssonSg10PickStatus = "Low";}
-
-						//Nasr
-						var nasrSg01PickStatus = "";
-						if(nasrSg01Percent === 0){ nasrSg01PickStatus = "Zero";} else if (nasrSg01Percent >= 20){ nasrSg01PickStatus = "High";} else if (nasrSg01Percent >= 10){ nasrSg01PickStatus = "Medium";}  else { nasrSg01PickStatus = "Low";}
-						var nasrSg02PickStatus = "";
-						if(nasrSg02Percent === 0){ nasrSg02PickStatus = "Zero";} else if (nasrSg02Percent >= 20){ nasrSg02PickStatus = "High";} else if (nasrSg02Percent >= 10){ nasrSg02PickStatus = "Medium";}  else { nasrSg02PickStatus = "Low";}
-						var nasrSg03PickStatus = "";
-						if(nasrSg03Percent === 0){ nasrSg03PickStatus = "Zero";} else if (nasrSg03Percent >= 20){ nasrSg03PickStatus = "High";} else if (nasrSg03Percent >= 10){ nasrSg03PickStatus = "Medium";}  else { nasrSg03PickStatus = "Low";}
-						var nasrSg04PickStatus = "";
-						if(nasrSg04Percent === 0){ nasrSg04PickStatus = "Zero";} else if (nasrSg04Percent >= 20){ nasrSg04PickStatus = "High";} else if (nasrSg04Percent >= 10){ nasrSg04PickStatus = "Medium";}  else { nasrSg04PickStatus = "Low";}
-						var nasrSg05PickStatus = "";
-						if(nasrSg05Percent === 0){ nasrSg05PickStatus = "Zero";} else if (nasrSg05Percent >= 20){ nasrSg05PickStatus = "High";} else if (nasrSg05Percent >= 10){ nasrSg05PickStatus = "Medium";}  else { nasrSg05PickStatus = "Low";}
-						var nasrSg06PickStatus = "";
-						if(nasrSg06Percent === 0){ nasrSg06PickStatus = "Zero";} else if (nasrSg06Percent >= 20){ nasrSg06PickStatus = "High";} else if (nasrSg06Percent >= 10){ nasrSg06PickStatus = "Medium";}  else { nasrSg06PickStatus = "Low";}
-						var nasrSg07PickStatus = "";
-						if(nasrSg07Percent === 0){ nasrSg07PickStatus = "Zero";} else if (nasrSg07Percent >= 20){ nasrSg07PickStatus = "High";} else if (nasrSg07Percent >= 10){ nasrSg07PickStatus = "Medium";}  else { nasrSg07PickStatus = "Low";}
-						var nasrSg08PickStatus = "";
-						if(nasrSg08Percent === 0){ nasrSg08PickStatus = "Zero";} else if (nasrSg08Percent >= 20){ nasrSg08PickStatus = "High";} else if (nasrSg08Percent >= 10){ nasrSg08PickStatus = "Medium";}  else { nasrSg08PickStatus = "Low";}
-						var nasrSg09PickStatus = "";
-						if(nasrSg09Percent === 0){ nasrSg09PickStatus = "Zero";} else if (nasrSg09Percent >= 20){ nasrSg09PickStatus = "High";} else if (nasrSg09Percent >= 10){ nasrSg09PickStatus = "Medium";}  else { nasrSg09PickStatus = "Low";}
-						var nasrSg10PickStatus = "";
-						if(nasrSg10Percent === 0){ nasrSg10PickStatus = "Zero";} else if (nasrSg10Percent >= 20){ nasrSg10PickStatus = "High";} else if (nasrSg10Percent >= 10){ nasrSg10PickStatus = "Medium";}  else { nasrSg10PickStatus = "Low";}
-
-						//Alonso
-						var alonsoSg01PickStatus = "";
-						if(alonsoSg01Percent === 0){ alonsoSg01PickStatus = "Zero";} else if (alonsoSg01Percent >= 20){ alonsoSg01PickStatus = "High";} else if (alonsoSg01Percent >= 10){ alonsoSg01PickStatus = "Medium";}  else { alonsoSg01PickStatus = "Low";}
-						var alonsoSg02PickStatus = "";
-						if(alonsoSg02Percent === 0){ alonsoSg02PickStatus = "Zero";} else if (alonsoSg02Percent >= 20){ alonsoSg02PickStatus = "High";} else if (alonsoSg02Percent >= 10){ alonsoSg02PickStatus = "Medium";}  else { alonsoSg02PickStatus = "Low";}
-						var alonsoSg03PickStatus = "";
-						if(alonsoSg03Percent === 0){ alonsoSg03PickStatus = "Zero";} else if (alonsoSg03Percent >= 20){ alonsoSg03PickStatus = "High";} else if (alonsoSg03Percent >= 10){ alonsoSg03PickStatus = "Medium";}  else { alonsoSg03PickStatus = "Low";}
-						var alonsoSg04PickStatus = "";
-						if(alonsoSg04Percent === 0){ alonsoSg04PickStatus = "Zero";} else if (alonsoSg04Percent >= 20){ alonsoSg04PickStatus = "High";} else if (alonsoSg04Percent >= 10){ alonsoSg04PickStatus = "Medium";}  else { alonsoSg04PickStatus = "Low";}
-						var alonsoSg05PickStatus = "";
-						if(alonsoSg05Percent === 0){ alonsoSg05PickStatus = "Zero";} else if (alonsoSg05Percent >= 20){ alonsoSg05PickStatus = "High";} else if (alonsoSg05Percent >= 10){ alonsoSg05PickStatus = "Medium";}  else { alonsoSg05PickStatus = "Low";}
-						var alonsoSg06PickStatus = "";
-						if(alonsoSg06Percent === 0){ alonsoSg06PickStatus = "Zero";} else if (alonsoSg06Percent >= 20){ alonsoSg06PickStatus = "High";} else if (alonsoSg06Percent >= 10){ alonsoSg06PickStatus = "Medium";}  else { alonsoSg06PickStatus = "Low";}
-						var alonsoSg07PickStatus = "";
-						if(alonsoSg07Percent === 0){ alonsoSg07PickStatus = "Zero";} else if (alonsoSg07Percent >= 20){ alonsoSg07PickStatus = "High";} else if (alonsoSg07Percent >= 10){ alonsoSg07PickStatus = "Medium";}  else { alonsoSg07PickStatus = "Low";}
-						var alonsoSg08PickStatus = "";
-						if(alonsoSg08Percent === 0){ alonsoSg08PickStatus = "Zero";} else if (alonsoSg08Percent >= 20){ alonsoSg08PickStatus = "High";} else if (alonsoSg08Percent >= 10){ alonsoSg08PickStatus = "Medium";}  else { alonsoSg08PickStatus = "Low";}
-						var alonsoSg09PickStatus = "";
-						if(alonsoSg09Percent === 0){ alonsoSg09PickStatus = "Zero";} else if (alonsoSg09Percent >= 20){ alonsoSg09PickStatus = "High";} else if (alonsoSg09Percent >= 10){ alonsoSg09PickStatus = "Medium";}  else { alonsoSg09PickStatus = "Low";}
-						var alonsoSg10PickStatus = "";
-						if(alonsoSg10Percent === 0){ alonsoSg10PickStatus = "Zero";} else if (alonsoSg10Percent >= 20){ alonsoSg10PickStatus = "High";} else if (alonsoSg10Percent >= 10){ alonsoSg10PickStatus = "Medium";}  else { alonsoSg10PickStatus = "Low";}
-
-						//Button
-						var buttonSg01PickStatus = "";
-						if(buttonSg01Percent === 0){ buttonSg01PickStatus = "Zero";} else if (buttonSg01Percent >= 20){ buttonSg01PickStatus = "High";} else if (buttonSg01Percent >= 10){ buttonSg01PickStatus = "Medium";}  else { buttonSg01PickStatus = "Low";}
-						var buttonSg02PickStatus = "";
-						if(buttonSg02Percent === 0){ buttonSg02PickStatus = "Zero";} else if (buttonSg02Percent >= 20){ buttonSg02PickStatus = "High";} else if (buttonSg02Percent >= 10){ buttonSg02PickStatus = "Medium";}  else { buttonSg02PickStatus = "Low";}
-						var buttonSg03PickStatus = "";
-						if(buttonSg03Percent === 0){ buttonSg03PickStatus = "Zero";} else if (buttonSg03Percent >= 20){ buttonSg03PickStatus = "High";} else if (buttonSg03Percent >= 10){ buttonSg03PickStatus = "Medium";}  else { buttonSg03PickStatus = "Low";}
-						var buttonSg04PickStatus = "";
-						if(buttonSg04Percent === 0){ buttonSg04PickStatus = "Zero";} else if (buttonSg04Percent >= 20){ buttonSg04PickStatus = "High";} else if (buttonSg04Percent >= 10){ buttonSg04PickStatus = "Medium";}  else { buttonSg04PickStatus = "Low";}
-						var buttonSg05PickStatus = "";
-						if(buttonSg05Percent === 0){ buttonSg05PickStatus = "Zero";} else if (buttonSg05Percent >= 20){ buttonSg05PickStatus = "High";} else if (buttonSg05Percent >= 10){ buttonSg05PickStatus = "Medium";}  else { buttonSg05PickStatus = "Low";}
-						var buttonSg06PickStatus = "";
-						if(buttonSg06Percent === 0){ buttonSg06PickStatus = "Zero";} else if (buttonSg06Percent >= 20){ buttonSg06PickStatus = "High";} else if (buttonSg06Percent >= 10){ buttonSg06PickStatus = "Medium";}  else { buttonSg06PickStatus = "Low";}
-						var buttonSg07PickStatus = "";
-						if(buttonSg07Percent === 0){ buttonSg07PickStatus = "Zero";} else if (buttonSg07Percent >= 20){ buttonSg07PickStatus = "High";} else if (buttonSg07Percent >= 10){ buttonSg07PickStatus = "Medium";}  else { buttonSg07PickStatus = "Low";}
-						var buttonSg08PickStatus = "";
-						if(buttonSg08Percent === 0){ buttonSg08PickStatus = "Zero";} else if (buttonSg08Percent >= 20){ buttonSg08PickStatus = "High";} else if (buttonSg08Percent >= 10){ buttonSg08PickStatus = "Medium";}  else { buttonSg08PickStatus = "Low";}
-						var buttonSg09PickStatus = "";
-						if(buttonSg09Percent === 0){ buttonSg09PickStatus = "Zero";} else if (buttonSg09Percent >= 20){ buttonSg09PickStatus = "High";} else if (buttonSg09Percent >= 10){ buttonSg09PickStatus = "Medium";}  else { buttonSg09PickStatus = "Low";}
-						var buttonSg10PickStatus = "";
-						if(buttonSg10Percent === 0){ buttonSg10PickStatus = "Zero";} else if (buttonSg10Percent >= 20){ buttonSg10PickStatus = "High";} else if (buttonSg10Percent >= 10){ buttonSg10PickStatus = "Medium";}  else { buttonSg10PickStatus = "Low";}
-
-						//Stevens
-						var stevensSg01PickStatus = "";
-						if(stevensSg01Percent === 0){ stevensSg01PickStatus = "Zero";} else if (stevensSg01Percent >= 20){ stevensSg01PickStatus = "High";} else if (stevensSg01Percent >= 10){ stevensSg01PickStatus = "Medium";}  else { stevensSg01PickStatus = "Low";}
-						var stevensSg02PickStatus = "";
-						if(stevensSg02Percent === 0){ stevensSg02PickStatus = "Zero";} else if (stevensSg02Percent >= 20){ stevensSg02PickStatus = "High";} else if (stevensSg02Percent >= 10){ stevensSg02PickStatus = "Medium";}  else { stevensSg02PickStatus = "Low";}
-						var stevensSg03PickStatus = "";
-						if(stevensSg03Percent === 0){ stevensSg03PickStatus = "Zero";} else if (stevensSg03Percent >= 20){ stevensSg03PickStatus = "High";} else if (stevensSg03Percent >= 10){ stevensSg03PickStatus = "Medium";}  else { stevensSg03PickStatus = "Low";}
-						var stevensSg04PickStatus = "";
-						if(stevensSg04Percent === 0){ stevensSg04PickStatus = "Zero";} else if (stevensSg04Percent >= 20){ stevensSg04PickStatus = "High";} else if (stevensSg04Percent >= 10){ stevensSg04PickStatus = "Medium";}  else { stevensSg04PickStatus = "Low";}
-						var stevensSg05PickStatus = "";
-						if(stevensSg05Percent === 0){ stevensSg05PickStatus = "Zero";} else if (stevensSg05Percent >= 20){ stevensSg05PickStatus = "High";} else if (stevensSg05Percent >= 10){ stevensSg05PickStatus = "Medium";}  else { stevensSg05PickStatus = "Low";}
-						var stevensSg06PickStatus = "";
-						if(stevensSg06Percent === 0){ stevensSg06PickStatus = "Zero";} else if (stevensSg06Percent >= 20){ stevensSg06PickStatus = "High";} else if (stevensSg06Percent >= 10){ stevensSg06PickStatus = "Medium";}  else { stevensSg06PickStatus = "Low";}
-						var stevensSg07PickStatus = "";
-						if(stevensSg07Percent === 0){ stevensSg07PickStatus = "Zero";} else if (stevensSg07Percent >= 20){ stevensSg07PickStatus = "High";} else if (stevensSg07Percent >= 10){ stevensSg07PickStatus = "Medium";}  else { stevensSg07PickStatus = "Low";}
-						var stevensSg08PickStatus = "";
-						if(stevensSg08Percent === 0){ stevensSg08PickStatus = "Zero";} else if (stevensSg08Percent >= 20){ stevensSg08PickStatus = "High";} else if (stevensSg08Percent >= 10){ stevensSg08PickStatus = "Medium";}  else { stevensSg08PickStatus = "Low";}
-						var stevensSg09PickStatus = "";
-						if(stevensSg09Percent === 0){ stevensSg09PickStatus = "Zero";} else if (stevensSg09Percent >= 20){ stevensSg09PickStatus = "High";} else if (stevensSg09Percent >= 10){ stevensSg09PickStatus = "Medium";}  else { stevensSg09PickStatus = "Low";}
-						var stevensSg10PickStatus = "";
-						if(stevensSg10Percent === 0){ stevensSg10PickStatus = "Zero";} else if (stevensSg10Percent >= 20){ stevensSg10PickStatus = "High";} else if (stevensSg10Percent >= 10){ stevensSg10PickStatus = "Medium";}  else { stevensSg10PickStatus = "Low";}
-
-						//Merhi
-						var merhiSg01PickStatus = "";
-						if(merhiSg01Percent === 0){ merhiSg01PickStatus = "Zero";} else if (merhiSg01Percent >= 20){ merhiSg01PickStatus = "High";} else if (merhiSg01Percent >= 10){ merhiSg01PickStatus = "Medium";}  else { merhiSg01PickStatus = "Low";}
-						var merhiSg02PickStatus = "";
-						if(merhiSg02Percent === 0){ merhiSg02PickStatus = "Zero";} else if (merhiSg02Percent >= 20){ merhiSg02PickStatus = "High";} else if (merhiSg02Percent >= 10){ merhiSg02PickStatus = "Medium";}  else { merhiSg02PickStatus = "Low";}
-						var merhiSg03PickStatus = "";
-						if(merhiSg03Percent === 0){ merhiSg03PickStatus = "Zero";} else if (merhiSg03Percent >= 20){ merhiSg03PickStatus = "High";} else if (merhiSg03Percent >= 10){ merhiSg03PickStatus = "Medium";}  else { merhiSg03PickStatus = "Low";}
-						var merhiSg04PickStatus = "";
-						if(merhiSg04Percent === 0){ merhiSg04PickStatus = "Zero";} else if (merhiSg04Percent >= 20){ merhiSg04PickStatus = "High";} else if (merhiSg04Percent >= 10){ merhiSg04PickStatus = "Medium";}  else { merhiSg04PickStatus = "Low";}
-						var merhiSg05PickStatus = "";
-						if(merhiSg05Percent === 0){ merhiSg05PickStatus = "Zero";} else if (merhiSg05Percent >= 20){ merhiSg05PickStatus = "High";} else if (merhiSg05Percent >= 10){ merhiSg05PickStatus = "Medium";}  else { merhiSg05PickStatus = "Low";}
-						var merhiSg06PickStatus = "";
-						if(merhiSg06Percent === 0){ merhiSg06PickStatus = "Zero";} else if (merhiSg06Percent >= 20){ merhiSg06PickStatus = "High";} else if (merhiSg06Percent >= 10){ merhiSg06PickStatus = "Medium";}  else { merhiSg06PickStatus = "Low";}
-						var merhiSg07PickStatus = "";
-						if(merhiSg07Percent === 0){ merhiSg07PickStatus = "Zero";} else if (merhiSg07Percent >= 20){ merhiSg07PickStatus = "High";} else if (merhiSg07Percent >= 10){ merhiSg07PickStatus = "Medium";}  else { merhiSg07PickStatus = "Low";}
-						var merhiSg08PickStatus = "";
-						if(merhiSg08Percent === 0){ merhiSg08PickStatus = "Zero";} else if (merhiSg08Percent >= 20){ merhiSg08PickStatus = "High";} else if (merhiSg08Percent >= 10){ merhiSg08PickStatus = "Medium";}  else { merhiSg08PickStatus = "Low";}
-						var merhiSg09PickStatus = "";
-						if(merhiSg09Percent === 0){ merhiSg09PickStatus = "Zero";} else if (merhiSg09Percent >= 20){ merhiSg09PickStatus = "High";} else if (merhiSg09Percent >= 10){ merhiSg09PickStatus = "Medium";}  else { merhiSg09PickStatus = "Low";}
-						var merhiSg10PickStatus = "";
-						if(merhiSg10Percent === 0){ merhiSg10PickStatus = "Zero";} else if (merhiSg10Percent >= 20){ merhiSg10PickStatus = "High";} else if (merhiSg10Percent >= 10){ merhiSg10PickStatus = "Medium";}  else { merhiSg10PickStatus = "Low";}
+				//======================================================
 
 						//Here are the IF statements to determine the points "paid" by each driver in each position
+
+
+						
 						//Hamilton
 						var hamiltonOne;
 						if (hamiltonSg01PickStatus === "Zero") { hamiltonOne = 0;}
