@@ -214,7 +214,7 @@ vm.submitPicks = function(){
 				}
 				console.log(allSgPicks);
 
-				console.log(allSgPicks[Object.keys(allSgPicks)[1]]); //returns 'someVal'
+				console.log(allSgPicks[Object.keys(allSgPicks)[1]]);
 
 				//Create objects to hold how many picks for each driver exist in each grid position
 				var counts = {
@@ -248,7 +248,7 @@ vm.submitPicks = function(){
 				//Total picks for each driver
 
 				var hamiltonTotal = (counts.Sg01.Hamilton || 0) + (counts.Sg02.Hamilton || 0) + (counts.Sg03.Hamilton || 0) + (counts.Sg04.Hamilton || 0) + (counts.Sg05.Hamilton || 0) + (counts.Sg06.Hamilton || 0) + (counts.Sg07.Hamilton || 0) + (counts.Sg08.Hamilton || 0) + (counts.Sg09.Hamilton || 0) + (counts.Sg10.Hamilton || 0);
-				console.log("Hamiilton Total " + hamiltonTotal);
+				console.log("Hamilton Total " + hamiltonTotal);
 				//Percentage
 				var hamiltonPercent = Math.round((hamiltonTotal/vm.users.length)*100);
 				//Driver Status
@@ -382,226 +382,50 @@ vm.submitPicks = function(){
 				    vm.sortReverse = false;
 
 						//Percentage of picks per specific grid position
-						//Hamilton
-						var hamiltonSg01Percent = Math.round((countsSg01.Hamilton/vm.users.length)*100) || 0;
-						var hamiltonSg02Percent = Math.round((countsSg02.Hamilton/vm.users.length)*100) || 0;
-						var hamiltonSg03Percent = Math.round((countsSg03.Hamilton/vm.users.length)*100) || 0;
-						var hamiltonSg04Percent = Math.round((countsSg04.Hamilton/vm.users.length)*100) || 0;
-						var hamiltonSg05Percent = Math.round((countsSg05.Hamilton/vm.users.length)*100) || 0;
-						var hamiltonSg06Percent = Math.round((countsSg06.Hamilton/vm.users.length)*100) || 0;
-						var hamiltonSg07Percent = Math.round((countsSg07.Hamilton/vm.users.length)*100) || 0;
-						var hamiltonSg08Percent = Math.round((countsSg08.Hamilton/vm.users.length)*100) || 0;
-						var hamiltonSg09Percent = Math.round((countsSg09.Hamilton/vm.users.length)*100) || 0;
-						var hamiltonSg10Percent = Math.round((countsSg10.Hamilton/vm.users.length)*100) || 0;
-						//Rosberg
-						var rosbergSg01Percent = Math.round((countsSg01.Rosberg/vm.users.length)*100) || 0;
-						var rosbergSg02Percent = Math.round((countsSg02.Rosberg/vm.users.length)*100) || 0;
-						var rosbergSg03Percent = Math.round((countsSg03.Rosberg/vm.users.length)*100) || 0;
-						var rosbergSg04Percent = Math.round((countsSg04.Rosberg/vm.users.length)*100) || 0;
-						var rosbergSg05Percent = Math.round((countsSg05.Rosberg/vm.users.length)*100) || 0;
-						var rosbergSg06Percent = Math.round((countsSg06.Rosberg/vm.users.length)*100) || 0;
-						var rosbergSg07Percent = Math.round((countsSg07.Rosberg/vm.users.length)*100) || 0;
-						var rosbergSg08Percent = Math.round((countsSg08.Rosberg/vm.users.length)*100) || 0;
-						var rosbergSg09Percent = Math.round((countsSg09.Rosberg/vm.users.length)*100) || 0;
-						var rosbergSg10Percent = Math.round((countsSg10.Rosberg/vm.users.length)*100) || 0;
-						//Vettel
-						var vettelSg01Percent = Math.round((countsSg01.Vettel/vm.users.length)*100) || 0;
-						var vettelSg02Percent = Math.round((countsSg02.Vettel/vm.users.length)*100) || 0;
-						var vettelSg03Percent = Math.round((countsSg03.Vettel/vm.users.length)*100) || 0;
-						var vettelSg04Percent = Math.round((countsSg04.Vettel/vm.users.length)*100) || 0;
-						var vettelSg05Percent = Math.round((countsSg05.Vettel/vm.users.length)*100) || 0;
-						var vettelSg06Percent = Math.round((countsSg06.Vettel/vm.users.length)*100) || 0;
-						var vettelSg07Percent = Math.round((countsSg07.Vettel/vm.users.length)*100) || 0;
-						var vettelSg08Percent = Math.round((countsSg08.Vettel/vm.users.length)*100) || 0;
-						var vettelSg09Percent = Math.round((countsSg09.Vettel/vm.users.length)*100) || 0;
-						var vettelSg10Percent = Math.round((countsSg10.Vettel/vm.users.length)*100) || 0;
-						//Raikkonen
-						var raikkonenSg01Percent = Math.round((countsSg01.Raikkonen/vm.users.length)*100) || 0;
-						var raikkonenSg02Percent = Math.round((countsSg02.Raikkonen/vm.users.length)*100) || 0;
-						var raikkonenSg03Percent = Math.round((countsSg03.Raikkonen/vm.users.length)*100) || 0;
-						var raikkonenSg04Percent = Math.round((countsSg04.Raikkonen/vm.users.length)*100) || 0;
-						var raikkonenSg05Percent = Math.round((countsSg05.Raikkonen/vm.users.length)*100) || 0;
-						var raikkonenSg06Percent = Math.round((countsSg06.Raikkonen/vm.users.length)*100) || 0;
-						var raikkonenSg07Percent = Math.round((countsSg07.Raikkonen/vm.users.length)*100) || 0;
-						var raikkonenSg08Percent = Math.round((countsSg08.Raikkonen/vm.users.length)*100) || 0;
-						var raikkonenSg09Percent = Math.round((countsSg09.Raikkonen/vm.users.length)*100) || 0;
-						var raikkonenSg10Percent = Math.round((countsSg10.Raikkonen/vm.users.length)*100) || 0;
-						//Massa
-						var massaSg01Percent = Math.round((countsSg01.Massa/vm.users.length)*100) || 0;
-						var massaSg02Percent = Math.round((countsSg02.Massa/vm.users.length)*100) || 0;
-						var massaSg03Percent = Math.round((countsSg03.Massa/vm.users.length)*100) || 0;
-						var massaSg04Percent = Math.round((countsSg04.Massa/vm.users.length)*100) || 0;
-						var massaSg05Percent = Math.round((countsSg05.Massa/vm.users.length)*100) || 0;
-						var massaSg06Percent = Math.round((countsSg06.Massa/vm.users.length)*100) || 0;
-						var massaSg07Percent = Math.round((countsSg07.Massa/vm.users.length)*100) || 0;
-						var massaSg08Percent = Math.round((countsSg08.Massa/vm.users.length)*100) || 0;
-						var massaSg09Percent = Math.round((countsSg09.Massa/vm.users.length)*100) || 0;
-						var massaSg10Percent = Math.round((countsSg10.Massa/vm.users.length)*100) || 0;
-						//Bottas
-						var bottasSg01Percent = Math.round((countsSg01.Bottas/vm.users.length)*100) || 0;
-						var bottasSg02Percent = Math.round((countsSg02.Bottas/vm.users.length)*100) || 0;
-						var bottasSg03Percent = Math.round((countsSg03.Bottas/vm.users.length)*100) || 0;
-						var bottasSg04Percent = Math.round((countsSg04.Bottas/vm.users.length)*100) || 0;
-						var bottasSg05Percent = Math.round((countsSg05.Bottas/vm.users.length)*100) || 0;
-						var bottasSg06Percent = Math.round((countsSg06.Bottas/vm.users.length)*100) || 0;
-						var bottasSg07Percent = Math.round((countsSg07.Bottas/vm.users.length)*100) || 0;
-						var bottasSg08Percent = Math.round((countsSg08.Bottas/vm.users.length)*100) || 0;
-						var bottasSg09Percent = Math.round((countsSg09.Bottas/vm.users.length)*100) || 0;
-						var bottasSg10Percent = Math.round((countsSg10.Bottas/vm.users.length)*100) || 0;
-						//Kvyat
-						var kvyatSg01Percent = Math.round((countsSg01.Kvyat/vm.users.length)*100) || 0;
-						var kvyatSg02Percent = Math.round((countsSg02.Kvyat/vm.users.length)*100) || 0;
-						var kvyatSg03Percent = Math.round((countsSg03.Kvyat/vm.users.length)*100) || 0;
-						var kvyatSg04Percent = Math.round((countsSg04.Kvyat/vm.users.length)*100) || 0;
-						var kvyatSg05Percent = Math.round((countsSg05.Kvyat/vm.users.length)*100) || 0;
-						var kvyatSg06Percent = Math.round((countsSg06.Kvyat/vm.users.length)*100) || 0;
-						var kvyatSg07Percent = Math.round((countsSg07.Kvyat/vm.users.length)*100) || 0;
-						var kvyatSg08Percent = Math.round((countsSg08.Kvyat/vm.users.length)*100) || 0;
-						var kvyatSg09Percent = Math.round((countsSg09.Kvyat/vm.users.length)*100) || 0;
-						var kvyatSg10Percent = Math.round((countsSg10.Kvyat/vm.users.length)*100) || 0;
-						//Ricciardo
-						var ricciardoSg01Percent = Math.round((countsSg01.Ricciardo/vm.users.length)*100) || 0;
-						var ricciardoSg02Percent = Math.round((countsSg02.Ricciardo/vm.users.length)*100) || 0;
-						var ricciardoSg03Percent = Math.round((countsSg03.Ricciardo/vm.users.length)*100) || 0;
-						var ricciardoSg04Percent = Math.round((countsSg04.Ricciardo/vm.users.length)*100) || 0;
-						var ricciardoSg05Percent = Math.round((countsSg05.Ricciardo/vm.users.length)*100) || 0;
-						var ricciardoSg06Percent = Math.round((countsSg06.Ricciardo/vm.users.length)*100) || 0;
-						var ricciardoSg07Percent = Math.round((countsSg07.Ricciardo/vm.users.length)*100) || 0;
-						var ricciardoSg08Percent = Math.round((countsSg08.Ricciardo/vm.users.length)*100) || 0;
-						var ricciardoSg09Percent = Math.round((countsSg09.Ricciardo/vm.users.length)*100) || 0;
-						var ricciardoSg10Percent = Math.round((countsSg10.Ricciardo/vm.users.length)*100) || 0;
-						//Perez
-						var perezSg01Percent = Math.round((countsSg01.Perez/vm.users.length)*100) || 0;
-						var perezSg02Percent = Math.round((countsSg02.Perez/vm.users.length)*100) || 0;
-						var perezSg03Percent = Math.round((countsSg03.Perez/vm.users.length)*100) || 0;
-						var perezSg04Percent = Math.round((countsSg04.Perez/vm.users.length)*100) || 0;
-						var perezSg05Percent = Math.round((countsSg05.Perez/vm.users.length)*100) || 0;
-						var perezSg06Percent = Math.round((countsSg06.Perez/vm.users.length)*100) || 0;
-						var perezSg07Percent = Math.round((countsSg07.Perez/vm.users.length)*100) || 0;
-						var perezSg08Percent = Math.round((countsSg08.Perez/vm.users.length)*100) || 0;
-						var perezSg09Percent = Math.round((countsSg09.Perez/vm.users.length)*100) || 0;
-						var perezSg10Percent = Math.round((countsSg10.Perez/vm.users.length)*100) || 0;
-						//Hulkenberg
-						var hulkenbergSg01Percent = Math.round((countsSg01.Hulkenberg/vm.users.length)*100) || 0;
-						var hulkenbergSg02Percent = Math.round((countsSg02.Hulkenberg/vm.users.length)*100) || 0;
-						var hulkenbergSg03Percent = Math.round((countsSg03.Hulkenberg/vm.users.length)*100) || 0;
-						var hulkenbergSg04Percent = Math.round((countsSg04.Hulkenberg/vm.users.length)*100) || 0;
-						var hulkenbergSg05Percent = Math.round((countsSg05.Hulkenberg/vm.users.length)*100) || 0;
-						var hulkenbergSg06Percent = Math.round((countsSg06.Hulkenberg/vm.users.length)*100) || 0;
-						var hulkenbergSg07Percent = Math.round((countsSg07.Hulkenberg/vm.users.length)*100) || 0;
-						var hulkenbergSg08Percent = Math.round((countsSg08.Hulkenberg/vm.users.length)*100) || 0;
-						var hulkenbergSg09Percent = Math.round((countsSg09.Hulkenberg/vm.users.length)*100) || 0;
-						var hulkenbergSg10Percent = Math.round((countsSg10.Hulkenberg/vm.users.length)*100) || 0;
-						//Grosjean
-						var grosjeanSg01Percent = Math.round((countsSg01.Grosjean/vm.users.length)*100) || 0;
-						var grosjeanSg02Percent = Math.round((countsSg02.Grosjean/vm.users.length)*100) || 0;
-						var grosjeanSg03Percent = Math.round((countsSg03.Grosjean/vm.users.length)*100) || 0;
-						var grosjeanSg04Percent = Math.round((countsSg04.Grosjean/vm.users.length)*100) || 0;
-						var grosjeanSg05Percent = Math.round((countsSg05.Grosjean/vm.users.length)*100) || 0;
-						var grosjeanSg06Percent = Math.round((countsSg06.Grosjean/vm.users.length)*100) || 0;
-						var grosjeanSg07Percent = Math.round((countsSg07.Grosjean/vm.users.length)*100) || 0;
-						var grosjeanSg08Percent = Math.round((countsSg08.Grosjean/vm.users.length)*100) || 0;
-						var grosjeanSg09Percent = Math.round((countsSg09.Grosjean/vm.users.length)*100) || 0;
-						var grosjeanSg10Percent = Math.round((countsSg10.Grosjean/vm.users.length)*100) || 0;
-						//Maldonado
-						var maldonadoSg01Percent = Math.round((countsSg01.Maldonado/vm.users.length)*100) || 0;
-						var maldonadoSg02Percent = Math.round((countsSg02.Maldonado/vm.users.length)*100) || 0;
-						var maldonadoSg03Percent = Math.round((countsSg03.Maldonado/vm.users.length)*100) || 0;
-						var maldonadoSg04Percent = Math.round((countsSg04.Maldonado/vm.users.length)*100) || 0;
-						var maldonadoSg05Percent = Math.round((countsSg05.Maldonado/vm.users.length)*100) || 0;
-						var maldonadoSg06Percent = Math.round((countsSg06.Maldonado/vm.users.length)*100) || 0;
-						var maldonadoSg07Percent = Math.round((countsSg07.Maldonado/vm.users.length)*100) || 0;
-						var maldonadoSg08Percent = Math.round((countsSg08.Maldonado/vm.users.length)*100) || 0;
-						var maldonadoSg09Percent = Math.round((countsSg09.Maldonado/vm.users.length)*100) || 0;
-						var maldonadoSg10Percent = Math.round((countsSg10.Maldonado/vm.users.length)*100) || 0;
-						//Verstappen
-						var verstappenSg01Percent = Math.round((countsSg01.Verstappen/vm.users.length)*100) || 0;
-						var verstappenSg02Percent = Math.round((countsSg02.Verstappen/vm.users.length)*100) || 0;
-						var verstappenSg03Percent = Math.round((countsSg03.Verstappen/vm.users.length)*100) || 0;
-						var verstappenSg04Percent = Math.round((countsSg04.Verstappen/vm.users.length)*100) || 0;
-						var verstappenSg05Percent = Math.round((countsSg05.Verstappen/vm.users.length)*100) || 0;
-						var verstappenSg06Percent = Math.round((countsSg06.Verstappen/vm.users.length)*100) || 0;
-						var verstappenSg07Percent = Math.round((countsSg07.Verstappen/vm.users.length)*100) || 0;
-						var verstappenSg08Percent = Math.round((countsSg08.Verstappen/vm.users.length)*100) || 0;
-						var verstappenSg09Percent = Math.round((countsSg09.Verstappen/vm.users.length)*100) || 0;
-						var verstappenSg10Percent = Math.round((countsSg10.Verstappen/vm.users.length)*100) || 0;
-						//Sainz
-						var sainzSg01Percent = Math.round((countsSg01.Sainz/vm.users.length)*100) || 0;
-						var sainzSg02Percent = Math.round((countsSg02.Sainz/vm.users.length)*100) || 0;
-						var sainzSg03Percent = Math.round((countsSg03.Sainz/vm.users.length)*100) || 0;
-						var sainzSg04Percent = Math.round((countsSg04.Sainz/vm.users.length)*100) || 0;
-						var sainzSg05Percent = Math.round((countsSg05.Sainz/vm.users.length)*100) || 0;
-						var sainzSg06Percent = Math.round((countsSg06.Sainz/vm.users.length)*100) || 0;
-						var sainzSg07Percent = Math.round((countsSg07.Sainz/vm.users.length)*100) || 0;
-						var sainzSg08Percent = Math.round((countsSg08.Sainz/vm.users.length)*100) || 0;
-						var sainzSg09Percent = Math.round((countsSg09.Sainz/vm.users.length)*100) || 0;
-						var sainzSg10Percent = Math.round((countsSg10.Sainz/vm.users.length)*100) || 0;
-						//Ericsson
-						var ericssonSg01Percent = Math.round((countsSg01.Ericsson/vm.users.length)*100) || 0;
-						var ericssonSg02Percent = Math.round((countsSg02.Ericsson/vm.users.length)*100) || 0;
-						var ericssonSg03Percent = Math.round((countsSg03.Ericsson/vm.users.length)*100) || 0;
-						var ericssonSg04Percent = Math.round((countsSg04.Ericsson/vm.users.length)*100) || 0;
-						var ericssonSg05Percent = Math.round((countsSg05.Ericsson/vm.users.length)*100) || 0;
-						var ericssonSg06Percent = Math.round((countsSg06.Ericsson/vm.users.length)*100) || 0;
-						var ericssonSg07Percent = Math.round((countsSg07.Ericsson/vm.users.length)*100) || 0;
-						var ericssonSg08Percent = Math.round((countsSg08.Ericsson/vm.users.length)*100) || 0;
-						var ericssonSg09Percent = Math.round((countsSg09.Ericsson/vm.users.length)*100) || 0;
-						var ericssonSg10Percent = Math.round((countsSg10.Ericsson/vm.users.length)*100) || 0;
-						//Nasr
-						var nasrSg01Percent = Math.round((countsSg01.Nasr/vm.users.length)*100) || 0;
-						var nasrSg02Percent = Math.round((countsSg02.Nasr/vm.users.length)*100) || 0;
-						var nasrSg03Percent = Math.round((countsSg03.Nasr/vm.users.length)*100) || 0;
-						var nasrSg04Percent = Math.round((countsSg04.Nasr/vm.users.length)*100) || 0;
-						var nasrSg05Percent = Math.round((countsSg05.Nasr/vm.users.length)*100) || 0;
-						var nasrSg06Percent = Math.round((countsSg06.Nasr/vm.users.length)*100) || 0;
-						var nasrSg07Percent = Math.round((countsSg07.Nasr/vm.users.length)*100) || 0;
-						var nasrSg08Percent = Math.round((countsSg08.Nasr/vm.users.length)*100) || 0;
-						var nasrSg09Percent = Math.round((countsSg09.Nasr/vm.users.length)*100) || 0;
-						var nasrSg10Percent = Math.round((countsSg10.Nasr/vm.users.length)*100) || 0;
-						//Alonso
-						var alonsoSg01Percent = Math.round((countsSg01.Alonso/vm.users.length)*100) || 0;
-						var alonsoSg02Percent = Math.round((countsSg02.Alonso/vm.users.length)*100) || 0;
-						var alonsoSg03Percent = Math.round((countsSg03.Alonso/vm.users.length)*100) || 0;
-						var alonsoSg04Percent = Math.round((countsSg04.Alonso/vm.users.length)*100) || 0;
-						var alonsoSg05Percent = Math.round((countsSg05.Alonso/vm.users.length)*100) || 0;
-						var alonsoSg06Percent = Math.round((countsSg06.Alonso/vm.users.length)*100) || 0;
-						var alonsoSg07Percent = Math.round((countsSg07.Alonso/vm.users.length)*100) || 0;
-						var alonsoSg08Percent = Math.round((countsSg08.Alonso/vm.users.length)*100) || 0;
-						var alonsoSg09Percent = Math.round((countsSg09.Alonso/vm.users.length)*100) || 0;
-						var alonsoSg10Percent = Math.round((countsSg10.Alonso/vm.users.length)*100) || 0;
-						//Button
-						var buttonSg01Percent = Math.round((countsSg01.Button/vm.users.length)*100) || 0;
-						var buttonSg02Percent = Math.round((countsSg02.Button/vm.users.length)*100) || 0;
-						var buttonSg03Percent = Math.round((countsSg03.Button/vm.users.length)*100) || 0;
-						var buttonSg04Percent = Math.round((countsSg04.Button/vm.users.length)*100) || 0;
-						var buttonSg05Percent = Math.round((countsSg05.Button/vm.users.length)*100) || 0;
-						var buttonSg06Percent = Math.round((countsSg06.Button/vm.users.length)*100) || 0;
-						var buttonSg07Percent = Math.round((countsSg07.Button/vm.users.length)*100) || 0;
-						var buttonSg08Percent = Math.round((countsSg08.Button/vm.users.length)*100) || 0;
-						var buttonSg09Percent = Math.round((countsSg09.Button/vm.users.length)*100) || 0;
-						var buttonSg10Percent = Math.round((countsSg10.Button/vm.users.length)*100) || 0;
-						//Stevens
-						var stevensSg01Percent = Math.round((countsSg01.Stevens/vm.users.length)*100) || 0;
-						var stevensSg02Percent = Math.round((countsSg02.Stevens/vm.users.length)*100) || 0;
-						var stevensSg03Percent = Math.round((countsSg03.Stevens/vm.users.length)*100) || 0;
-						var stevensSg04Percent = Math.round((countsSg04.Stevens/vm.users.length)*100) || 0;
-						var stevensSg05Percent = Math.round((countsSg05.Stevens/vm.users.length)*100) || 0;
-						var stevensSg06Percent = Math.round((countsSg06.Stevens/vm.users.length)*100) || 0;
-						var stevensSg07Percent = Math.round((countsSg07.Stevens/vm.users.length)*100) || 0;
-						var stevensSg08Percent = Math.round((countsSg08.Stevens/vm.users.length)*100) || 0;
-						var stevensSg09Percent = Math.round((countsSg09.Stevens/vm.users.length)*100) || 0;
-						var stevensSg10Percent = Math.round((countsSg10.Stevens/vm.users.length)*100) || 0;
-						//Merhi
-						var merhiSg01Percent = Math.round((countsSg01.Merhi/vm.users.length)*100) || 0;
-						var merhiSg02Percent = Math.round((countsSg02.Merhi/vm.users.length)*100) || 0;
-						var merhiSg03Percent = Math.round((countsSg03.Merhi/vm.users.length)*100) || 0;
-						var merhiSg04Percent = Math.round((countsSg04.Merhi/vm.users.length)*100) || 0;
-						var merhiSg05Percent = Math.round((countsSg05.Merhi/vm.users.length)*100) || 0;
-						var merhiSg06Percent = Math.round((countsSg06.Merhi/vm.users.length)*100) || 0;
-						var merhiSg07Percent = Math.round((countsSg07.Merhi/vm.users.length)*100) || 0;
-						var merhiSg08Percent = Math.round((countsSg08.Merhi/vm.users.length)*100) || 0;
-						var merhiSg09Percent = Math.round((countsSg09.Merhi/vm.users.length)*100) || 0;
-						var merhiSg10Percent = Math.round((countsSg10.Merhi/vm.users.length)*100) || 0;
+
+						var sgPercentage = {
+							Hamilton:   { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Rosberg:    { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Vettel:     { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Raikkonen:  { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Massa:      { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Bottas:     { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Kvyat:      { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Ricciardo:  { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Perez:      { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Hulkenberg: { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Grosjean:   { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Maldonado:  { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Verstappen: { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Sainz:      { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Ericsson:   { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Nasr:       { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Alonso:     { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Button:     { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Stevens:    { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 },
+							Merhi:      { Sg01Percent: 0, Sg02Percent: 0, Sg03Percent: 0, Sg04Percent: 0, Sg05Percent: 0, Sg06Percent: 0, Sg07Percent: 0, Sg08Percent: 0, Sg09Percent: 0, Sg10Percent: 0 }
+						};
+
+						//var dr goes from 0 to 19 and represents the driver name, which is a key in the sgPercentage object
+						//var gp goes from 0 to 9 and represents the grid position, which is a key in the sgPercentage object
+						//the while formula bellow gets very complicated, so this is a breakdown to remember what it is doing.
+						//The first part will get the driver name "dr" and all his grid positions "gr". "dr" goes from 0 to 19 to pick all 20 drivers and "sg" goes from 0 to 9 to pick all 10 positions.
+						console.log(sgPercentage[Object.keys(sgPercentage)[5]][Object.keys(sgPercentage[Object.keys(sgPercentage)[5]])[3]]); //This will get driver 5 which is Bottas and Sg04.
+						//The second part with Math.round finds the starting grid position "sg" from 0 to 9 and the driver name "dr" from 0 to 19 and divides it by the number of users to get a percentage.
+						console.log(counts[Object.keys(counts)[1]][Object.keys(counts[Object.keys(counts)[1]])[19]]);//This will get Sg02 and Merhi. First number goes from 0 to 9 and second goes from 0 to 19
+
+						var dr = 0;
+						var sg = 0;
+						while (dr < 20) {
+							while (sg < 10){
+								sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[sg]] = Math.round((counts[Object.keys(counts)[sg]][Object.keys(counts[Object.keys(counts)[sg]])[dr]]/vm.users.length)*100) || 0;
+								sg++;
+							}
+							sg = 0;
+							dr++;
+						}
+
+						console.log(sgPercentage);
 
 
 						//Driver Pick Status
