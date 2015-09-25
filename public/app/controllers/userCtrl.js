@@ -218,161 +218,86 @@ vm.submitPicks = function(){
 
 				//Create objects to hold how many picks for each driver exist in each grid position
 				var counts = {
-					Sg01: { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
-					Sg02: { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
-					Sg03: { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
-					Sg04: { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
-					Sg05: { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
-					Sg06: { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
-					Sg07: { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
-					Sg08: { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
-					Sg09: { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
-					Sg10: { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
+					Sg01:    { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
+					Sg02:    { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
+					Sg03:    { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
+					Sg04:    { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
+					Sg05:    { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
+					Sg06:    { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
+					Sg07:    { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
+					Sg08:    { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
+					Sg09:    { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
+					Sg10:    { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
+					Total:   { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
+					Percent: { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 },
+					Status:  { Hamilton: 0, Rosberg: 0, Vettel: 0, Raikkonen: 0, Massa: 0, Bottas: 0, Kvyat: 0, Ricciardo: 0, Perez: 0, Hulkenberg: 0, Grosjean: 0, Maldonado: 0, Verstappen: 0, Sainz: 0, Ericsson: 0, Nasr: 0, Alonso: 0, Button: 0, Stevens: 0, Merhi: 0 }
 				};
 
 				//Adding the number of picks for each driver in each position. Accessed using counts.Sg01[Object.keys(counts.Sg01)[0]]
-				allSgPicks[Object.keys(allSgPicks)[0]].forEach(function(x) { counts.Sg01[x] = (counts.Sg01[x] || 0)+1; });
-				allSgPicks[Object.keys(allSgPicks)[1]].forEach(function(x) { counts.Sg02[x] = (counts.Sg02[x] || 0)+1; });
-				allSgPicks[Object.keys(allSgPicks)[2]].forEach(function(x) { counts.Sg03[x] = (counts.Sg03[x] || 0)+1; });
-				allSgPicks[Object.keys(allSgPicks)[3]].forEach(function(x) { counts.Sg04[x] = (counts.Sg04[x] || 0)+1; });
-				allSgPicks[Object.keys(allSgPicks)[4]].forEach(function(x) { counts.Sg05[x] = (counts.Sg05[x] || 0)+1; });
-				allSgPicks[Object.keys(allSgPicks)[5]].forEach(function(x) { counts.Sg06[x] = (counts.Sg06[x] || 0)+1; });
-				allSgPicks[Object.keys(allSgPicks)[6]].forEach(function(x) { counts.Sg07[x] = (counts.Sg07[x] || 0)+1; });
-				allSgPicks[Object.keys(allSgPicks)[7]].forEach(function(x) { counts.Sg08[x] = (counts.Sg08[x] || 0)+1; });
-				allSgPicks[Object.keys(allSgPicks)[8]].forEach(function(x) { counts.Sg09[x] = (counts.Sg09[x] || 0)+1; });
-				allSgPicks[Object.keys(allSgPicks)[9]].forEach(function(x) { counts.Sg10[x] = (counts.Sg10[x] || 0)+1; });
+				var picks = 0; //picks goes from 0 to 9 representing each grid position
+				while (picks < 10){
+					allSgPicks[Object.keys(allSgPicks)[picks]].forEach(function(x) { counts.Sg01[x] = (counts.Sg01[x] || 0)+1; }); //adds how many picks each driver has for each grid position to the counts object
+					picks++;
+				}
 
-				console.log(counts.Sg01[Object.keys(counts.Sg01)[0]]); //this will get Sg01 and Hamilton
-				console.log(counts[Object.keys(counts)[1]][Object.keys(counts[Object.keys(counts)[1]])[19]]);//This will get Sg02 and Merhi. First number goes from 0 to 9 and second goes from 0 to 19
+				console.log(counts.Sg01[Object.keys(counts.Sg01)[0]]); //this will show the number of picks that Hamilton has at Sg01
+				console.log(counts[Object.keys(counts)[1]][Object.keys(counts[Object.keys(counts)[1]])[19]]);//This will show  Sg02 and Merhi. First number goes from 0 to 9 and second goes from 0 to 19
 
 				//Total picks for each driver
+				var sg = 0;
+				var dr = 0;
+				while (dr < 20){
+					while (sg < 10){
+						counts[Object.keys(counts)[10]][Object.keys(counts[Object.keys(counts)[10]])[dr]] = counts[Object.keys(counts)[10]][Object.keys(counts[Object.keys(counts)[10]])[dr]] + counts[Object.keys(counts)[sg]][Object.keys(counts[Object.keys(counts)[sg]])[dr]];
+						sg++;
+					}
+					sg = 0;
+					dr++;
+				}
 
-				var hamiltonTotal = (counts.Sg01.Hamilton || 0) + (counts.Sg02.Hamilton || 0) + (counts.Sg03.Hamilton || 0) + (counts.Sg04.Hamilton || 0) + (counts.Sg05.Hamilton || 0) + (counts.Sg06.Hamilton || 0) + (counts.Sg07.Hamilton || 0) + (counts.Sg08.Hamilton || 0) + (counts.Sg09.Hamilton || 0) + (counts.Sg10.Hamilton || 0);
-				console.log("Hamilton Total " + hamiltonTotal);
-				//Percentage
-				var hamiltonPercent = Math.round((hamiltonTotal/vm.users.length)*100);
+				//Percentage, based on how many players picked each specific driver in any of the 10 starting grid positions.
+				dr = 0; //resetting the Drivers variable
+				while (dr < 20){
+					counts[Object.keys(counts)[11]][Object.keys(counts[Object.keys(counts)[11]])[dr]] = Math.round((counts[Object.keys(counts)[10]][Object.keys(counts[Object.keys(counts)[10]])[dr]]/vm.users.length)*100);
+					dr++;
+				}
+
 				//Driver Status
-				var hamiltonStatus = "";
-				if(hamiltonPercent >= 85){ hamiltonStatus = "Favorite";} else if (hamiltonPercent >= 50){ hamiltonStatus = "Very Likely";} else if (hamiltonPercent >= 15){ hamiltonStatus = "Less Likely";} else { hamiltonStatus = "Underdog";}
-
-				var rosbergTotal = (counts.Sg01.Rosberg || 0) + (counts.Sg02.Rosberg || 0) + (counts.Sg03.Rosberg || 0) + (counts.Sg04.Rosberg || 0) + (counts.Sg05.Rosberg || 0) + (counts.Sg06.Rosberg || 0) + (counts.Sg07.Rosberg || 0) + (counts.Sg08.Rosberg || 0) + (counts.Sg09.Rosberg || 0) + (counts.Sg10.Rosberg || 0);
-				var rosbergPercent = Math.round((rosbergTotal/vm.users.length)*100);
-				var rosbergStatus = "";
-				if(rosbergPercent >= 85){ rosbergStatus = "Favorite";} else if (rosbergPercent >= 50){ rosbergStatus = "Very Likely";} else if (rosbergPercent >= 15){ rosbergStatus = "Less Likely";} else { rosbergStatus = "Underdog";}
-
-				var vettelTotal = (counts.Sg01.Vettel || 0) + (counts.Sg02.Vettel || 0) + (counts.Sg03.Vettel || 0) + (counts.Sg04.Vettel || 0) + (counts.Sg05.Vettel || 0) + (counts.Sg06.Vettel || 0) + (counts.Sg07.Vettel || 0) + (counts.Sg08.Vettel || 0) + (counts.Sg09.Vettel || 0) + (counts.Sg10.Vettel || 0);
-				var vettelPercent = Math.round((vettelTotal/vm.users.length)*100);
-				var vettelStatus = "";
-				if(vettelPercent >= 85){ vettelStatus = "Favorite";} else if (vettelPercent >= 50){ vettelStatus = "Very Likely";} else if (vettelPercent >= 15){ vettelStatus = "Less Likely";} else { vettelStatus = "Underdog";}
-
-				var raikkonenTotal = (counts.Sg01.Raikkonen || 0) + (counts.Sg02.Raikkonen || 0) + (counts.Sg03.Raikkonen || 0) + (counts.Sg04.Raikkonen || 0) + (counts.Sg05.Raikkonen || 0) + (counts.Sg06.Raikkonen || 0) + (counts.Sg07.Raikkonen || 0) + (counts.Sg08.Raikkonen || 0) + (counts.Sg09.Raikkonen || 0) + (counts.Sg10.Raikkonen || 0);
-				var raikkonenPercent = Math.round((raikkonenTotal/vm.users.length)*100);
-				var raikkonenStatus = "";
-				if(raikkonenPercent >= 85){ raikkonenStatus = "Favorite";} else if (raikkonenPercent >= 50){ raikkonenStatus = "Very Likely";} else if (raikkonenPercent >= 15){ raikkonenStatus = "Less Likely";} else { raikkonenStatus = "Underdog";}
-
-				var massaTotal = (counts.Sg01.Massa || 0) + (counts.Sg02.Massa || 0) + (counts.Sg03.Massa || 0) + (counts.Sg04.Massa || 0) + (counts.Sg05.Massa || 0) + (counts.Sg06.Massa || 0) + (counts.Sg07.Massa || 0) + (counts.Sg08.Massa || 0) + (counts.Sg09.Massa || 0) + (counts.Sg10.Massa || 0);
-				var massaPercent = Math.round((massaTotal/vm.users.length)*100);
-				var massaStatus = "";
-				if(massaPercent >= 85){ massaStatus = "Favorite";} else if (massaPercent >= 50){ massaStatus = "Very Likely";} else if (massaPercent >= 15){ massaStatus = "Less Likely";} else { massaStatus = "Underdog";}
-
-				var bottasTotal = (counts.Sg01.Bottas || 0) + (counts.Sg02.Bottas || 0) + (counts.Sg03.Bottas || 0) + (counts.Sg04.Bottas || 0) + (counts.Sg05.Bottas || 0) + (counts.Sg06.Bottas || 0) + (counts.Sg07.Bottas || 0) + (counts.Sg08.Bottas || 0) + (counts.Sg09.Bottas || 0) + (counts.Sg10.Bottas || 0);
-				var bottasPercent = Math.round((bottasTotal/vm.users.length)*100);
-				var bottasStatus = "";
-				if(bottasPercent >= 85){ bottasStatus = "Favorite";} else if (bottasPercent >= 50){ bottasStatus = "Very Likely";} else if (bottasPercent >= 15){ bottasStatus = "Less Likely";} else { bottasStatus = "Underdog";}
-
-				var kvyatTotal = (counts.Sg01.Kvyat || 0) + (counts.Sg02.Kvyat || 0) + (counts.Sg03.Kvyat || 0) + (counts.Sg04.Kvyat || 0) + (counts.Sg05.Kvyat || 0) + (counts.Sg06.Kvyat || 0) + (counts.Sg07.Kvyat || 0) + (counts.Sg08.Kvyat || 0) + (counts.Sg09.Kvyat || 0) + (counts.Sg10.Kvyat || 0);
-				var kvyatPercent = Math.round((kvyatTotal/vm.users.length)*100);
-				var kvyatStatus = "";
-				if(kvyatPercent >= 85){ kvyatStatus = "Favorite";} else if (kvyatPercent >= 50){ kvyatStatus = "Very Likely";} else if (kvyatPercent >= 15){ kvyatStatus = "Less Likely";} else { kvyatStatus = "Underdog";}
-
-				var ricciardoTotal = (counts.Sg01.Ricciardo || 0) + (counts.Sg02.Ricciardo || 0) + (counts.Sg03.Ricciardo || 0) + (counts.Sg04.Ricciardo || 0) + (counts.Sg05.Ricciardo || 0) + (counts.Sg06.Ricciardo || 0) + (counts.Sg07.Ricciardo || 0) + (counts.Sg08.Ricciardo || 0) + (counts.Sg09.Ricciardo || 0) + (counts.Sg10.Ricciardo || 0);
-				var ricciardoPercent = Math.round((ricciardoTotal/vm.users.length)*100);
-				var ricciardoStatus = "";
-				if(ricciardoPercent >= 85){ ricciardoStatus = "Favorite";} else if (ricciardoPercent >= 50){ ricciardoStatus = "Very Likely";} else if (ricciardoPercent >= 15){ ricciardoStatus = "Less Likely";} else { ricciardoStatus = "Underdog";}
-
-				var perezTotal = (counts.Sg01.Perez || 0) + (counts.Sg02.Perez || 0) + (counts.Sg03.Perez || 0) + (counts.Sg04.Perez || 0) + (counts.Sg05.Perez || 0) + (counts.Sg06.Perez || 0) + (counts.Sg07.Perez || 0) + (counts.Sg08.Perez || 0) + (counts.Sg09.Perez || 0) + (counts.Sg10.Perez || 0);
-				var perezPercent = Math.round((perezTotal/vm.users.length)*100);
-				var perezStatus = "";
-				if(perezPercent >= 85){ perezStatus = "Favorite";} else if (perezPercent >= 50){ perezStatus = "Very Likely";} else if (perezPercent >= 15){ perezStatus = "Less Likely";} else { perezStatus = "Underdog";}
-
-				var hulkenbergTotal = (counts.Sg01.Hulkenberg || 0) + (counts.Sg02.Hulkenberg || 0) + (counts.Sg03.Hulkenberg || 0) + (counts.Sg04.Hulkenberg || 0) + (counts.Sg05.Hulkenberg || 0) + (counts.Sg06.Hulkenberg || 0) + (counts.Sg07.Hulkenberg || 0) + (counts.Sg08.Hulkenberg || 0) + (counts.Sg09.Hulkenberg || 0) + (counts.Sg10.Hulkenberg || 0);
-				var hulkenbergPercent = Math.round((hulkenbergTotal/vm.users.length)*100);
-				var hulkenbergStatus = "";
-				if(hulkenbergPercent >= 85){ hulkenbergStatus = "Favorite";} else if (hulkenbergPercent >= 50){ hulkenbergStatus = "Very Likely";} else if (hulkenbergPercent >= 15){ hulkenbergStatus = "Less Likely";} else { hulkenbergStatus = "Underdog";}
-
-				var grosjeanTotal = (counts.Sg01.Grosjean || 0) + (counts.Sg02.Grosjean || 0) + (counts.Sg03.Grosjean || 0) + (counts.Sg04.Grosjean || 0) + (counts.Sg05.Grosjean || 0) + (counts.Sg06.Grosjean || 0) + (counts.Sg07.Grosjean || 0) + (counts.Sg08.Grosjean || 0) + (counts.Sg09.Grosjean || 0) + (counts.Sg10.Grosjean || 0);
-				var grosjeanPercent = Math.round((grosjeanTotal/vm.users.length)*100);
-				var grosjeanStatus = "";
-				if(grosjeanPercent >= 85){ grosjeanStatus = "Favorite";} else if (grosjeanPercent >= 50){ grosjeanStatus = "Very Likely";} else if (grosjeanPercent >= 15){ grosjeanStatus = "Less Likely";} else { grosjeanStatus = "Underdog";}
-
-				var maldonadoTotal = (counts.Sg01.Maldonado || 0) + (counts.Sg02.Maldonado || 0) + (counts.Sg03.Maldonado || 0) + (counts.Sg04.Maldonado || 0) + (counts.Sg05.Maldonado || 0) + (counts.Sg06.Maldonado || 0) + (counts.Sg07.Maldonado || 0) + (counts.Sg08.Maldonado || 0) + (counts.Sg09.Maldonado || 0) + (counts.Sg10.Maldonado || 0);
-				var maldonadoPercent = Math.round((maldonadoTotal/vm.users.length)*100);
-				var maldonadoStatus = "";
-				if(maldonadoPercent >= 85){ maldonadoStatus = "Favorite";} else if (maldonadoPercent >= 50){ maldonadoStatus = "Very Likely";} else if (maldonadoPercent >= 15){ maldonadoStatus = "Less Likely";} else { maldonadoStatus = "Underdog";}
-
-				var verstappenTotal = (counts.Sg01.Verstappen || 0) + (counts.Sg02.Verstappen || 0) + (counts.Sg03.Verstappen || 0) + (counts.Sg04.Verstappen || 0) + (counts.Sg05.Verstappen || 0) + (counts.Sg06.Verstappen || 0) + (counts.Sg07.Verstappen || 0) + (counts.Sg08.Verstappen || 0) + (counts.Sg09.Verstappen || 0) + (counts.Sg10.Verstappen || 0);
-				var verstappenPercent = Math.round((verstappenTotal/vm.users.length)*100);
-				var verstappenStatus = "";
-				if(verstappenPercent >= 85){ verstappenStatus = "Favorite";} else if (verstappenPercent >= 50){ verstappenStatus = "Very Likely";} else if (verstappenPercent >= 15){ verstappenStatus = "Less Likely";} else { verstappenStatus = "Underdog";}
-
-				var sainzTotal = (counts.Sg01.Sainz || 0) + (counts.Sg02.Sainz || 0) + (counts.Sg03.Sainz || 0) + (counts.Sg04.Sainz || 0) + (counts.Sg05.Sainz || 0) + (counts.Sg06.Sainz || 0) + (counts.Sg07.Sainz || 0) + (counts.Sg08.Sainz || 0) + (counts.Sg09.Sainz || 0) + (counts.Sg10.Sainz || 0);
-				var sainzPercent = Math.round((sainzTotal/vm.users.length)*100);
-				var sainzStatus = "";
-				if(sainzPercent >= 85){ sainzStatus = "Favorite";} else if (sainzPercent >= 50){ sainzStatus = "Very Likely";} else if (sainzPercent >= 15){ sainzStatus = "Less Likely";} else { sainzStatus = "Underdog";}
-
-				var ericssonTotal = (counts.Sg01.Ericsson || 0) + (counts.Sg02.Ericsson || 0) + (counts.Sg03.Ericsson || 0) + (counts.Sg04.Ericsson || 0) + (counts.Sg05.Ericsson || 0) + (counts.Sg06.Ericsson || 0) + (counts.Sg07.Ericsson || 0) + (counts.Sg08.Ericsson || 0) + (counts.Sg09.Ericsson || 0) + (counts.Sg10.Ericsson || 0);
-				var ericssonPercent = Math.round((ericssonTotal/vm.users.length)*100);
-				var ericssonStatus = "";
-				if(ericssonPercent >= 85){ ericssonStatus = "Favorite";} else if (ericssonPercent >= 50){ ericssonStatus = "Very Likely";} else if (ericssonPercent >= 15){ ericssonStatus = "Less Likely";} else { ericssonStatus = "Underdog";}
-
-				var nasrTotal = (counts.Sg01.Nasr || 0) + (counts.Sg02.Nasr || 0) + (counts.Sg03.Nasr || 0) + (counts.Sg04.Nasr || 0) + (counts.Sg05.Nasr || 0) + (counts.Sg06.Nasr || 0) + (counts.Sg07.Nasr || 0) + (counts.Sg08.Nasr || 0) + (counts.Sg09.Nasr || 0) + (counts.Sg10.Nasr || 0);
-				var nasrPercent = Math.round((nasrTotal/vm.users.length)*100);
-				var nasrStatus = "";
-				if(nasrPercent >= 85){ nasrStatus = "Favorite";} else if (nasrPercent >= 50){ nasrStatus = "Very Likely";} else if (nasrPercent >= 15){ nasrStatus = "Less Likely";} else { nasrStatus = "Underdog";}
-
-				var alonsoTotal = (counts.Sg01.Alonso || 0) + (counts.Sg02.Alonso || 0) + (counts.Sg03.Alonso || 0) + (counts.Sg04.Alonso || 0) + (counts.Sg05.Alonso || 0) + (counts.Sg06.Alonso || 0) + (counts.Sg07.Alonso || 0) + (counts.Sg08.Alonso || 0) + (counts.Sg09.Alonso || 0) + (counts.Sg10.Alonso || 0);
-				var alonsoPercent = Math.round((alonsoTotal/vm.users.length)*100);
-				var alonsoStatus = "";
-				if(alonsoPercent >= 85){ alonsoStatus = "Favorite";} else if (alonsoPercent >= 50){ alonsoStatus = "Very Likely";} else if (alonsoPercent >= 15){ alonsoStatus = "Less Likely";} else { alonsoStatus = "Underdog";}
-
-				var buttonTotal = (counts.Sg01.Button || 0) + (counts.Sg02.Button || 0) + (counts.Sg03.Button || 0) + (counts.Sg04.Button || 0) + (counts.Sg05.Button || 0) + (counts.Sg06.Button || 0) + (counts.Sg07.Button || 0) + (counts.Sg08.Button || 0) + (counts.Sg09.Button || 0) + (counts.Sg10.Button || 0);
-				var buttonPercent = Math.round((buttonTotal/vm.users.length)*100);
-				var buttonStatus = "";
-				if(buttonPercent >= 85){ buttonStatus = "Favorite";} else if (buttonPercent >= 50){ buttonStatus = "Very Likely";} else if (buttonPercent >= 15){ buttonStatus = "Less Likely";} else { buttonStatus = "Underdog";}
-
-				var stevensTotal = (counts.Sg01.Stevens || 0) + (counts.Sg02.Stevens || 0) + (counts.Sg03.Stevens || 0) + (counts.Sg04.Stevens || 0) + (counts.Sg05.Stevens || 0) + (counts.Sg06.Stevens || 0) + (counts.Sg07.Stevens || 0) + (counts.Sg08.Stevens || 0) + (counts.Sg09.Stevens || 0) + (counts.Sg10.Stevens || 0);
-				var stevensPercent = Math.round((stevensTotal/vm.users.length)*100);
-				var stevensStatus = "";
-				if(stevensPercent >= 85){ stevensStatus = "Favorite";} else if (stevensPercent >= 50){ stevensStatus = "Very Likely";} else if (stevensPercent >= 15){ stevensStatus = "Less Likely";} else { stevensStatus = "Underdog";}
-
-				var merhiTotal = (counts.Sg01.Merhi || 0) + (counts.Sg02.Merhi || 0) + (counts.Sg03.Merhi || 0) + (counts.Sg04.Merhi || 0) + (counts.Sg05.Merhi || 0) + (counts.Sg06.Merhi || 0) + (counts.Sg07.Merhi || 0) + (counts.Sg08.Merhi || 0) + (counts.Sg09.Merhi || 0) + (counts.Sg10.Merhi || 0);
-				var merhiPercent = Math.round((merhiTotal/vm.users.length)*100);
-				var merhiStatus = "";
-				if(merhiPercent >= 85){ merhiStatus = "Favorite";} else if (merhiPercent >= 50){ merhiStatus = "Very Likely";} else if (merhiPercent >= 15){ merhiStatus = "Less Likely";} else { merhiStatus = "Underdog";}
-
+				dr = 0; //resetting the Driver variable
+				while (dr < 20){
+					if(counts[Object.keys(counts)[11]][Object.keys(counts[Object.keys(counts)[11]])[dr]] >= 85){
+						counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] = "Favorite";
+					} else if (counts[Object.keys(counts)[11]][Object.keys(counts[Object.keys(counts)[11]])[dr]] >= 50){
+						counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] = "Very Likely";
+					} else if (counts[Object.keys(counts)[11]][Object.keys(counts[Object.keys(counts)[11]])[dr]] >= 15){
+						counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] = "Less Likely";
+					} else {counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] = "Underdog";
+					}
+					dr++;
+				}
 
 				//prepopulate a list of drivers
 				vm.drivers = [
-				    { pos: 1, driver: "Hamilton",    one: counts.Sg01.Hamilton || 0,   two: counts.Sg02.Hamilton || 0,   three: counts.Sg03.Hamilton || 0,   four: counts.Sg04.Hamilton || 0,   five: counts.Sg05.Hamilton || 0,   six: counts.Sg06.Hamilton || 0,   seven: counts.Sg07.Hamilton || 0,   eight: counts.Sg08.Hamilton || 0,   nine: counts.Sg09.Hamilton || 0,   ten: counts.Sg10.Hamilton || 0,   total: hamiltonTotal, percent: hamiltonPercent, status: hamiltonStatus},
-				    { pos: 2, driver: "Rosberg",     one: counts.Sg01.Rosberg || 0,    two: counts.Sg02.Rosberg || 0,    three: counts.Sg03.Rosberg || 0,    four: counts.Sg04.Rosberg || 0,    five: counts.Sg05.Rosberg || 0,    six: counts.Sg06.Rosberg || 0,    seven: counts.Sg07.Rosberg || 0,    eight: counts.Sg08.Rosberg || 0,    nine: counts.Sg09.Rosberg || 0,    ten: counts.Sg10.Rosberg || 0,    total: rosbergTotal, percent: rosbergPercent, status: rosbergStatus},
-				    { pos: 3, driver: "Vettel",      one: counts.Sg01.Vettel || 0,     two: counts.Sg02.Vettel || 0,     three: counts.Sg03.Vettel || 0,     four: counts.Sg04.Vettel || 0,     five: counts.Sg05.Vettel || 0,     six: counts.Sg06.Vettel || 0,     seven: counts.Sg07.Vettel || 0,     eight: counts.Sg08.Vettel || 0,     nine: counts.Sg09.Vettel || 0,     ten: counts.Sg10.Vettel || 0,     total: vettelTotal, percent: vettelPercent, status: vettelStatus},
-				    { pos: 4, driver: "Raikkonen",   one: counts.Sg01.Raikkonen || 0,  two: counts.Sg02.Raikkonen || 0,  three: counts.Sg03.Raikkonen || 0,  four: counts.Sg04.Raikkonen || 0,  five: counts.Sg05.Raikkonen || 0,  six: counts.Sg06.Raikkonen || 0,  seven: counts.Sg07.Raikkonen || 0,  eight: counts.Sg08.Raikkonen || 0,  nine: counts.Sg09.Raikkonen || 0,  ten: counts.Sg10.Raikkonen || 0,  total: raikkonenTotal, percent: raikkonenPercent, status: raikkonenStatus},
-				    { pos: 5, driver: "Massa",       one: counts.Sg01.Massa || 0,      two: counts.Sg02.Massa || 0,      three: counts.Sg03.Massa || 0,      four: counts.Sg04.Massa || 0,      five: counts.Sg05.Massa || 0,      six: counts.Sg06.Massa || 0,      seven: counts.Sg07.Massa || 0,      eight: counts.Sg08.Massa || 0,      nine: counts.Sg09.Massa || 0,      ten: counts.Sg10.Massa || 0,      total: massaTotal, percent: massaPercent, status: massaStatus},
-				    { pos: 6, driver: "Bottas",      one: counts.Sg01.Bottas || 0,     two: counts.Sg02.Bottas || 0,     three: counts.Sg03.Bottas || 0,     four: counts.Sg04.Bottas || 0,     five: counts.Sg05.Bottas || 0,     six: counts.Sg06.Bottas || 0,     seven: counts.Sg07.Bottas || 0,     eight: counts.Sg08.Bottas || 0,     nine: counts.Sg09.Bottas || 0,     ten: counts.Sg10.Bottas || 0,     total: bottasTotal, percent: bottasPercent, status: bottasStatus},
-				    { pos: 7, driver: "Kvyat",       one: counts.Sg01.Kvyat || 0,      two: counts.Sg02.Kvyat || 0,      three: counts.Sg03.Kvyat || 0,      four: counts.Sg04.Kvyat || 0,      five: counts.Sg05.Kvyat || 0,      six: counts.Sg06.Kvyat || 0,      seven: counts.Sg07.Kvyat || 0,      eight: counts.Sg08.Kvyat || 0,      nine: counts.Sg09.Kvyat || 0,      ten: counts.Sg10.Kvyat || 0,      total: kvyatTotal, percent: kvyatPercent, status: kvyatStatus},
-				    { pos: 8, driver: "Ricciardo",   one: counts.Sg01.Ricciardo || 0,  two: counts.Sg02.Ricciardo || 0,  three: counts.Sg03.Ricciardo || 0,  four: counts.Sg04.Ricciardo || 0,  five: counts.Sg05.Ricciardo || 0,  six: counts.Sg06.Ricciardo || 0,  seven: counts.Sg07.Ricciardo || 0,  eight: counts.Sg08.Ricciardo || 0,  nine: counts.Sg09.Ricciardo || 0,  ten: counts.Sg10.Ricciardo || 0,  total: ricciardoTotal, percent: ricciardoPercent, status: ricciardoStatus},
-				    { pos: 9, driver: "Perez",       one: counts.Sg01.Perez || 0,      two: counts.Sg02.Perez || 0,      three: counts.Sg03.Perez || 0,      four: counts.Sg04.Perez || 0,      five: counts.Sg05.Perez || 0,      six: counts.Sg06.Perez || 0,      seven: counts.Sg07.Perez || 0,      eight: counts.Sg08.Perez || 0,      nine: counts.Sg09.Perez || 0,      ten: counts.Sg10.Perez || 0,      total: perezTotal, percent: perezPercent, status: perezStatus},
-				    { pos: 10, driver: "Hulkenberg", one: counts.Sg01.Hulkenberg || 0, two: counts.Sg02.Hulkenberg || 0, three: counts.Sg03.Hulkenberg || 0, four: counts.Sg04.Hulkenberg || 0, five: counts.Sg05.Hulkenberg || 0, six: counts.Sg06.Hulkenberg || 0, seven: counts.Sg07.Hulkenberg || 0, eight: counts.Sg08.Hulkenberg || 0, nine: counts.Sg09.Hulkenberg || 0, ten: counts.Sg10.Hulkenberg || 0, total: hulkenbergTotal, percent: hulkenbergPercent, status: hulkenbergStatus},
-				    { pos: 11, driver: "Grosjean",   one: counts.Sg01.Grosjean || 0,   two: counts.Sg02.Grosjean || 0,   three: counts.Sg03.Grosjean || 0,   four: counts.Sg04.Grosjean || 0,   five: counts.Sg05.Grosjean || 0,   six: counts.Sg06.Grosjean || 0,   seven: counts.Sg07.Grosjean || 0,   eight: counts.Sg08.Grosjean || 0,   nine: counts.Sg09.Grosjean || 0,   ten: counts.Sg10.Grosjean || 0,   total: grosjeanTotal, percent: grosjeanPercent, status: grosjeanStatus},
-				    { pos: 12, driver: "Maldonado",  one: counts.Sg01.Maldonado || 0,  two: counts.Sg02.Maldonado || 0,  three: counts.Sg03.Maldonado || 0,  four: counts.Sg04.Maldonado || 0,  five: counts.Sg05.Maldonado || 0,  six: counts.Sg06.Maldonado || 0,  seven: counts.Sg07.Maldonado || 0,  eight: counts.Sg08.Maldonado || 0,  nine: counts.Sg09.Maldonado || 0,  ten: counts.Sg10.Maldonado || 0,  total: maldonadoTotal, percent: maldonadoPercent, status: maldonadoStatus},
-				    { pos: 13, driver: "Verstappen", one: counts.Sg01.Verstappen || 0, two: counts.Sg02.Verstappen || 0, three: counts.Sg03.Verstappen || 0, four: counts.Sg04.Verstappen || 0, five: counts.Sg05.Verstappen || 0, six: counts.Sg06.Verstappen || 0, seven: counts.Sg07.Verstappen || 0, eight: counts.Sg08.Verstappen || 0, nine: counts.Sg09.Verstappen || 0, ten: counts.Sg10.Verstappen || 0, total: verstappenTotal, percent: verstappenPercent, status: verstappenStatus},
-				    { pos: 14, driver: "Sainz",      one: counts.Sg01.Sainz || 0,      two: counts.Sg02.Sainz || 0,      three: counts.Sg03.Sainz || 0,      four: counts.Sg04.Sainz || 0,      five: counts.Sg05.Sainz || 0,      six: counts.Sg06.Sainz || 0,      seven: counts.Sg07.Sainz || 0,      eight: counts.Sg08.Sainz || 0,      nine: counts.Sg09.Sainz || 0,      ten: counts.Sg10.Sainz || 0,      total: sainzTotal, percent: sainzPercent, status: sainzStatus},
-				    { pos: 15, driver: "Ericsson",   one: counts.Sg01.Ericsson || 0,   two: counts.Sg02.Ericsson || 0,   three: counts.Sg03.Ericsson || 0,   four: counts.Sg04.Ericsson || 0,   five: counts.Sg05.Ericsson || 0,   six: counts.Sg06.Ericsson || 0,   seven: counts.Sg07.Ericsson || 0,   eight: counts.Sg08.Ericsson || 0,   nine: counts.Sg09.Ericsson || 0,   ten: counts.Sg10.Ericsson || 0,   total: ericssonTotal, percent: ericssonPercent, status: ericssonStatus},
-				    { pos: 16, driver: "Nasr",       one: counts.Sg01.Nasr || 0,       two: counts.Sg02.Nasr || 0,       three: counts.Sg03.Nasr || 0,       four: counts.Sg04.Nasr || 0,       five: counts.Sg05.Nasr || 0,       six: counts.Sg06.Nasr || 0,       seven: counts.Sg07.Nasr || 0,       eight: counts.Sg08.Nasr || 0,       nine: counts.Sg09.Nasr || 0,       ten: counts.Sg10.Nasr || 0,       total: nasrTotal, percent: nasrPercent, status: nasrStatus},
-				    { pos: 17, driver: "Alonso",     one: counts.Sg01.Alonso || 0,     two: counts.Sg02.Alonso || 0,     three: counts.Sg03.Alonso || 0,     four: counts.Sg04.Alonso || 0,     five: counts.Sg05.Alonso || 0,     six: counts.Sg06.Alonso || 0,     seven: counts.Sg07.Alonso || 0,     eight: counts.Sg08.Alonso || 0,     nine: counts.Sg09.Alonso || 0,     ten: counts.Sg10.Alonso || 0,     total: alonsoTotal, percent: alonsoPercent, status: alonsoStatus},
-				    { pos: 18, driver: "Button",     one: counts.Sg01.Button || 0,     two: counts.Sg02.Button || 0,     three: counts.Sg03.Button || 0,     four: counts.Sg04.Button || 0,     five: counts.Sg05.Button || 0,     six: counts.Sg06.Button || 0,     seven: counts.Sg07.Button || 0,     eight: counts.Sg08.Button || 0,     nine: counts.Sg09.Button || 0,     ten: counts.Sg10.Button || 0,     total: buttonTotal, percent: buttonPercent, status: buttonStatus},
-				    { pos: 19, driver: "Stevens",    one: counts.Sg01.Stevens || 0,    two: counts.Sg02.Stevens || 0,    three: counts.Sg03.Stevens || 0,    four: counts.Sg04.Stevens || 0,    five: counts.Sg05.Stevens || 0,    six: counts.Sg06.Stevens || 0,    seven: counts.Sg07.Stevens || 0,    eight: counts.Sg08.Stevens || 0,    nine: counts.Sg09.Stevens || 0,    ten: counts.Sg10.Stevens || 0,    total: stevensTotal, percent: stevensPercent, status: stevensStatus},
-				    { pos: 20, driver: "Merhi",      one: counts.Sg01.Merhi || 0,      two: counts.Sg02.Merhi || 0,      three: counts.Sg03.Merhi || 0,      four: counts.Sg04.Merhi || 0,      five: counts.Sg05.Merhi || 0,      six: counts.Sg06.Merhi || 0,      seven: counts.Sg07.Merhi || 0,      eight: counts.Sg08.Merhi || 0,      nine: counts.Sg09.Merhi || 0,      ten: counts.Sg10.Merhi || 0,      total: merhiTotal, percent: merhiPercent, status: merhiStatus},
+				    { pos: 1, driver: "Hamilton",    one: counts.Sg01.Hamilton || 0,   two: counts.Sg02.Hamilton || 0,   three: counts.Sg03.Hamilton || 0,   four: counts.Sg04.Hamilton || 0,   five: counts.Sg05.Hamilton || 0,   six: counts.Sg06.Hamilton || 0,   seven: counts.Sg07.Hamilton || 0,   eight: counts.Sg08.Hamilton || 0,   nine: counts.Sg09.Hamilton || 0,   ten: counts.Sg10.Hamilton || 0,   total: counts.Total.Hamilton,   percent: counts.Percent.Hamilton,   status: counts.Status.Hamilton},
+				    { pos: 2, driver: "Rosberg",     one: counts.Sg01.Rosberg || 0,    two: counts.Sg02.Rosberg || 0,    three: counts.Sg03.Rosberg || 0,    four: counts.Sg04.Rosberg || 0,    five: counts.Sg05.Rosberg || 0,    six: counts.Sg06.Rosberg || 0,    seven: counts.Sg07.Rosberg || 0,    eight: counts.Sg08.Rosberg || 0,    nine: counts.Sg09.Rosberg || 0,    ten: counts.Sg10.Rosberg || 0,    total: counts.Total.Rosberg,    percent: counts.Percent.Rosberg,    status: counts.Status.Rosberg},
+				    { pos: 3, driver: "Vettel",      one: counts.Sg01.Vettel || 0,     two: counts.Sg02.Vettel || 0,     three: counts.Sg03.Vettel || 0,     four: counts.Sg04.Vettel || 0,     five: counts.Sg05.Vettel || 0,     six: counts.Sg06.Vettel || 0,     seven: counts.Sg07.Vettel || 0,     eight: counts.Sg08.Vettel || 0,     nine: counts.Sg09.Vettel || 0,     ten: counts.Sg10.Vettel || 0,     total: counts.Total.Vettel,     percent: counts.Percent.Vettel,     status: counts.Status.Vettel},
+				    { pos: 4, driver: "Raikkonen",   one: counts.Sg01.Raikkonen || 0,  two: counts.Sg02.Raikkonen || 0,  three: counts.Sg03.Raikkonen || 0,  four: counts.Sg04.Raikkonen || 0,  five: counts.Sg05.Raikkonen || 0,  six: counts.Sg06.Raikkonen || 0,  seven: counts.Sg07.Raikkonen || 0,  eight: counts.Sg08.Raikkonen || 0,  nine: counts.Sg09.Raikkonen || 0,  ten: counts.Sg10.Raikkonen || 0,  total: counts.Total.Raikkonen,  percent: counts.Percent.Raikkonen,  status: counts.Status.Raikkonen},
+				    { pos: 5, driver: "Massa",       one: counts.Sg01.Massa || 0,      two: counts.Sg02.Massa || 0,      three: counts.Sg03.Massa || 0,      four: counts.Sg04.Massa || 0,      five: counts.Sg05.Massa || 0,      six: counts.Sg06.Massa || 0,      seven: counts.Sg07.Massa || 0,      eight: counts.Sg08.Massa || 0,      nine: counts.Sg09.Massa || 0,      ten: counts.Sg10.Massa || 0,      total: counts.Total.Massa,      percent: counts.Percent.Massa,      status: counts.Status.Massa},
+				    { pos: 6, driver: "Bottas",      one: counts.Sg01.Bottas || 0,     two: counts.Sg02.Bottas || 0,     three: counts.Sg03.Bottas || 0,     four: counts.Sg04.Bottas || 0,     five: counts.Sg05.Bottas || 0,     six: counts.Sg06.Bottas || 0,     seven: counts.Sg07.Bottas || 0,     eight: counts.Sg08.Bottas || 0,     nine: counts.Sg09.Bottas || 0,     ten: counts.Sg10.Bottas || 0,     total: counts.Total.Bottas,     percent: counts.Percent.Bottas,     status: counts.Status.Bottas},
+				    { pos: 7, driver: "Kvyat",       one: counts.Sg01.Kvyat || 0,      two: counts.Sg02.Kvyat || 0,      three: counts.Sg03.Kvyat || 0,      four: counts.Sg04.Kvyat || 0,      five: counts.Sg05.Kvyat || 0,      six: counts.Sg06.Kvyat || 0,      seven: counts.Sg07.Kvyat || 0,      eight: counts.Sg08.Kvyat || 0,      nine: counts.Sg09.Kvyat || 0,      ten: counts.Sg10.Kvyat || 0,      total: counts.Total.Kvyat,      percent: counts.Percent.Kvyat,      status: counts.Status.Kvyat},
+				    { pos: 8, driver: "Ricciardo",   one: counts.Sg01.Ricciardo || 0,  two: counts.Sg02.Ricciardo || 0,  three: counts.Sg03.Ricciardo || 0,  four: counts.Sg04.Ricciardo || 0,  five: counts.Sg05.Ricciardo || 0,  six: counts.Sg06.Ricciardo || 0,  seven: counts.Sg07.Ricciardo || 0,  eight: counts.Sg08.Ricciardo || 0,  nine: counts.Sg09.Ricciardo || 0,  ten: counts.Sg10.Ricciardo || 0,  total: counts.Total.Ricciardo,  percent: counts.Percent.Ricciardo,  status: counts.Status.Ricciardo},
+				    { pos: 9, driver: "Perez",       one: counts.Sg01.Perez || 0,      two: counts.Sg02.Perez || 0,      three: counts.Sg03.Perez || 0,      four: counts.Sg04.Perez || 0,      five: counts.Sg05.Perez || 0,      six: counts.Sg06.Perez || 0,      seven: counts.Sg07.Perez || 0,      eight: counts.Sg08.Perez || 0,      nine: counts.Sg09.Perez || 0,      ten: counts.Sg10.Perez || 0,      total: counts.Total.Perez,      percent: counts.Percent.Perez,      status: counts.Status.Perez},
+				    { pos: 10, driver: "Hulkenberg", one: counts.Sg01.Hulkenberg || 0, two: counts.Sg02.Hulkenberg || 0, three: counts.Sg03.Hulkenberg || 0, four: counts.Sg04.Hulkenberg || 0, five: counts.Sg05.Hulkenberg || 0, six: counts.Sg06.Hulkenberg || 0, seven: counts.Sg07.Hulkenberg || 0, eight: counts.Sg08.Hulkenberg || 0, nine: counts.Sg09.Hulkenberg || 0, ten: counts.Sg10.Hulkenberg || 0, total: counts.Total.Hulkenberg, percent: counts.Percent.Hulkenberg, status: counts.Status.Hulkenberg},
+				    { pos: 11, driver: "Grosjean",   one: counts.Sg01.Grosjean || 0,   two: counts.Sg02.Grosjean || 0,   three: counts.Sg03.Grosjean || 0,   four: counts.Sg04.Grosjean || 0,   five: counts.Sg05.Grosjean || 0,   six: counts.Sg06.Grosjean || 0,   seven: counts.Sg07.Grosjean || 0,   eight: counts.Sg08.Grosjean || 0,   nine: counts.Sg09.Grosjean || 0,   ten: counts.Sg10.Grosjean || 0,   total: counts.Total.Grosjean,   percent: counts.Percent.Grosjean,   status: counts.Status.Grosjean},
+				    { pos: 12, driver: "Maldonado",  one: counts.Sg01.Maldonado || 0,  two: counts.Sg02.Maldonado || 0,  three: counts.Sg03.Maldonado || 0,  four: counts.Sg04.Maldonado || 0,  five: counts.Sg05.Maldonado || 0,  six: counts.Sg06.Maldonado || 0,  seven: counts.Sg07.Maldonado || 0,  eight: counts.Sg08.Maldonado || 0,  nine: counts.Sg09.Maldonado || 0,  ten: counts.Sg10.Maldonado || 0,  total: counts.Total.Maldonado,  percent: counts.Percent.Maldonado,  status: counts.Status.Maldonado},
+				    { pos: 13, driver: "Verstappen", one: counts.Sg01.Verstappen || 0, two: counts.Sg02.Verstappen || 0, three: counts.Sg03.Verstappen || 0, four: counts.Sg04.Verstappen || 0, five: counts.Sg05.Verstappen || 0, six: counts.Sg06.Verstappen || 0, seven: counts.Sg07.Verstappen || 0, eight: counts.Sg08.Verstappen || 0, nine: counts.Sg09.Verstappen || 0, ten: counts.Sg10.Verstappen || 0, total: counts.Total.Verstappen, percent: counts.Percent.Verstappen, status: counts.Status.Verstappen},
+				    { pos: 14, driver: "Sainz",      one: counts.Sg01.Sainz || 0,      two: counts.Sg02.Sainz || 0,      three: counts.Sg03.Sainz || 0,      four: counts.Sg04.Sainz || 0,      five: counts.Sg05.Sainz || 0,      six: counts.Sg06.Sainz || 0,      seven: counts.Sg07.Sainz || 0,      eight: counts.Sg08.Sainz || 0,      nine: counts.Sg09.Sainz || 0,      ten: counts.Sg10.Sainz || 0,      total: counts.Total.Sainz,      percent: counts.Percent.Sainz,      status: counts.Status.Sainz},
+				    { pos: 15, driver: "Ericsson",   one: counts.Sg01.Ericsson || 0,   two: counts.Sg02.Ericsson || 0,   three: counts.Sg03.Ericsson || 0,   four: counts.Sg04.Ericsson || 0,   five: counts.Sg05.Ericsson || 0,   six: counts.Sg06.Ericsson || 0,   seven: counts.Sg07.Ericsson || 0,   eight: counts.Sg08.Ericsson || 0,   nine: counts.Sg09.Ericsson || 0,   ten: counts.Sg10.Ericsson || 0,   total: counts.Total.Ericsson,   percent: counts.Percent.Ericsson,   status: counts.Status.Ericsson},
+				    { pos: 16, driver: "Nasr",       one: counts.Sg01.Nasr || 0,       two: counts.Sg02.Nasr || 0,       three: counts.Sg03.Nasr || 0,       four: counts.Sg04.Nasr || 0,       five: counts.Sg05.Nasr || 0,       six: counts.Sg06.Nasr || 0,       seven: counts.Sg07.Nasr || 0,       eight: counts.Sg08.Nasr || 0,       nine: counts.Sg09.Nasr || 0,       ten: counts.Sg10.Nasr || 0,       total: counts.Total.Nasr,       percent: counts.Percent.Nasr,       status: counts.Status.Nasr},
+				    { pos: 17, driver: "Alonso",     one: counts.Sg01.Alonso || 0,     two: counts.Sg02.Alonso || 0,     three: counts.Sg03.Alonso || 0,     four: counts.Sg04.Alonso || 0,     five: counts.Sg05.Alonso || 0,     six: counts.Sg06.Alonso || 0,     seven: counts.Sg07.Alonso || 0,     eight: counts.Sg08.Alonso || 0,     nine: counts.Sg09.Alonso || 0,     ten: counts.Sg10.Alonso || 0,     total: counts.Total.Alonso,     percent: counts.Percent.Alonso,     status: counts.Status.Alonso},
+				    { pos: 18, driver: "Button",     one: counts.Sg01.Button || 0,     two: counts.Sg02.Button || 0,     three: counts.Sg03.Button || 0,     four: counts.Sg04.Button || 0,     five: counts.Sg05.Button || 0,     six: counts.Sg06.Button || 0,     seven: counts.Sg07.Button || 0,     eight: counts.Sg08.Button || 0,     nine: counts.Sg09.Button || 0,     ten: counts.Sg10.Button || 0,     total: counts.Total.Button,     percent: counts.Percent.Button,     status: counts.Status.Button},
+				    { pos: 19, driver: "Stevens",    one: counts.Sg01.Stevens || 0,    two: counts.Sg02.Stevens || 0,    three: counts.Sg03.Stevens || 0,    four: counts.Sg04.Stevens || 0,    five: counts.Sg05.Stevens || 0,    six: counts.Sg06.Stevens || 0,    seven: counts.Sg07.Stevens || 0,    eight: counts.Sg08.Stevens || 0,    nine: counts.Sg09.Stevens || 0,    ten: counts.Sg10.Stevens || 0,    total: counts.Total.Stevens,    percent: counts.Percent.Stevens,    status: counts.Status.Stevens},
+				    { pos: 20, driver: "Merhi",      one: counts.Sg01.Merhi || 0,      two: counts.Sg02.Merhi || 0,      three: counts.Sg03.Merhi || 0,      four: counts.Sg04.Merhi || 0,      five: counts.Sg05.Merhi || 0,      six: counts.Sg06.Merhi || 0,      seven: counts.Sg07.Merhi || 0,      eight: counts.Sg08.Merhi || 0,      nine: counts.Sg09.Merhi || 0,      ten: counts.Sg10.Merhi || 0,      total: counts.Total.Merhi,      percent: counts.Percent.Merhi,      status: counts.Status.Merhi}
 				];
 
 				//==========================
@@ -381,49 +306,68 @@ vm.submitPicks = function(){
 				    vm.sortType = 'pos';
 				    vm.sortReverse = false;
 
-						//Percentage of picks per specific grid position
-
+						// creating an object to hold all the values we need for each driver and picks tocalculate the points table.
 						var sgPercentage = {
 							Hamilton:   { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Rosberg:    { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Vettel:     { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Raikkonen:  { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Massa:      { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Bottas:     { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Kvyat:      { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Ricciardo:  { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Perez:      { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Hulkenberg: { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Grosjean:   { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Maldonado:  { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Verstappen: { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Sainz:      { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Ericsson:   { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Nasr:       { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Alonso:     { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Button:     { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Stevens:    { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0},
 							Merhi:      { Sg01Percent:    0, Sg02Percent:    0, Sg03Percent:    0, Sg04Percent:    0, Sg05Percent:    0, Sg06Percent:    0, Sg07Percent:    0, Sg08Percent:    0, Sg09Percent:    0, Sg10Percent:    0,
-							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0},
+							 							Sg01PickStatus: 0, Sg02PickStatus: 0, Sg03PickStatus: 0, Sg04PickStatus: 0, Sg05PickStatus: 0, Sg06PickStatus: 0, Sg07PickStatus: 0, Sg08PickStatus: 0, Sg09PickStatus: 0, Sg10PickStatus: 0,
+							 							Sg01Points:     0, Sg02Points:     0, Sg03Points:     0, Sg04Points:     0, Sg05Points:     0, Sg06Points:     0, Sg07Points:     0, Sg08Points:     0, Sg09Points:     0, Sg10Points:     0}
 						};
 
 						//var dr goes from 0 to 19 and represents the driver name, which is a key in the sgPercentage object
@@ -434,8 +378,11 @@ vm.submitPicks = function(){
 						//The second part with Math.round finds the starting grid position "sg" from 0 to 9 and the driver name "dr" from 0 to 19 and divides it by the number of users to get a percentage.
 						console.log(counts[Object.keys(counts)[1]][Object.keys(counts[Object.keys(counts)[1]])[19]]);//This will get Sg02 and Merhi. First number goes from 0 to 9 and second goes from 0 to 19
 
-						var dr = 0; //stands for driver name and it goes from 0 to 19
-						var sg = 0; //stands for strating grid position and it goes from 0 to 9
+        //======================================================
+
+						//Percentage of picks per specific grid position
+						dr = 0; //resetting it. stands for driver name and it goes from 0 to 19
+						sg = 0; //resetting it. stands for starting grid position and it goes from 0 to 9. declared a while ago.
 						while (dr < 20) {
 							while (sg < 10){
 								sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[sg]] = Math.round((counts[Object.keys(counts)[sg]][Object.keys(counts[Object.keys(counts)[sg]])[dr]]/vm.users.length)*100) || 0;
@@ -450,15 +397,14 @@ vm.submitPicks = function(){
         //======================================================
 
 						//Driver Pick Status
-						//Hamilton
 						dr = 0;
 						sg = 0;
 						var ps = 10; //ps stands for pick status and it goes from 10 to 19 in the sgPercentage object
 
 						while (dr < 20){
 							while (sg < 10){
-								if(sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[sg]] === 0){
-									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] = "Zero";
+								if(sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[sg]] === 0){ // Percentage per grid position
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] = "Zero"; // Pick Status
 								} else if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[sg]] >= 20){
 									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] = "High";
 								} else if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[sg]] >= 10){
@@ -478,10 +424,66 @@ vm.submitPicks = function(){
 
 				//======================================================
 
-						//Here are the IF statements to determine the points "paid" by each driver in each position
+						//Here are the IF statements to determine the Points "paid" by each driver in each position
 
+						dr = 0; //resetting the Drivers variable
+						ps = 10; //resetting the Pick Status variable. Starts at 10.
+						var pts = 20; //Points variable starts at position 20 in the Object
 
 						
+						if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] === "Zero") {
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[pts]] = 0;
+								}
+						if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] === "High" &&
+						    counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] === "Favorite"){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[pts]] = 4;
+								}
+						if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] === "High" &&
+						    counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] === "Very Likely"){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[pts]] = 8;
+								}
+						if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] === "High" &&
+						    counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] === "Less Likely"){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[pts]] = 12;
+								}
+						if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] === "High" &&
+						    counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] === "Underdog"){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[pts]] = 16;
+								}
+						if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] === "Medium" &&
+						    counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] === "Favorite"){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[pts]] = 6;
+								}
+						if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] === "Medium" &&
+						    counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] === "Very Likely"){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[pts]] = 10;
+								}
+						if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] === "Medium" &&
+						    counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] === "Less Likely"){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[pts]] = 14;
+								}
+						if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] === "Medium" &&
+						    counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] === "Underdog"){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[pts]] = 18;
+								}
+						if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] === "Low" &&
+						    counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] === "Favorite"){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[pts]] = 8;
+								}
+						if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] === "Low" &&
+						    counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] === "Very Likely"){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[pts]] = 12;
+								}
+						if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] === "Low" &&
+						    counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] === "Less Likely"){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[pts]] = 16;
+								}
+						if (sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[ps]] === "Low" &&
+						    counts[Object.keys(counts)[12]][Object.keys(counts[Object.keys(counts)[12]])[dr]] === "Underdog"){
+									sgPercentage[Object.keys(sgPercentage)[dr]][Object.keys(sgPercentage[Object.keys(sgPercentage)[dr]])[pts]] = 20;
+								}
+
+
 						//Hamilton
 						var hamiltonOne;
 						if (hamiltonSg01PickStatus === "Zero") { hamiltonOne = 0;}
