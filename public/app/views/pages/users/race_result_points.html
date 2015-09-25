@@ -24,20 +24,20 @@
            <span class="text">Next Race:</span>
          </th>
          <td class="race-country">Singapore <img class="flag2" src="https://www.formula1.com/content/fom-website/en/championship/races/2015/Singapore/_jcr_content/countryFlag.img.jpg/1423093148498.jpg"></td>
-         <td><h5><b><u>Starting Grid</u></b> Points Table</h5></td>
-         <td class="total-players">Total Players: {{sgPointsCtrl.users.length}}</td>
+         <td><h5><b><u>Race Result</u></b> Points Table</h5></td>
+         <td class="total-players">Total Players: {{rsPointsCtrl.users.length}}</td>
        </tr>
     </tbody>
   </table>
     <br>
 
-    <p class="text-center">This table shows the points that each driver "pays" for each position in the STARTING GRID. It is generated based on the <u>picks table</u> for this specific race.</p><br>
+    <p class="text-center">This table shows the points that each driver "pays" for each position in the final RACE RESULT. It is generated based on the <u>picks table</u> for this specific race.</p><br>
 
     <!-- Search Bar -->
     <section class="text-center">
       <label>Search:</label>
       <input type="text" ng-model="search">
-      <a href="/users/starting_grid_picks" class="btn btn-sm btn-info">
+      <a href="/users/race_result_picks" class="btn btn-sm btn-info">
         <i>Picks Table</i>
       </a>
     </section>
@@ -47,8 +47,8 @@
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th class="text-center" rowspan="2" ng-click="sgPointsCtrl.sortType = 'pos'; sgPointsCtrl.sortReverse = !sgPointsCtrl.sortReverse">Pos</th>
-                <th class="text-center" rowspan="2" ng-click="sgPointsCtrl.sortType = 'driver'; sgPointsCtrl.sortReverse = !sgPointsCtrl.sortReverse">Driver</th>
+                <th class="text-center" rowspan="2" ng-click="rsPointsCtrl.sortType = 'pos'; rsPointsCtrl.sortReverse = !rsPointsCtrl.sortReverse">Pos</th>
+                <th class="text-center" rowspan="2" ng-click="rsPointsCtrl.sortType = 'driver'; rsPointsCtrl.sortReverse = !rsPointsCtrl.sortReverse">Driver</th>
                 <th class="text-center" colspan="3">1st</th>
                 <th class="text-center" colspan="3">2nd</th>
                 <th class="text-center" colspan="3">3rd</th>
@@ -94,7 +94,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="driver in sgPointsCtrl.driversPoints | filter:search | orderBy: sgPointsCtrl.sortType:sgPointsCtrl.sortReverse">
+            <tr ng-repeat="driver in rsPointsCtrl.driversPoints | filter:search | orderBy: rsPointsCtrl.sortType:rsPointsCtrl.sortReverse">
                 <td class="text-center">{{driver.pos}}</td>
                 <td class="text-center">{{driver.driver}}</td>
                 <td class="text-center">{{driver.oneP}}</td>

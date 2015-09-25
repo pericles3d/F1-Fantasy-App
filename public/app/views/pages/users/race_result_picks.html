@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+<html ng-app="userCtrl" lang="en"> <!-- ng-app tells that this is an angular application and it chooses userCtrl-->
+    <meta charset="UTF-8">
+    <title>Formula 1 Hero</title>
+
+    <!-- CSS -->
+    <!-- load bootstrap from CDN and custom CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+
+</head>
+<body class="container">
+
+  <!-- {{rsPicksCtrl.userData}} -->
+  <table class="next-race">
+    <col width="110">
+    <col width="350">
+    <col width="300">
+    <col width="500">
+    <tbody>
+      <tr>
+         <th scope="row" class="next-title">
+           <span class="text">Next Race:</span>
+         </th>
+         <td class="race-country">Singapore <img class="flag2" src="https://www.formula1.com/content/fom-website/en/championship/races/2015/Singapore/_jcr_content/countryFlag.img.jpg/1423093148498.jpg"></td>
+         <td><h5><b><u>Race Result</u></b> Pick Stats</h5></td>
+         <td class="total-players">Total Players: {{rsPicksCtrl.users.length}}</td>
+       </tr>
+    </tbody>
+  </table>
+    <br>
+
+    <p class="text-center">This table shows how many players picked each driver, for each position, in the final RACING RESULT. It is used to calculate the <u>points table</u> for this specific race.</p><br>
+
+    <!-- Search Bar -->
+    <section class="text-center">
+      <label>Search:</label>
+      <input type="text" ng-model="search">
+      <a href="/users/race_result_points" class="btn btn-sm btn-info">
+        <i>Points Table</i>
+      </a>
+    </section>
+    <br>
+
+    <!-- Table that will populate with our list of drivers -->
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'pos'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">Pos</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'driver'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">Driver</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'one'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">1st</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'two'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">2nd</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'three'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">3rd</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'four'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">4th</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'five'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">5th</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'six'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">6th</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'seven'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">7th</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'eight'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">8th</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'nine'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">9th</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'ten'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">10th</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'total'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">Total</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'percent'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">%</th>
+                <th class="text-center" ng-click="rsPicksCtrl.sortType = 'status'; rsPicksCtrl.sortReverse = !rsPicksCtrl.sortReverse">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="driver in rsPicksCtrl.drivers | filter:search | orderBy: rsPicksCtrl.sortType:rsPicksCtrl.sortReverse">
+                <td class="text-center">{{driver.pos}}</td>
+                <td class="text-center">{{driver.driver}}</td>
+                <td class="text-center">{{driver.one}}</td>
+                <td class="text-center">{{driver.two}}</td>
+                <td class="text-center">{{driver.three}}</td>
+                <td class="text-center">{{driver.four}}</td>
+                <td class="text-center">{{driver.five}}</td>
+                <td class="text-center">{{driver.six}}</td>
+                <td class="text-center">{{driver.seven}}</td>
+                <td class="text-center">{{driver.eight}}</td>
+                <td class="text-center">{{driver.nine}}</td>
+                <td class="text-center">{{driver.ten}}</td>
+                <td class="text-center">{{driver.total}}</td>
+                <td class="text-center">{{driver.percent}}</td>
+                <td class="text-center">{{driver.status}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
