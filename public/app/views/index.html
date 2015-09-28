@@ -17,7 +17,8 @@
 
     <!-- CSS -->
     <!-- load bootstrap from CDN and custom CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css"> -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -54,6 +55,19 @@
         <li><a href="/driver_standings"><span class="glyphicon"></span> Driver Standings</a></li>
         <li><a href="/driver_standings"><span class="glyphicon"></span> User Standings</a></li>
         <li><a href="/race_calendar"><span class="glyphicon"></span> Race Calendar</a></li>
+        <li class="dropdown">
+          <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Picks/Points
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="drop2">
+            <li><a href="/starting_grid_picks"><span class="glyphicon"></span>Grid Pick</a></li>
+            <li><a href="/starting_grid_points"><span class="glyphicon"></span>Grid Points</a></li>
+            <li><a href="/race_result_picks"><span class="glyphicon"></span>Race Picks</a></li>
+            <li><a href="/race_result_points"><span class="glyphicon"></span>Race Points</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/race_calendar">Previous Races</a></li>
+          </ul>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li ng-if="!main.loggedIn"><a href="/login">Login</a></li>
@@ -62,7 +76,10 @@
       </ul>
     </div>
     </div>
+
+
   </header>
+
 
   <main class="container">
     <!-- ANGULAR VIEWS -->

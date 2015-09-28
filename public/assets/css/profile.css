@@ -211,6 +211,10 @@
   margin-left: 47%;
 }
 
+.page-title {
+  background-color: rgb(223, 223, 223);
+}
+
 /*ANIMATION FOR THE DRAG AND DROP*/
 .blink_me {
     -webkit-animation-name: blinker;

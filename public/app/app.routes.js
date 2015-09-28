@@ -53,28 +53,28 @@ angular.module('appRoutes', ['ngRoute'])
       })
 
       //starting grid picks page
-      .when('/users/starting_grid_picks', {
+      .when('/starting_grid_picks', {
         templateUrl: 'app/views/pages/users/starting_grid_picks.html',
         controller: 'startingGridController',
         controllerAs: 'sgPicksCtrl'
       })
 
       //starting grid points page
-      .when('/users/starting_grid_points', {
+      .when('/starting_grid_points', {
         templateUrl: 'app/views/pages/users/starting_grid_points.html',
         controller: 'startingGridController',
         controllerAs: 'sgPointsCtrl'
       })
 
       //race results picks page
-      .when('/users/race_result_picks', {
+      .when('/race_result_picks', {
         templateUrl: 'app/views/pages/users/race_result_picks.html',
         controller: 'raceResultController',
         controllerAs: 'rsPicksCtrl'
       })
 
       //race results points page
-      .when('/users/race_result_points', {
+      .when('/race_result_points', {
         templateUrl: 'app/views/pages/users/race_result_points.html',
         controller: 'raceResultController',
         controllerAs: 'rsPointsCtrl'
